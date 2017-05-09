@@ -1,0 +1,20 @@
+== Structure 
+
+Placeholder text.
+
+=== Directory Structure
+
+Placeholder text.
+
+=== AsciiDoc Attributes
+
+Placeholder text.
+
+=== Rendering Content
+
+Placeholder text.
+
+=== Synchronizing Content
+
+Placeholder text.
+

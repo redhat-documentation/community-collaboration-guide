@@ -1,0 +1,23 @@
+== Migrating an Existing Repository
+
+Placeholder text.
+
+=== Preparing Content for Migration
+
+Placeholder text.
+
+==== Creating the Directory Structure
+
+Placeholder text.
+
+==== Creating Attributes
+
+Placeholder text.
+
+=== Migrating Content
+
+Placeholder text.
+
+=== Troubleshooting Migration
+
+Placeholder text.

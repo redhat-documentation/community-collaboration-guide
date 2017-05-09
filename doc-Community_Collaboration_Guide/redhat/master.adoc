@@ -1,0 +1,32 @@
+= Community Contribution Guide
+:imagesdir: images
+:vernum: 1.0
+:doctype: book
+:toc: left
+:toclevels: 3
+:numbered!:
+:experimental:
+
+:numbered:
+include::topics/introduction.adoc[]
+
+include::topics/structure.adoc[]
+
+include::topics/supported_tools.adoc[]
+
+include::topics/creating_a_new_repository.adoc[]
+
+include::topics/migrating_an_existing_repository.adoc[]
+
+include::topics/tips_and_tricks.adoc[]
+
+include::topics/contacts.adoc[]
+
+include::topics/contributing_to_the_framework.adoc[]
+
+
+
+
+
+
+

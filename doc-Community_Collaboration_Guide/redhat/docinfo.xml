@@ -1,0 +1,20 @@
+<title>Community Collaboration Guide</title>
+<productname>Internal Documentation</productname>
+<productnumber>1.0</productnumber>
+<subtitle>Configuring a Repository to Enable Content Sharing</subtitle>
+<abstract>
+   <para>This guide outlines how to set up or migrate to a repository structure where content is shared between a repository for community documentation and a repository for Red Hat's product documentation.</para>
+</abstract>
+<authorgroup id="Author_Group">
+	<affiliation>
+		<orgname>Red Hat</orgname>
+		<orgdiv>Customer Content Services</orgdiv>
+	</affiliation>
+</authorgroup>
+
+
+
+
+
+
+
