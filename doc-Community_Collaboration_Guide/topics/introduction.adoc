@@ -1,6 +1,6 @@
 == Introduction
 
-Placeholder text.
+This communication survey is to be used by CCS to determine if single-streaming documentation is feasible on a specific project. Content Strategists and Documentation Program Managers will work together to gather data to evaluate community documentation for their products. Using the results of this survey the CCS team will make a proposal for or against single-streaming documentation.
 
 === Overview
 
