@@ -10,7 +10,7 @@ Placeholder text.
 
 AsciiDoc attributes are variables you can use in common files to avoid hard-coding brand-specific information. Using attributes allows you to more easily share content between multiple brands. To use attributes, first define them in the relevant _brand_ AsciiDoc attribute file in the `common` directory. Then, include the _brand_ AsciiDoc attribute file in the `master.adoc` file for the relevant document. Finally, replace brand-specific terms with the variable names that you have defined, and use `ifdef` statements to indicate mark blocks of brand-specific content.
 
-Common AsciiDoc attributes include product name, abbreviated product name, and product version.
+Common AsciiDoc attributes include product name, abbreviated product name, and product version. For more information about attributes  and `ifdef` statements, see http://www.methods.co.nz/asciidoc/userguide.html#X18[Attribute Entries] and http://www.methods.co.nz/asciidoc/userguide.html#_conditional_inclusion_macros[Conditional Inclusion Macros] in the __AsciiDoc User Guide__.
 
 The example below creates attributes for the *Community Documentation* brand.
 
