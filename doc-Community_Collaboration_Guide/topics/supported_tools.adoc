@@ -2,11 +2,39 @@
 
 Placeholder text.
 
-=== Supported Tools and Formats
+=== AsciiBinder
 
-Placeholder text.
+Placeholder text for introduction.
 
-=== Unsupported Tools and Formats
+Website:
 
-Placeholder text.
+Advantages::
+* Placeholder text.
+
+Challenges::
+* Placeholder text.
+
+=== GitBook
+
+Placeholder text for introduction.
+
+Website:
+
+Advantages::
+* Placeholder text.
+
+Challenges::
+* Placeholder text.
+
+=== RST + Sphinx
+
+Placeholder text for introduction.
+
+Website:
+
+Advantages::
+* Placeholder text.
+
+Challenges::
+* Placeholder text.
 
