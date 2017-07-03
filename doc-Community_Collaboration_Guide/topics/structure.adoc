@@ -8,7 +8,59 @@ Placeholder text.
 
 === AsciiDoc Attributes
 
-Placeholder text.
+AsciiDoc attributes are variables you can use in common files to avoid hard-coding brand-specific information. Using attributes allows you to more easily share content between multiple brands. To use attributes, first define them in the relevant _brand_ AsciiDoc attribute file in the `common` directory. Then, include the _brand_ AsciiDoc attribute file in the `master.adoc` file for the relevant document. Finally, replace brand-specific terms with the variable names that you have defined, and use `ifdef` statements to indicate mark blocks of brand-specific content.
+
+Common AsciiDoc attributes include product name, abbreviated product name, and product version. For more information about attributes  and `ifdef` statements, see http://www.methods.co.nz/asciidoc/userguide.html#X18[Attribute Entries] and http://www.methods.co.nz/asciidoc/userguide.html#_conditional_inclusion_macros[Conditional Inclusion Macros] in the __AsciiDoc User Guide__.
+
+The example below creates attributes for the *Community Documentation* brand.
+
+. Create a new `community.adoc` file in the `common/attributes/` directory.
+
+. Open the file, and add your attribute mappings, each entry on a new line:
++
+----
+:product-name: Community Documentation
+:product-name_short: Community
+:product-name_abbr: cd
+:product-version: 1.0
+----
++
+. Save the file.
+. In each _doc-Guide_Name_/`community` directory, edit the `master.adoc` file. Include the attribute file, and add the variable name you want to use to identify `ifdef` statements:
++
+----
+include::common/attributes/community.adoc
+
+:community:
+----
++
+. Anywhere in a common topic file that you would normally use the product name or version, use the following values instead:
++
+----
+{product-name}
+{product-name_short}
+{product-name_abbr}
+{product-version}
+----
++
+. Anywhere in a common topic file that you need a section of text to appear only in the *Community Documentation* version of the guide, use an ifdef statement:
++
+----
+// An ifdef for an entire sentence or paragraph
+ ifdef::community[]
+ This is a sentence that applies only to the Community Documentation version of the document.
+ endif::community[]
+
+// An ifdef for an inline reference, which includes an entry for another brand
+ See
+ ifdef::community[the Community Standards Guide.]
+ ifdef::productx[the Product X Conventions Guide.]
+----
++
+
+The `ifdef` statement must be at the start of a new line, even for inline references. When the *Community Documentation* version of the guide is rendered, the content inside the `ifdef` statements for `community` will appear, and the content inside the `ifdef` statements for `productx` will be excluded. Any content not included inside an `ifdef` statement will appear in rendered guides for all brands.
+
+. Render the guide to verify that your attributes are appearing correctly.
 
 === Rendering Content
 
