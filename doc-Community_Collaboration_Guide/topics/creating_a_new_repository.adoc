@@ -2,10 +2,10 @@
 
 Placeholder text.
 
-== Setting up the Repository
+=== Setting up the Repository
 
 Placeholder text.
 
-== Configuring Content Synchronization
+=== Configuring Content Synchronization
 
 Placeholder text.
