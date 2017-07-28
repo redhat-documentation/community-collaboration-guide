@@ -1,11 +1,153 @@
+[[ccg-create-repo]]
 == Creating a New Repository
 
 Placeholder text.
 
+[[ccg-create-repo-setup]]
 === Setting up the Repository
 
 Placeholder text.
 
+[[ccg-create-repo-synch]]
 === Configuring Content Synchronization
 
 Placeholder text.
+
+[[ccg-create-repo-synch-methods]]
+==== Synchronization Methods
+
+The following synchronization methods are currently recommended:
+
+* <<ccg-create-repo-synch-batchcommit,Batch Commit>>
+
+
+[[ccg-create-repo-synch-batchcommit]]
+==== Batch Commit Synchronization Method
+
+[[ccg-create-repo-synch-batchcommit-when]]
+===== When to Use this Approach
+
+The batch commit process is a good approach to use when you need to incorporate upstream content into product documentation and the product contains a good deal of additional product-specific content.
+In other words, when the upstream content is included as a _subset_ of the product documentation.
+
+[[ccg-create-repo-synch-batchcommit-prereq]]
+===== Prerequisites
+
+The batch commit method assumes that your upstream repository is hosted on GitHub and the machine where you run the batch commit script has the following utilities installed:
+
+* `curl`
+* `zip`
+
+[[ccg-create-repo-synch-batchcommit-dir]]
+===== Directory Structure
+
+The batch commit example described here assumes that you have a book directory, `my-sample-book`, structured as follows:
+
+----
+my-sample-book/
+|__ fetch-upstream.sh
+|__ docinfo.xml
+|__ master.adoc
+|__ topics/
+|__ upstream/
+----
+
+Where `fetch-upstream.sh` is the batch commit script (for details, see <<ccg-create-repo-synch-batchcommit-script>>), and `upstream` is a subdirectory reserved for the upstream content.
+
+[[ccg-create-repo-synch-batchcommit-workflow]]
+===== Workflow
+
+Given that you already have a batch commit script, `fetch-upstream.sh`, the workflow for synchronizing content from the upstream repository is as follows:
+
+. Pull down the latest content from the upstream repository and put the downloaded files in the `upstream/` subdirectory:
++
+----
+$ ./fetch-upstream.sh
+----
+
+. Inspect the downloaded content (for example, using `git diff`) to check for new files, restructured content, and so on.
+If necessary, edit the book file, `master.adoc`, to incorporate new content.
+
+. Add and commit the downloaded content:
++
+----
+$ git add upstream
+$ git commit -m "Synched content from upstream"
+----
+
+[[ccg-create-repo-synch-batchcommit-script]]
+===== Sample Batch Commit Script
+
+The batch commit script, `fetch-upstream.sh`, is a simple `bash` script that pulls down the latest upstream content, copying the relevant upstream files into the `upstream` subdirectory.
+The script exploits a particular feature of GitHub, whereby GitHub provides a downloadable archive file containing the working tree for any branch in the repository.
+The archive file contains a snapshot of the _latest_ content in a particular branch and thus provides an ideal basis for synchronizing content downstream.
+
+To see how his works, consider the following sample `fetch-upstream.sh` script that was developed for synchronizing the contents of the _Apache Camel Component Reference_:
+
+----
+#!/bin/sh
+
+branch=camel-2.18.x <1>
+
+echo "info: fetching upstream content from branch: $branch"
+echo
+
+# -L = follow redirects
+curl -L -o $branch.zip https://github.com/apache/camel/archive/$branch.zip <2>
+
+# -o = overwrite, -j = flatten directory structure, -q = quiet
+unzip -qjo -d upstream $branch.zip camel-$branch/components/camel-*/src/main/docs/*.adoc <3>
+unzip -qjo -d upstream/images $branch.zip camel-$branch/components/camel-*/src/main/docs/*.png
+unzip -qjo -d upstream $branch.zip camel-$branch/camel-core/src/main/docs/*-component.adoc
+
+rm $branch.zip <4>
+----
+
+<1> Set the `branch` variable to the name of the upstream branch.
+<2> Download the archive (`.zip`) file from GitHub, which contains a snapshot of the latest content from the `$branch` branch and store it locally as the file, `$branch.zip`.
+<3> Extract the relevant documentation files from the archive and put them into the `upstream` subdirectory.
+Note that the `unzip` command is a remarkably flexible tool for extracting content from the archive.
+In this particular case, the Asciidoc files are embedded in the Java code base and scattered across hundreds of subdirectories.
+But thanks to the globbing capabilities of `unzip`, it takes only a few commands to find and extract all of the relevant files.
+<4> Clean up, by removing the downloaded archive, `$branch.zip`.
+
+NOTE: It is not necessary for the script to figure out whether specific files have changed or not.
+Git automatically detects when a file has changed based on the file's content, not its creation time.
+So Git ignores any files with the same content as before.
+
+[[ccg-create-repo-synch-batchcommit-procon]]
+===== Pros and Cons
+
+Given that the batch commit script is fairly simple, you might be tempted to conclude that it's functionality is weak.
+But if you compare it with a mechanism that provides similar functionality -- for example, Git _submodules_ -- it measures up well.
+For example, <<table-batch-commit-git-submodule>> makes a point by point comparison of the batch commit process against the Git submodule process.
+
+[[table-batch-commit-git-submodule]]
+.Comparison of Batch Commit and Git Submodule
+|===
+|(Negative) Feature |Batch Commit |Git Submodule
+
+|Contributor needs to know special processes or commands?
+a|_No_
+a|_Yes_
+
+For example, `git submodule update`
+
+|Requires customization of publication toolchain?
+a|_No_
+a|_Yes_
+
+|Causes repository bloat?
+a|_No_
+
+Only the required files are committed to the downstream repository.
+
+a|_Yes_
+
+Complete working tree and complete history are downloaded.
+
+|Requires maintenance to keep in sync?
+a|_Yes_
+a|_Yes_
+
+|===
