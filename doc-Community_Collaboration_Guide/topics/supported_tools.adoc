@@ -18,33 +18,33 @@ Challenges::
 
 GitBook is a documentation hosting system based on GitHub.
 
-Website: https://www.gitbook.com
+Website: link:https://www.gitbook.com[]
 
 Advantages::
 * Very low barrier to entry for community members
 ** Easy to make edits
-** Comes with a built in stylesheet
-* Publishes in Asciidoc
+** Comes with a built-in stylesheet
+* Publishes in AsciiDoc
 * Integrates into GitHub
-* Allows for inline comments
-* GitBook supports building books written in multiple languages.
+* Allows inline comments
+* Supports building books written in multiple languages
 ** Each language is in a subdirectory
-** There is support for rtl languages
-* Includes full text search engine
+** Support for rtl languages
+* Includes a full-text search engine
 ** JSON index file on a static version of the documentation
 
 Challenges::
-* Having to review inline comments is time consuming when you’re also monitoring JIRAs
+* Having to review inline comments is time consuming when you are also monitoring issue tracking systems
 * Converting to downstream requires a Python script
-* Requires a lengthy process to pull content from Gitbook downstream
+* Requires a lengthy process to pull content from GitBook to the downstream
 * Directory tree defined by GitBook and does not allow for easy manipulation
 * Only free for a small number of managers, has a cost after that
-* Things that work in Asciidoc don’t always work in GitBook
+* Things that work in AsciiDoc do not always work in GitBook
 ** Certain special tags will completely break things in GitBook
-** Asciidoc is not fully supported in GitBook
-* GitBook requires that we use a JSON file for attributes which is not as flexible as Asciidoc
-** Asciidoc you can embed attributes, but in JSON you can’t
-* GitBook support is not responsive
+** AsciiDoc is not fully supported in GitBook
+* GitBook requires that we use a JSON file for attributes which is not as flexible as AsciiDoc
+** You can embed attributes in AsciiDoc, but not in JSON
+* GitBook support is ad-hoc
 * Edits are immediately committed
 * Editor is not advanced enough to keep in conditional tags in place
 
