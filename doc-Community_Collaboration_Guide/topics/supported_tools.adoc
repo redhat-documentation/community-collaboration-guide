@@ -4,7 +4,7 @@ Placeholder text.
 
 === AsciiBinder
 
-AsciiBinder is a Ruby-based command-line tool that is designed to streamline the documentation and publication process for teams that manage a large volume of content and re-publish that content regularly. AsciiBinder allows you to share content across multiple distributions by using a map of content that is common to all distributions and by breaking the meta data for each distribution out into a separate branch in Git.
+AsciiBinder is a Ruby-based command-line tool that is designed to streamline the documentation and publication process for teams that manage a large volume of content and re-publish that content regularly. AsciiBinder allows you to share content across multiple distributions by using a map of content that is common to all distributions and by breaking the metadata for each distribution out into a separate branch in Git.
 
 Website: link:http://www.asciibinder.org[]
 
