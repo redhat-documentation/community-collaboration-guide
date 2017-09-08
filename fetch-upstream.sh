@@ -11,7 +11,7 @@ curl -L -o $branch.zip https://github.com/redhat-documentation/community-contrib
 # -o = overwrite
 unzip -o $branch.zip community-contribution-template-$branch/*
 
-cp -r community-contribution-template-$branch/* .
+cp -rf community-contribution-template-$branch/* .
 
 rm -rf community-contribution-template-$branch
 
