@@ -64,7 +64,38 @@ The `ifdef` statement must be at the start of a new line, even for inline refere
 
 === Rendering Content
 
-Placeholder text.
+When your source content is ready to be reviewed or published, you can render it into a display format that can be hosted on a website, included directly in a product, or otherwise accessed by your users. The recommended tool for rendering AsciiDoc into a display format is AsciiDoctor. AsciiDoctor is a fully open-source, Ruby-based implementation of AsciiDoc, and is also the tool that GitHub itself uses to render the content of files written in AsciiDoc.
+
+See the project home page for instructions on how to install AsciiDoctor on a variety of platforms:
+
+* http://asciidoctor.org/
+
+The following is the basic syntax for rendering content into a display format:
+
+[options="nowrap" subs="verbatim,quotes"]
+----
+$ asciidoctor master.adoc
+----
+
+This command creates a single HTML file of the same name and in the same directory as the specified master file. The master file does not need to be in the current working directory, and you can specify either a relative path or absolute path to it.
+
+In addition to this basic syntax, AsciiDoctor also provides a number of options that allow you to customize the location and format of the content that it renders.
+
+The following example outlines how to specify a custom output directory:
+
+[options="nowrap" subs="verbatim,quotes"]
+----
+$ asciidoctor -D ./output master.adoc
+----
+
+The following example outlines how to render the content as an article instead of as a book:
+
+[options="nowrap" subs="verbatim,quotes"]
+----
+$ asciidoctor -d article master.adoc
+----
+
+For additional examples, including instructions on how to render content in formats other than HTML such as PDF, EPUB3, and LaTeX, see link:http://asciidoctor.org/docs/render-documents/[How do I render a document?] on the AsciiDoctor project home page. 
 
 === Synchronizing Content
 
