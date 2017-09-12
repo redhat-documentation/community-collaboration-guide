@@ -80,9 +80,9 @@ $ git commit -m "Synched content from upstream"
 
 The batch commit script, `fetch-upstream.sh`, is a simple `bash` script that pulls down the latest upstream content, copying the relevant upstream files into the `upstream` subdirectory.
 The script exploits a particular feature of GitHub, whereby GitHub provides a downloadable archive file containing the working tree for any branch in the repository.
-The archive file contains a snapshot of the _latest_ content in a particular branch and thus provides an ideal basis for synchronizing content downstream.
+The archive file has a snapshot of the _latest_ content in a particular branch and thus provides an ideal basis for synchronizing content downstream.
 
-To see how his works, consider the following sample `fetch-upstream.sh` script that was developed for synchronizing the contents of the _Apache Camel Component Reference_:
+To see how his works, consider the following sample `fetch-upstream.sh` script developed for synchronizing the contents of the _Apache Camel Component Reference_:
 
 ----
 #!/bin/sh
@@ -104,11 +104,11 @@ rm $branch.zip <4>
 ----
 
 <1> Set the `branch` variable to the name of the upstream branch.
-<2> Download the archive (`.zip`) file from GitHub, which contains a snapshot of the latest content from the `$branch` branch and store it locally as the file, `$branch.zip`.
+<2> Download the archive (`.zip`) file from GitHub, which includes a snapshot of the latest content from the `$branch` branch and store it locally as the file, `$branch.zip`.
 <3> Extract the relevant documentation files from the archive and put them into the `upstream` subdirectory.
 Note that the `unzip` command is a remarkably flexible tool for extracting content from the archive.
 In this particular case, the Asciidoc files are embedded in the Java code base and scattered across hundreds of subdirectories.
-But thanks to the globbing capabilities of `unzip`, it takes only a few commands to find and extract all of the relevant files.
+But thanks to the globbing capabilities of `unzip`, it takes only a few commands to find and extract all the relevant files.
 <4> Clean up, by removing the downloaded archive, `$branch.zip`.
 
 NOTE: It is not necessary for the script to figure out whether specific files have changed or not.
@@ -118,7 +118,7 @@ So Git ignores any files with the same content as before.
 [[ccg-create-repo-synch-batchcommit-procon]]
 ===== Pros and Cons
 
-Given that the batch commit script is fairly simple, you might be tempted to conclude that it's functionality is weak.
+Given the simplicity of the batch commit script, you might get the impression that it is not as powerful as other approaches.
 But if you compare it with a mechanism that provides similar functionality -- for example, Git _submodules_ -- it measures up well.
 For example, <<table-batch-commit-git-submodule>> makes a point by point comparison of the batch commit process against the Git submodule process.
 
