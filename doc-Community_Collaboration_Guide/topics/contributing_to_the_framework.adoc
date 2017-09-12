@@ -132,7 +132,7 @@ upstream	git@github.com:redhat-documentation/community-contribution-template.git
 [discrete]
 === Fetch the Source and Create a Branch
 
-Fetch the latest source from the upstream repository. Note that using the `git fetch` command to obtain the latest copy of the source doesn not actually "put" the content on your local fork until you perform some other action, such as creating a branch.
+Fetch the latest source from the upstream repository. Note that using the `git fetch` command to obtain the latest copy of the source does not actually "put" the content on your local fork until you perform some other action, such as creating a branch.
 
 . Use the `git fetch` command to fetch the latest source from the repository.
 [options="nowrap",subs="+quotes"]
