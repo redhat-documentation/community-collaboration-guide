@@ -123,6 +123,12 @@ Placeholder text.
 
 Reference::https://placeholder.url[]
 
+==== GitHub Pages
+
+Placeholder text.
+
+Reference::https://placeholder.url[]
+
 ==== Other
 
 Placeholder text.
