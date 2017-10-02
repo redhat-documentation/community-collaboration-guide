@@ -1,10 +1,54 @@
-== Structure 
+== Structure
 
-Placeholder text.
+When building a new repo, one can choose a single title per repository or multiple titles per repository structure. Contribution style and build requirements are two primary considerations.
+The single title per repository model allows independent updates between titles, but prevents topic sharing among titles.
+The multiple title per repository model enables simple-and-easy topic-sharing between titles, but does require building all
+titles when updates are made.
 
 === Directory Structure
 
-Placeholder text.
+Directories should be structured in a logical and related fashion. Folder and document names should be clear and consistent; "52187.adoc" is not likely to mean anything to anyone save the author.
+
+Here is an example directory structure of a single title per repository structure.
+
+----
+*GUIDE_NAME/* _(The specific book)
+.
+├──├── *images/*  _(Contains all the images used by the docs)_
+├──│   │   ├── my-image.png
+├──├──*topics/*  _(Folder that contains all AsciiDoc topic files)_
+├──│   ├── *templates/*  _(AsciiDoc template files to be used across guides)_
+├──│   ├──*topic_focus_1 _(folder to hold related topics; repeat for each topic focus)_
+├──│   ├──├── topic_focus_a.adoc _(AsciiDoc file for information within each focus area; repeat as needed)_
+├──*README.adoc*  _(This file)_
+├──*master.adoc*  _(Top level content specification for the book)_
+├──*document-attributes.adoc*  _(Document attributes used across guides)_
+└──*buildGuide.sh*  _(Script to build this book)_
+----
+Here is an example directory structure of a multiple titles per repository structure.
+----
+.
+├── *README.adoc*  _(This file)_
+├── *docs/*  _(Contains the book folders and topics folder)_
+│   ├── *GUIDE_NAME/*  _(Book folder; repeat for each title in the repository)_
+│   │   ├── *master.adoc*  _(Top level content specification for the book)_
+│   │   ├── *buildGuide.sh*  _(Script to build this book)_
+│   │   ├── *topics*  _(Symbolic link to docs/topics/)_
+│   ├── *topics/*  _(Folder that contains all AsciiDoc topic files)_
+│   │   │   ├── *images/*  _(Contains all the images used by the docs)_
+│   │   │   │   ├── my-image.png
+│   │   │   ├── *templates/*  _(AsciiDoc template files to be used across guides)_
+│   │   │   │   ├── *document-attributes.adoc*  _(Document attributes used across guides)_
+│   │   │   ├── my-topic.adoc
+├── *internal-resources/*  _(References for contributors)_
+├── *legacy-topics/*  _(Houses any legacy source)_
+│   ├── *asciidoc/*  _(Houses any converted AsciiDoc files)_
+│   └── *docbook-xml/*  _(Houses any DocBook XML topics from previous sources)_
+└── *scripts/*  _(Contains scripts that automate the processes used to create and build documentation)_
+    ├── *buildGuides.sh*  _(Builds all top-level guides that live in the docs/ folder)_
+    └── *processPrevSourceTopics.sh*  _(Retrieves files from a previous source, converts them to AsciiDoc, the stores them in the legacy-topics folder)_
+----
+
 
 === AsciiDoc Attributes
 
@@ -138,4 +182,3 @@ Reference::https://placeholder.url[]
 ==== Other
 
 Placeholder text.
-
