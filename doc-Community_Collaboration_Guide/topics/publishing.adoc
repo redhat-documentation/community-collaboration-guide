@@ -1,10 +1,10 @@
-[[publishing_content]]
+[[ccg-publishing-content]]
 = Publishing Content
 
 Placeholder text.
 
 
-[[asciibinder]]
+[[ccg-asciibinder]]
 == AsciiBinder
 
 In addition to providing a system to structure and maintain documentation for multiple brands using a single repository, AsciiBinder also provides the ability to preview and package documentation as a set of HTML files that you can publish on a website.
@@ -30,7 +30,7 @@ The output of this command is saved in the `<docs_repo_dir>/_package/<distro>/<b
 Reference:: http://asciibinder.org/latest/guides/user_guide.html#building-the-docs
 
 
-[[rpm_packaging]]
+[[ccg-rpm-packaging]]
 == RPM Packaging
 
 Placeholder text.
@@ -38,21 +38,21 @@ Placeholder text.
 Reference::https://placeholder.url[]
 
 
-[[microservices]]
+[[ccg-microservices]]
 == Microservices
 
 Placeholder text.
 
 Reference::https://placeholder.url[]
 
-[[github_pages]]
+[[ccg-github-pages]]
 == GitHub Pages
 
 Placeholder text.
 
 Reference::https://placeholder.url[]
 
-[[other]]
+[[ccg-other]]
 == Other
 
 Placeholder text.
