@@ -1,4 +1,4 @@
-[[project_structure]]
+[[ccg-project-structure]]
 == Project Structure
 
 There is no single structure that will work for all projects, rather as a project grows and becomes more complex, it is likely to move through a variety of different structures.  The repository structure may change as files and directories are added, a large repository may split into separate, related repositories, etc.    As a project grows, the documentation needs for the project also grow. And just like you want to have a plan for project architecture that changes and adapts as the project grows, you likewise want to have a plan for the documentation structure that grows and adapts as the doc set grows.
@@ -6,7 +6,7 @@ There is no single structure that will work for all projects, rather as a projec
 This section discusses repository and directory structure and how to structure your content for ease of reuse (both in multiple documents and in upstream/downstream documents).
 
 
-[[directory_structure]]
+[[ccg-directory-structure]]
 === Directory Structure
 
 The first steps towards documenting a project are often found in the README file of the repository.   Eventually the project will grow to where there is a need for more documentation than you can fit in a single README, and that may appear in the form of a project wiki, a separate installation guide, possibly a developer guide, and one or more user guides.   You may start out with all of the documentation in the same repository as the code, but as things grow more complex, you may want to consider having a separate repository for your documentation.  This makes it easier for community members who may only want to contribute to the documentation, as they don’t have to worry about merge conflicts in the code.
@@ -17,7 +17,7 @@ As your project grows, you should consider the structure you want to use for you
 * Add a new repo for each new title or document. The single title per repository model allows independent updates between titles, but prevents topic sharing among titles.
 * Add a new repo with multiple titles or documents. The multiple title per repository model enables simple-and-easy topic-sharing between titles, but does require building all titles when updates are made.
 
-[[flat_file_structure]]
+[[ccg-flat-file-structure]]
 === Flat File Structure
 
 In a flat-file structure there are no sub-directories, just one folder with all the documentation files in a single directory.  A flat file structure might be as simple as a single README file, or contain a complete manual. A flat file structure for an asciidoc manual might look something like this:
@@ -41,7 +41,7 @@ In a flat-file structure there are no sub-directories, just one folder with all 
 In a flat file system every file must have a different name because there is only one list of files.  A flat file structure may work with a very small number of files, but once a documentation project becomes more complex, it becomes more difficult to have all the files in the same directory.  And that is when the documentation for project may require a more complex structure.
 
 
-[[single_book_structure]]
+[[ccg-single-book-structure]]
 === Single Book Structure
 
 If you do not share any content between books you may choose a single book per directory structure.  A structure with a single asciidoc manual per repository might look something like this:
@@ -69,7 +69,7 @@ If you do not share any content between books you may choose a single book per d
 ....
 
 
-[[multiple_book_structure]]
+[[ccg-multiple-book-structure]]
 === Multiple Book Structure
 If you have common files that you want to reuse between books, you may choose a more complex directory structure, where all the books live in the same repository and have access to common files.
 
@@ -161,7 +161,7 @@ https://github.com/silasrh/multi-topic-level-repo-template
 ....
 
 
-[[content_structure]]
+[[ccg-content-structure]]
 === Content Structure
 Rather than writing your documentation in a single lengthy file, a best practice is to break the content up into small chunks.  There are several reasons why this is a good idea.   Having some sort of structure for your content provides many benefits for both readers and writers of your documentation:
 
@@ -180,8 +180,7 @@ A commonly used pattern for documentation is to chunk content into one of three 
 
 In general when writing content you want to use simple language and avoid jargon that people unfamiliar with your project might not understand  Writing short sentences and short paragraphs also makes your content easier to read and understand.
 
-
-[[file_naming]]
+[[ccg-file-naming]]
 === File Naming
 
 No matter what repo and directory structure you choose, folder and file names should be clear and consistent.
@@ -193,10 +192,7 @@ No matter what repo and directory structure you choose, folder and file names sh
 * Do not include the project or product name, book name, release version, or anything similar in file names.
 * Do not hard code file names when linking documents, use  relative paths to the topic or folder.
 
-
-
-
-[[asciidoc_converter]]
+[[ccg-asciidoc-converter]]
 === Asciidoc Converters
 
 If your project is not already written in Asciidoc and you want to migrate from markdown or another markup language, there are a variety of conversion tools available.
@@ -208,7 +204,7 @@ If your project is not already written in Asciidoc and you want to migrate from 
 * https://pandoc.org/[Pandoc] can convert between a large number of different markup and file formats including DocBook, Emacs Org-Mode, EPUB, HTML, LaTeX, LibreOffice ODT, markdown, MediaWiki markup, Microsoft Word docx, OPML, reStructuredText, textile, TWiki markup, and Txt2Tags.
 
 
-[[asciidoc_attributes]]
+[[ccg-asciidoc-attributes]]
 === AsciiDoc Attributes
 
 AsciiDoc attributes are variables you can use in common files to avoid hard-coding brand-specific information. Using attributes allows you to more easily share content between multiple brands. To use attributes, first define them in the relevant _brand_ AsciiDoc attribute file in the `common` directory. Then, include the _brand_ AsciiDoc attribute file in the `master.adoc` file for the relevant document. Finally, replace brand-specific terms with the variable names that you have defined, and use `ifdef` statements to indicate mark blocks of brand-specific content.
@@ -266,7 +262,7 @@ The `ifdef` statement must be at the start of a new line, even for inline refere
 . Render the guide to verify that your attributes are appearing correctly.
 
 
-[[rendering_content]]
+[[ccg-rendering-content]]
 === Rendering Content
 
 ifdef::community[]
@@ -308,7 +304,7 @@ ifdef::redhat[]
 You can use `ccutil` to build a local preview of your content in the same way as repositories that do not use this repository structure. The only difference is that the command must be run in the `redhat` brand directory where the master file is located instead of in the default content directory. Pantheon builds and build scripts must also be updated to specify the `redhat` brand directory.
 endif::redhat[]
 
-[[synchronizing_content]]
+[[ccg-synchronizing-content]]
 === Synchronizing Content
 
 Placeholder text.

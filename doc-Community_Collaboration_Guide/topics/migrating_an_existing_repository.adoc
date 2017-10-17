@@ -1,23 +1,29 @@
+[[ccg-migrating-existing]]
 == Migrating an Existing Repository
 
 Placeholder text.
 
+[[ccg-preparing-content]]
 === Preparing Content for Migration
 
 Placeholder text.
 
+[[ccg-creating-directory-structure]]
 ==== Creating the Directory Structure
 
 Placeholder text.
 
+[[ccg-creating-attributes]]
 ==== Creating Attributes
 
 Placeholder text.
 
+[[ccg-migrating-content]]
 === Migrating Content
 
 Placeholder text.
 
+[[ccg-troubleshooting-migration]]
 === Troubleshooting Migration
 
 Placeholder text.

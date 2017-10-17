@@ -1,4 +1,4 @@
-[[contributing_to_the_framework]]
+[[ccg-contributing-to-the-framework]]
 == Contributing to the Framework
 
 You can contribute to this project in two ways:
@@ -9,6 +9,7 @@ You can contribute to this project in two ways:
 
 Subsequent sections provide details for conducting each activity.
 
+[[ccg--proposing-a-change]]
 === Proposing a Change to the Template
 
 Currently, the best method for proposing a change to the template is to open an issue in the `community-contribution-template` GitHub repository.
@@ -35,6 +36,7 @@ You must be a member of the GitHub `community-contribution-template` repository.
 
 https://github.com/redhat-documentation/community-contribution-template/[Community Contribution Template Repository]
 
+[[ccg-updating-collaboration-guide]]
 === Updating the Community Collaboration Guide
 
 We encourage contributions to the _Community Collaboration Guide_. In particular, you can share your experiences in the following areas:
@@ -60,6 +62,7 @@ We encourage contributions to the _Community Collaboration Guide_. In particular
 https://help.github.com/articles/set-up-git/[Set Up Git]
 
 [discrete]
+[[ccg-fork-the-upstream-repository]]
 === Fork the Upstream (GitHub) Repository
 
 Fork the `community-contribution-template` upstream repository to create a fork under your own GitHub ID. This allows you to work on multiple pieces of content and push changes to branches in your local GitHub instance. When you are ready, you can request the changes be merged from your local fork into the upstream repository.
@@ -71,11 +74,13 @@ Fork the `community-contribution-template` upstream repository to create a fork 
 . Choose the location of the forked repository.
 
 [discrete]
+[[ccg-add-ssh-keys]]
 === Add Your SSH Keys to GitHub
 
 When using the SSH address for creating a clone, you need to add an SSH Key to GitHub. See the article https://help.github.com/articles/connecting-to-github-with-ssh/[_Generating an SSH Key_] for more information.
 
 [discrete]
+[[ccg-clone-upstream-repository]]
 === Clone the Upstream Repository to Your Fork
 
 Clone the repository. Your fork is the `origin` location for your local files.
@@ -97,6 +102,7 @@ $ cd community-contribution-template/
 ----
 
 [discrete]
+[[ccg-add-upstream-remote]]
 === Add the Upstream as a Remote Repository
 
 After you have forked and cloned the upstream repository, connect it to your local fork by adding the upstream repository as a remote.
@@ -130,6 +136,7 @@ upstream	git@github.com:redhat-documentation/community-contribution-template.git
 ----
 
 [discrete]
+[[ccg-fetch-source-create-branch]]
 === Fetch the Source and Create a Branch
 
 Fetch the latest source from the upstream repository. Note that using the `git fetch` command to obtain the latest copy of the source does not actually "put" the content on your local fork until you perform some other action, such as creating a branch.
@@ -146,7 +153,7 @@ $ git fetch upstream
 $ git checkout -b BRANCH_NAME upstream/master
 ----
 In this example, _BRANCH_NAME_ is the unique name of the branch you are using to make changes locally.
- 
+
 [NOTE]
 ====
-You can check out multiple topic branches and work on multiple features at one time, with no impact on each other as long as each topic branch is branched from `master`. 
+You can check out multiple topic branches and work on multiple features at one time, with no impact on each other as long as each topic branch is branched from `master`.

@@ -1,7 +1,9 @@
+[[ccg-supported-tools]]
 == Supported Tools
 
 Placeholder text.
 
+[[ccg-asciibinder-tool]]
 === AsciiBinder
 
 AsciiBinder is a Ruby-based command-line tool that is designed to streamline the documentation and publication process for teams that manage a large volume of content and re-publish that content regularly. AsciiBinder allows you to share content across multiple distributions by using a map of content that is common to all distributions and by breaking the metadata for each distribution out into a separate branch in Git.
@@ -17,6 +19,7 @@ Challenges::
 * Support is provided on an ad-hoc basis
 * Uses a fixed directory structure defined by AsciiBinder
 
+[[ccg-gitbook-tool]]
 === GitBook
 
 GitBook is a documentation hosting system based on GitHub.
@@ -51,6 +54,7 @@ Challenges::
 * Edits are immediately committed
 * Editor is not advanced enough to keep in conditional tags in place
 
+[[ccg-rst-sphinx-tool]]
 === RST + Sphinx
 
 Placeholder text for introduction.
