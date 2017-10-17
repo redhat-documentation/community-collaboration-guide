@@ -1,5 +1,5 @@
 [[project_structure]]
-== Project Structure 
+== Project Structure
 
 There is no single structure that will work for all projects, rather as a project grows and becomes more complex, it is likely to move through a variety of different structures.  The repository structure may change as files and directories are added, a large repository may split into separate, related repositories, etc.    As a project grows, the documentation needs for the project also grow. And just like you want to have a plan for project architecture that changes and adapts as the project grows, you likewise want to have a plan for the documentation structure that grows and adapts as the doc set grows.
 
@@ -14,7 +14,7 @@ The first steps towards documenting a project are often found in the README file
 As your project grows, you should consider the structure you want to use for your documentation directory.  Directories should be structured in a logical and related fashion. Many projects have a documentation repo or folder for their project web page, and possibly a separate repo or folder for the project documentation.  You may choose to have separate repositories for each “manual” or you may choose to have all the documents in your doc set share a repository.  Contribution style and build requirements are two primary considerations when you decide how to proceed.
 
 * Add a docs folder to the code repository.  This makes it easier for developers to update the documentation, but may present a challenge for non-developers who want to contribute to the documentation but may not know now to resolve merge conflicts in the code.
-* Add a new repo for each new title or document. The single title per repository model allows independent updates between titles, but prevents topic sharing among titles. 
+* Add a new repo for each new title or document. The single title per repository model allows independent updates between titles, but prevents topic sharing among titles.
 * Add a new repo with multiple titles or documents. The multiple title per repository model enables simple-and-easy topic-sharing between titles, but does require building all titles when updates are made.
 
 [[flat_file_structure]]
@@ -65,13 +65,13 @@ If you do not share any content between books you may choose a single book per d
 │   │   │   ├── topic-4.adoc
 │   │   │   └── topic-5.adoc
 └── scripts (Scripts to automatically create and build documentation)
-    └── buildGuides.sh 
+    └── buildGuides.sh
 ....
 
 
 [[multiple_book_structure]]
 === Multiple Book Structure
-If you have common files that you want to reuse between books, you may choose a more complex directory structure, where all the books live in the same repository and have access to common files.   
+If you have common files that you want to reuse between books, you may choose a more complex directory structure, where all the books live in the same repository and have access to common files.
 
 Note that in the following multiple book structure each “book” directory has a symlink to a common directory for topic files.  This allows you to use any individual topic in any book, saving time writing and updating topics that appear in more than one place.  This structure also uses a common folder for images inside the topics folder, again allowing for reuse of images such as button icons and product logos.  And the attributes file is also common, allowing for the same replacement variables in all files and books.
 
@@ -80,8 +80,8 @@ A structure with multiple asciidoc manuals per repository and a single topic dir
 internal Up/Down repo template on Red Hat GitLab https://gitlab.cee.redhat.com/ccs-tools-documentation/up-down-repo-template#use-this-repository-template
 ////
 ....
-├── README.md 
-├── docs 
+├── README.md
+├── docs
 │   ├── Title_A
 │   │   ├── master.adoc
 │   │   ├── master-docinfo.xml
@@ -162,7 +162,7 @@ https://github.com/silasrh/multi-topic-level-repo-template
 
 
 [[content_structure]]
-=== Content Structure 
+=== Content Structure
 Rather than writing your documentation in a single lengthy file, a best practice is to break the content up into small chunks.  There are several reasons why this is a good idea.   Having some sort of structure for your content provides many benefits for both readers and writers of your documentation:
 
 * *Onboarding new contributors* – It’s easier for new contributors to add to the documentation if they have some sort of template or pattern to follow. For example, all 	UNIX/LINUX man pages follow a similar structure, so when a developer is documenting a new command, they can follow that familiar pattern.
@@ -174,9 +174,9 @@ A commonly used pattern for documentation is to chunk content into one of three 
 ** *Concept or Overview* – Product specific terminology or concepts that the user needs to understand in order to successfully use the software.
 ** *Reference* – Reference material about the software, for example configuration settings , lists of commands, or API documentation.
 
-* *Reusability* – If you write content in small chunks, it can be reused in different documents that cover the same topics. For example, topics such as “System Requirements” or “Supported Platforms” might appear in Release Notes, planning documentation, and installation documentation. 
+* *Reusability* – If you write content in small chunks, it can be reused in different documents that cover the same topics. For example, topics such as “System Requirements” or “Supported Platforms” might appear in Release Notes, planning documentation, and installation documentation.
 * *Findability* – Content that is properly structured makes it easier for readers to find answers to their 	questions. For example, when procedures are properly formatted as	numbered steps, readers don’t have to search paragraphs of text for instructions for how to complete a task. Projects that follow naming conventions and have an organizational structure make it easier for contributing writers to find and update topics.
-* *Organization* – Writing content in small chunks makes it easier to rearrange content than writing content in longer files.  
+* *Organization* – Writing content in small chunks makes it easier to rearrange content than writing content in longer files.
 
 In general when writing content you want to use simple language and avoid jargon that people unfamiliar with your project might not understand  Writing short sentences and short paragraphs also makes your content easier to read and understand.
 
@@ -184,7 +184,7 @@ In general when writing content you want to use simple language and avoid jargon
 [[file_naming]]
 === File Naming
 
-No matter what repo and directory structure you choose, folder and file names should be clear and consistent.  
+No matter what repo and directory structure you choose, folder and file names should be clear and consistent.
 
 * Numbered file names like "52187.adoc" or “IMG_390.png” are more likely to cause confusion for other contributors.
 * Short file names are good, as long as they're still meaningful.  But give enough detail to make the content clear (“overview.adoc” could be anything).
@@ -208,7 +208,7 @@ If your project is not already written in Asciidoc and you want to migrate from 
 * https://pandoc.org/[Pandoc] can convert between a large number of different markup and file formats including DocBook, Emacs Org-Mode, EPUB, HTML, LaTeX, LibreOffice ODT, markdown, MediaWiki markup, Microsoft Word docx, OPML, reStructuredText, textile, TWiki markup, and Txt2Tags.
 
 
-[[asciidoc_attributes]] 
+[[asciidoc_attributes]]
 === AsciiDoc Attributes
 
 AsciiDoc attributes are variables you can use in common files to avoid hard-coding brand-specific information. Using attributes allows you to more easily share content between multiple brands. To use attributes, first define them in the relevant _brand_ AsciiDoc attribute file in the `common` directory. Then, include the _brand_ AsciiDoc attribute file in the `master.adoc` file for the relevant document. Finally, replace brand-specific terms with the variable names that you have defined, and use `ifdef` statements to indicate mark blocks of brand-specific content.
@@ -301,7 +301,7 @@ The following example outlines how to render the content as an article instead o
 $ asciidoctor -d article master.adoc
 ----
 
-For additional examples, including instructions on how to render content in formats other than HTML such as PDF, EPUB3, and LaTeX, see link:http://asciidoctor.org/docs/render-documents/[How do I render a document?] on the AsciiDoctor project home page. 
+For additional examples, including instructions on how to render content in formats other than HTML such as PDF, EPUB3, and LaTeX, see link:http://asciidoctor.org/docs/render-documents/[How do I render a document?] on the AsciiDoctor project home page.
 endif::community[]
 
 ifdef::redhat[]
@@ -312,63 +312,3 @@ endif::redhat[]
 === Synchronizing Content
 
 Placeholder text.
-
-[[publishing_content]]
-=== Publishing Content
-
-Placeholder text.
-
-
-[[asciibinder]]
-==== AsciiBinder
-
-In addition to providing a system to structure and maintain documentation for multiple brands using a single repository, AsciiBinder also provides the ability to preview and package documentation as a set of HTML files that you can publish on a website.
-
-Run the following command to build a preview of the documentation:
-
-[options="nowrap" subs="verbatim,quotes"]
-----
-$ asciibinder build
-----
-
-The output of this command is saved in the `<docs_repo_dir>/_preview/<distro>/<branch_dir_name>` directory.
-
-Run the following command to package the documentation:
-
-[options="nowrap" subs="verbatim,quotes"]
-----
-$ asciibinder package
-----
-
-The output of this command is saved in the `<docs_repo_dir>/_package/<distro>/<branch_dir_name>` directory. Each sub-directory in the `_package` represents the website content for a single brand, and can be copied to a hosting server as is.
-
-Reference:: http://asciibinder.org/latest/guides/user_guide.html#building-the-docs
-
-
-[[rpm_packaging]]
-==== RPM Packaging
-
-Placeholder text.
-
-Reference::https://placeholder.url[]
-
-
-[[microservices]]
-==== Microservices
-
-Placeholder text.
-
-Reference::https://placeholder.url[]
-
-[[github_pages]]
-==== GitHub Pages
-
-Placeholder text.
-
-Reference::https://placeholder.url[]
-
-[[other]]
-==== Other
-
-Placeholder text.
-
