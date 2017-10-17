@@ -18,6 +18,8 @@ include::topics/structure.adoc[]
 
 include::topics/supported_tools.adoc[]
 
+include::topics/publishing.adoc[]
+
 include::topics/creating_a_new_repository.adoc[]
 
 include::topics/migrating_an_existing_repository.adoc[]
