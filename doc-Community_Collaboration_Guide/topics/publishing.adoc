@@ -1,0 +1,58 @@
+[[publishing_content]]
+= Publishing Content
+
+Placeholder text.
+
+
+[[asciibinder]]
+== AsciiBinder
+
+In addition to providing a system to structure and maintain documentation for multiple brands using a single repository, AsciiBinder also provides the ability to preview and package documentation as a set of HTML files that you can publish on a website.
+
+Run the following command to build a preview of the documentation:
+
+[options="nowrap" subs="verbatim,quotes"]
+----
+$ asciibinder build
+----
+
+The output of this command is saved in the `<docs_repo_dir>/_preview/<distro>/<branch_dir_name>` directory.
+
+Run the following command to package the documentation:
+
+[options="nowrap" subs="verbatim,quotes"]
+----
+$ asciibinder package
+----
+
+The output of this command is saved in the `<docs_repo_dir>/_package/<distro>/<branch_dir_name>` directory. Each sub-directory in the `_package` represents the website content for a single brand, and can be copied to a hosting server as is.
+
+Reference:: http://asciibinder.org/latest/guides/user_guide.html#building-the-docs
+
+
+[[rpm_packaging]]
+== RPM Packaging
+
+Placeholder text.
+
+Reference::https://placeholder.url[]
+
+
+[[microservices]]
+== Microservices
+
+Placeholder text.
+
+Reference::https://placeholder.url[]
+
+[[github_pages]]
+== GitHub Pages
+
+Placeholder text.
+
+Reference::https://placeholder.url[]
+
+[[other]]
+== Other
+
+Placeholder text.
