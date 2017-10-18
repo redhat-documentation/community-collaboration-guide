@@ -29,15 +29,6 @@ The output of this command is saved in the `<docs_repo_dir>/_package/<distro>/<b
 
 Reference:: http://asciibinder.org/latest/guides/user_guide.html#building-the-docs
 
-
-[[ccg-rpm-packaging]]
-=== RPM Packaging
-
-Placeholder text.
-
-Reference::https://placeholder.url[]
-
-
 [[ccg-microservices]]
 === Microservices
 
@@ -51,6 +42,56 @@ Reference::https://placeholder.url[]
 Placeholder text.
 
 Reference::https://placeholder.url[]
+
+[[ccg-travis-container]]
+=== Travis CI and Asciidoctor container
+
+This publishing mechanism uses a single configuration file ``.travis.yml`` and is based on a **GitHub** + **Travis CI** + **Asciidoctor container** + **GitHub Pages** toolchain, an idea taken from http://mgreau.com/asciidoc-to-ghpages/[http://mgreau.com/asciidoc-to-ghpages/].
+
+Each commit pushed to a pre-configured branch (such as ``master``, ``devel`` or ``stable``) with a ``.travis.yml`` automatically triggers a document build, so you do not need an extra tool installed locally in order to publish an update to the document. When the Asciidoctor container running in Travis CI successfully finishes the build, Travis CI pushes the resulting HTML
+(and, optionally, PDF) to a deployment branch (such as ``gh-pages`` or ``publish``), and GitHub Pages then publishes the HTML (and PDF) from the deployment branch to the desired URL (for instance, ``my-project.github.io/my-document``).
+
+A working example that uses this mechanism can be found at https://github.com/redhat-developer/rpm-packaging-guide/[https://github.com/redhat-developer/rpm-packaging-guide/].
+
+[[ccg-travisyml]]
+==== Sample .travis.yml
+
+Below is a sample ``.travis.yml`` file that must be placed in the root directory of your branch, from which you want to publish to GitHub Pages.
+
+[options="nowrap" subs="verbatim,quotes"]
+----
+sudo: required
+
+branches:
+  only:
+  - master # Name of the branch from which to publish
+
+services:
+  - docker
+
+before_install:
+  - mkdir -p output
+  - docker pull asciidoctor/docker-asciidoctor
+
+script:
+  - docker run -v $TRAVIS_BUILD_DIR:/documents/ --name asciidoc-to-html asciidoctor/docker-asciidoctor asciidoctor -D /documents/output community/index.adoc
+  - docker run -v $TRAVIS_BUILD_DIR:/documents/ --name asciidoc-to-pdf asciidoctor/docker-asciidoctor asciidoctor-pdf -D /documents/output community/index.adoc # Only needed when also building PDF
+
+after_error:
+  - docker logs asciidoc-to-html
+  - docker logs asciidoc-to-pdf
+
+after_failure:
+  - docker logs asciidoc-to-html
+  - docker logs asciidoc-to-pdf
+
+after_success:
+  - cd output ; git init
+  - git config user.name "${USER_NAME}" # USER_NAME must be defined in Travis
+  - git config user.email "${USER_EMAIL}" # USER_EMAIL must be defined in Travis
+  - git add *.html ; git commit -m "Deploy to GitHub Pages"
+  - git push --force "https://${TOKEN}@${REF}" master:publish # TOKEN and REF must be defined in Travis; publish is the name of the deployment branch
+----
 
 [[ccg-other]]
 === Other
