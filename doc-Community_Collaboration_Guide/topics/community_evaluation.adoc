@@ -1,0 +1,40 @@
+[[ccg-community-evaluation]]
+= Evaluating Upstream Communities
+
+Before joining an upstream documentation community with the goal of collaborating, you should gather data about the community to evaluate how your documentation team will fit in with the community's.
+
+[[ccg-community-readiness]]
+== Community Readiness Survey
+
+This sample communication survey can be used to determine if single-streaming documentation is feasible on a specific project. Content Strategists and Documentation Program Managers will work together to gather data to evaluate community documentation for their products. Using the results of this survey your team will be able to make a proposal for or against single-streaming documentation.
+
+The top possible score on this evaluation is 100 and the bottom score is 50.
+
+[format="csv", options="header"]
+|===
+Question to ask communities,Answers & Weight
+What is the product?,_text_
+What is the community we're evaluating? (allows for us to answer this survey multiple times - one for each community),_text_
+"Is there a separate doc repo, or is it stored with the code (small vs larger projects)?",Docs in their own repository (5) | Docs part of code repository (4) | Docs not in a repository (5)
+Are there written instructions for how to contribute?,"Yes, detailed (5) | Yes, a few (4) | Yes, but they're not followed (3) | No (1)"
+Are they open to having a company help in decision making?,Yes (10) | No (0)
+"Are they interested in the support of a content strategist (describe what one does; some communities want support along the lines of ""editor"")?",Yes (10) | No (5)
+Who approves commits?,The committer (1) | A doc manager (3) | A select few community members (5)
+Is there a style guide (follow up with do they use it?)?,"Yes, detailed (5) | Yes, but not very detailed (4) | Yes, but it is not followed (3) | No (2)"
+" -- If no, do they want one?",Yes (5) | No (3)
+Are there formal documentation meetings?,Yes (5) | No (5)
+What markup language are the docs written in?,Asciidoc (5) | Docbook (5) | RST + Sphinx (3) | Markdown (3) | Proprietary format (1)
+Can anyone join the documentation team?,Yes (5) | No (2)
+" -- If yes, is there some sort of set criteria to join?",_text_
+Is there a voting process to accept new active community members?,Yes (5) | No (5)
+How are decisions in the community made? Consensus or Management?,Consensus (5) | Management (4) | Other
+ -- Enter the other,_text_
+Is there a process for training newcomers?,Yes (5) | No (3)
+Are community releases on the same schedule as product releases?,Yes (5) | No (3)
+Are there formal community meetings?,Yes (5) | No (4)
+Is there a documentation manager/lead?,Yes (5) | No (5)
+" -- If yes, is there a way for one of our CCS folks to run for this role?",Yes (5) | No (1)
+What tools are used in creating documents?,Asciidoctor (5) | Gitbook (1) | RST + Sphinx (3) | Jekyll (3) | Confluence (1) | Other wiki (1) | HTML (1)
+Average number of commits a month to code,_number_
+Average number of commits a month to docs,_number_
+|===
