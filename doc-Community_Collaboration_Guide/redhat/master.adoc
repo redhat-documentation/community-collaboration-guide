@@ -14,6 +14,8 @@ include::common/attributes/redhat.adoc
 :numbered:
 include::topics/introduction.adoc[]
 
+include::topics/community_evaluation.adoc[]
+
 include::topics/structure.adoc[]
 
 include::topics/supported_tools.adoc[]
@@ -29,10 +31,3 @@ include::topics/tips_and_tricks.adoc[]
 include::topics/contacts.adoc[]
 
 include::topics/contributing_to_the_framework.adoc[]
-
-
-
-
-
-
-
