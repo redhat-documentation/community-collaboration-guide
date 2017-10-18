@@ -11,16 +11,18 @@ This section discusses repository and directory structure and how to structure y
 
 The first steps towards documenting a project are often found in the README file of the repository.   Eventually the project will grow to where there is a need for more documentation than you can fit in a single README, and that may appear in the form of a project wiki, a separate installation guide, possibly a developer guide, and one or more user guides.   You may start out with all of the documentation in the same repository as the code, but as things grow more complex, you may want to consider having a separate repository for your documentation.  This makes it easier for community members who may only want to contribute to the documentation, as they don’t have to worry about merge conflicts in the code.
 
-As your project grows, you should consider the structure you want to use for your documentation directory.  Directories should be structured in a logical and related fashion. Many projects have a documentation repo or folder for their project web page, and possibly a separate repo or folder for the project documentation.  You may choose to have separate repositories for each “manual” or you may choose to have all the documents in your doc set share a repository.  Contribution style and build requirements are two primary considerations when you decide how to proceed.
+As your project grows, you should consider the structure you want to use for your documentation directory.  Directories should be structured in a logical and related fashion. Many projects have a documentation repo or directory for their project web page, and possibly a separate repo or directory for the project documentation.  You may choose to have separate repositories for each “manual” or you may choose to have all the documents in your doc set share a repository.  Contribution style and build requirements are two primary considerations when you decide how to proceed.
 
-* Add a docs folder to the code repository.  This makes it easier for developers to update the documentation, but may present a challenge for non-developers who want to contribute to the documentation but may not know now to resolve merge conflicts in the code.
-* Add a new repo for each new title or document. The single title per repository model allows independent updates between titles, but prevents topic sharing among titles.
-* Add a new repo with multiple titles or documents. The multiple title per repository model enables simple-and-easy topic-sharing between titles, but does require building all titles when updates are made.
+Add a docs directory to the code repository.:: This makes it easier for developers to update the documentation, but may present a challenge for non-developers who want to contribute to the documentation but may have difficulties following the repository workflow used by developers.
+
+Add a new repo for each new title or document.:: The single title per repository model allows independent updates between titles, but prevents topic sharing among titles.
+
+Add a new repo with multiple titles or documents.:: The multiple title per repository model enables simple-and-easy topic sharing between titles, but does require building all titles when updates are made.
 
 [[ccg-flat-file-structure]]
 === Flat File Structure
 
-In a flat-file structure there are no sub-directories, just one folder with all the documentation files in a single directory.  A flat file structure might be as simple as a single README file, or contain a complete manual. A flat file structure for an asciidoc manual might look something like this:
+In a flat-file structure there are no sub-directories, just one directory with all the documentation files in a single directory.  A flat file structure might be as simple as a single README file, or contain a complete guide. A flat file structure for an AsciiDoc guide might look something like this:
 
 ....
 ├── README.adoc
@@ -44,7 +46,7 @@ In a flat file system every file must have a different name because there is onl
 [[ccg-single-book-structure]]
 === Single Book Structure
 
-If you do not share any content between books you may choose a single book per directory structure.  A structure with a single asciidoc manual per repository might look something like this:
+If you do not share any content between books you may choose a single book per directory structure.  A structure with a single AsciiDoc guide per repository might look something like this:
 
 ....
 ├── README.adoc
@@ -73,12 +75,14 @@ If you do not share any content between books you may choose a single book per d
 === Multiple Book Structure
 If you have common files that you want to reuse between books, you may choose a more complex directory structure, where all the books live in the same repository and have access to common files.
 
-Note that in the following multiple book structure each “book” directory has a symlink to a common directory for topic files.  This allows you to use any individual topic in any book, saving time writing and updating topics that appear in more than one place.  This structure also uses a common folder for images inside the topics folder, again allowing for reuse of images such as button icons and product logos.  And the attributes file is also common, allowing for the same replacement variables in all files and books.
+Note that in the following multiple book structure each “book” directory has a symlink to a common directory for topic files.  This allows you to use any individual topic in any book, saving time writing and updating topics that appear in more than one place.  This structure also uses a common directory for images inside the topics directory, again allowing for reuse of images such as button icons and product logos.  And the attributes file is also common, allowing for the same replacement variables in all files and books.
 
-A structure with multiple asciidoc manuals per repository and a single topic directory might look something like this:
+A structure with multiple AsciiDoc guides per repository and a single topic directory might look something like this:
+
 ////
 internal Up/Down repo template on Red Hat GitLab https://gitlab.cee.redhat.com/ccs-tools-documentation/up-down-repo-template#use-this-repository-template
 ////
+
 ....
 ├── README.md
 ├── docs
@@ -109,7 +113,7 @@ internal Up/Down repo template on Red Hat GitLab https://gitlab.cee.redhat.com/c
 │   │   │   ├──  topic-shared-2.adoc
 ....
 
-And a structure with multiple asciidoc manuals per repository and multiple topic directories might look something like this:
+And a structure with multiple AsciiDoc guides per repository and multiple topic directories might look something like this:
 ////
 Silas’s Multi-topic repo template on GitHub
 https://github.com/silasrh/multi-topic-level-repo-template
@@ -183,33 +187,21 @@ In general when writing content you want to use simple language and avoid jargon
 [[ccg-file-naming]]
 === File Naming
 
-No matter what repo and directory structure you choose, folder and file names should be clear and consistent.
+No matter what repo and directory structure you choose, directory and file names should be clear and consistent.
 
 * Numbered file names like "52187.adoc" or “IMG_390.png” are more likely to cause confusion for other contributors.
 * Short file names are good, as long as they're still meaningful.  But give enough detail to make the content clear (“overview.adoc” could be anything).
 * Long file names are often unwieldy, hard to work with, and easy to mistype.  Try to find the right balance for file name length.
 * File names should reflect the topic they cover to help contributors find content in your files.
 * Do not include the project or product name, book name, release version, or anything similar in file names.
-* Do not hard code file names when linking documents, use  relative paths to the topic or folder.
-
-[[ccg-asciidoc-converter]]
-=== Asciidoc Converters
-
-If your project is not already written in Asciidoc and you want to migrate from markdown or another markup language, there are a variety of conversion tools available.
-
-* The Atom editor has a https://atom.io/packages/markdown-to-asciidoc[package to convert markdown to asciidoc].
-
-* There is a plugin to https://chrome.google.com/webstore/detail/asciidoc-processor/eghlmnhjljbjodpeehjjcgfcjegcfbhk?hl=en[convert Google docs to asciidoc].
-
-* https://pandoc.org/[Pandoc] can convert between a large number of different markup and file formats including DocBook, Emacs Org-Mode, EPUB, HTML, LaTeX, LibreOffice ODT, markdown, MediaWiki markup, Microsoft Word docx, OPML, reStructuredText, textile, TWiki markup, and Txt2Tags.
-
+* Do not hard-code file names when linking documents, use  relative paths to the topic or directory.
 
 [[ccg-asciidoc-attributes]]
 === AsciiDoc Attributes
 
 AsciiDoc attributes are variables you can use in common files to avoid hard-coding brand-specific information. Using attributes allows you to more easily share content between multiple brands. To use attributes, first define them in the relevant _brand_ AsciiDoc attribute file in the `common` directory. Then, include the _brand_ AsciiDoc attribute file in the `master.adoc` file for the relevant document. Finally, replace brand-specific terms with the variable names that you have defined, and use `ifdef` statements to indicate mark blocks of brand-specific content.
 
-Common AsciiDoc attributes include product name, abbreviated product name, and product version. For more information about attributes  and `ifdef` statements, see http://www.methods.co.nz/asciidoc/userguide.html#X18[Attribute Entries] and http://www.methods.co.nz/asciidoc/userguide.html#_conditional_inclusion_macros[Conditional Inclusion Macros] in the __AsciiDoc User Guide__.
+Common AsciiDoc attributes include product name, abbreviated product name, and product version. For more information about attributes  and `ifdef` statements, see http://asciidoctor.org/docs/user-manual/#attributes[Attributes] and http://asciidoctor.org/docs/user-manual/#conditional-preprocessor-directives[Conditional Preprocessor Directives] in the __Asciidoctor User Guide__.
 
 The example below creates attributes for the *Community Documentation* brand.
 
@@ -308,3 +300,16 @@ endif::redhat[]
 === Synchronizing Content
 
 Placeholder text.
+
+[[ccg-asciidoc-converter]]
+=== AsciiDoc Converters
+
+If your project is not already written in AsciiDoc and you want to migrate from Markdown or another markup language, there are a variety of conversion tools available.
+
+* The Atom editor has a https://atom.io/packages/markdown-to-asciidoc[package to convert Markdown to AsciiDoc].
+
+* There is a plugin to https://chrome.google.com/webstore/detail/asciidoc-processor/eghlmnhjljbjodpeehjjcgfcjegcfbhk?hl=en[convert Google docs to AsciiDoc].
+
+* https://pandoc.org/[Pandoc] can convert between a large number of different markup and file formats including DocBook, Emacs Org-Mode, EPUB, HTML, LaTeX, LibreOffice ODT, Markdown, MediaWiki markup, Microsoft Word docx, OPML, reStructuredText, textile, TWiki markup, and Txt2Tags.
+
+* https://github.com/lruzicka/rst2adoc/[rst2adoc] is an AsciiDoc builder and writer for Sphinx that allows you to convert reStructuredText (RST) files to AsciiDoc using the Sphinx build system.

@@ -12,7 +12,7 @@ Subsequent sections provide details for conducting each activity.
 [[ccg--proposing-a-change]]
 === Proposing a Change to the Template
 
-Currently, the best method for proposing a change to the template is to open an issue in the `community-contribution-template` GitHub repository.
+Currently, the best method for proposing a change to the template is to open an issue in the https://github.com/redhat-documentation/community-contribution-template[community-contribution-template] GitHub repository.
 
 .Prerequisites
 
@@ -20,7 +20,7 @@ You must be a member of the GitHub `community-contribution-template` repository.
 
 .Procedure
 
-. Navigate to the *Issues* tab and click *New issue.* The window for creating a new issue is displayed.
+. Navigate to the https://github.com/redhat-documentation/community-contribution-template/issues[*Issues*] tab and click *New issue.* The window for creating a new issue is displayed.
 
 . In the `Title` field, type a concise summary of the template change you are proposing.
 
@@ -31,10 +31,6 @@ You must be a member of the GitHub `community-contribution-template` repository.
 . (Optional) Navigate to the `Preview` tab to review your submission.
 
 . Click `Submit new issue`. The title and number of your open issue are displayed in a new window.
-
-.Related Information
-
-https://github.com/redhat-documentation/community-contribution-template/[Community Contribution Template Repository]
 
 [[ccg-updating-collaboration-guide]]
 === Updating the Community Collaboration Guide
