@@ -55,7 +55,7 @@ We encourage contributions to the _Community Collaboration Guide_. In particular
 
 .Related Information
 
-https://help.github.com/articles/set-up-git/[Set Up Git]
+https://help.github.com/articles/set-up-git/[Set Up Git^]
 
 [discrete]
 [[ccg-fork-the-upstream-repository]]
