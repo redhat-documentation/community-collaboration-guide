@@ -107,7 +107,7 @@ rm $branch.zip <4>
 <2> Download the archive (`.zip`) file from GitHub, which includes a snapshot of the latest content from the `$branch` branch and store it locally as the file, `$branch.zip`.
 <3> Extract the relevant documentation files from the archive and put them into the `upstream` subdirectory.
 Note that the `unzip` command is a remarkably flexible tool for extracting content from the archive.
-In this particular case, the Asciidoc files are embedded in the Java code base and scattered across hundreds of subdirectories.
+In this particular case, the AsciiDoc files are embedded in the Java code base and scattered across hundreds of subdirectories.
 But thanks to the globbing capabilities of `unzip`, it takes only a few commands to find and extract all the relevant files.
 <4> Clean up, by removing the downloaded archive, `$branch.zip`.
 
