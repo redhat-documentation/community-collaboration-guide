@@ -201,7 +201,7 @@ No matter what repo and directory structure you choose, directory and file names
 
 AsciiDoc attributes are variables you can use in common files to avoid hard-coding brand-specific information. Using attributes allows you to more easily share content between multiple brands. To use attributes, first define them in the relevant _brand_ AsciiDoc attribute file in the `common` directory. Then, include the _brand_ AsciiDoc attribute file in the `master.adoc` file for the relevant document. Finally, replace brand-specific terms with the variable names that you have defined, and use `ifdef` statements to indicate mark blocks of brand-specific content.
 
-Common AsciiDoc attributes include product name, abbreviated product name, and product version. For more information about attributes  and `ifdef` statements, see http://asciidoctor.org/docs/user-manual/#attributes[Attributes] and http://asciidoctor.org/docs/user-manual/#conditional-preprocessor-directives[Conditional Preprocessor Directives] in the __Asciidoctor User Guide__.
+Common AsciiDoc attributes include product name, abbreviated product name, and product version. For more information about attributes  and `ifdef` statements, see http://asciidoctor.org/docs/user-manual/#attributes[Attributes^] and http://asciidoctor.org/docs/user-manual/#conditional-preprocessor-directives[Conditional Preprocessor Directives^] in the __Asciidoctor User Guide__.
 
 The example below creates attributes for the *Community Documentation* brand.
 
@@ -262,7 +262,7 @@ When your source content is ready to be reviewed or published, you can render it
 
 See the project home page for instructions on how to install AsciiDoctor on a variety of platforms:
 
-* http://asciidoctor.org/
+* http://asciidoctor.org/[http://asciidoctor.org/^]
 
 The following is the basic syntax for rendering content into a display format:
 
@@ -289,7 +289,7 @@ The following example outlines how to render the content as an article instead o
 $ asciidoctor -d article master.adoc
 ----
 
-For additional examples, including instructions on how to render content in formats other than HTML such as PDF, EPUB3, and LaTeX, see link:http://asciidoctor.org/docs/render-documents/[How do I render a document?] on the AsciiDoctor project home page.
+For additional examples, including instructions on how to render content in formats other than HTML such as PDF, EPUB3, and LaTeX, see link:http://asciidoctor.org/docs/render-documents/[How do I render a document?^] on the AsciiDoctor project home page.
 endif::community[]
 
 ifdef::redhat[]
@@ -306,10 +306,10 @@ Placeholder text.
 
 If your project is not already written in AsciiDoc and you want to migrate from Markdown or another markup language, there are a variety of conversion tools available.
 
-* The Atom editor has a https://atom.io/packages/markdown-to-asciidoc[package to convert Markdown to AsciiDoc].
+* The Atom editor has a https://atom.io/packages/markdown-to-asciidoc[package to convert Markdown to AsciiDoc^].
 
-* There is a plugin to https://chrome.google.com/webstore/detail/asciidoc-processor/eghlmnhjljbjodpeehjjcgfcjegcfbhk?hl=en[convert Google docs to AsciiDoc].
+* There is a plugin to https://chrome.google.com/webstore/detail/asciidoc-processor/eghlmnhjljbjodpeehjjcgfcjegcfbhk?hl=en[convert Google docs to AsciiDoc^].
 
-* https://pandoc.org/[Pandoc] can convert between a large number of different markup and file formats including DocBook, Emacs Org-Mode, EPUB, HTML, LaTeX, LibreOffice ODT, Markdown, MediaWiki markup, Microsoft Word docx, OPML, reStructuredText, textile, TWiki markup, and Txt2Tags.
+* https://pandoc.org/[Pandoc^] can convert between a large number of different markup and file formats including DocBook, Emacs Org-Mode, EPUB, HTML, LaTeX, LibreOffice ODT, Markdown, MediaWiki markup, Microsoft Word docx, OPML, reStructuredText, textile, TWiki markup, and Txt2Tags.
 
-* https://github.com/lruzicka/rst2adoc/[rst2adoc] is an AsciiDoc builder and writer for Sphinx that allows you to convert reStructuredText (RST) files to AsciiDoc using the Sphinx build system.
+* https://github.com/lruzicka/rst2adoc/[rst2adoc^] is an AsciiDoc builder and writer for Sphinx that allows you to convert reStructuredText (RST) files to AsciiDoc using the Sphinx build system.

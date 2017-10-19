@@ -27,7 +27,7 @@ $ asciibinder package
 
 The output of this command is saved in the `<docs_repo_dir>/_package/<distro>/<branch_dir_name>` directory. Each sub-directory in the `_package` represents the website content for a single brand, and can be copied to a hosting server as is.
 
-Reference:: http://asciibinder.org/latest/guides/user_guide.html#building-the-docs
+Reference:: http://asciibinder.org/latest/guides/user_guide.html#building-the-docs[http://asciibinder.org/latest/guides/user_guide.html#building-the-docs^]
 
 
 [[ccg-rpm-packaging]]
