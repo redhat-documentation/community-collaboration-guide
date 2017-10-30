@@ -1,6 +1,6 @@
 ## Build files
-*/community/master.html
+/community/master.html
 ## Build directories
 */build/*
-*/redhat/build/*
-*/community/build/*
+/redhat/build/*
+/community/build/*
