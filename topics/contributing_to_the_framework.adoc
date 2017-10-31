@@ -12,15 +12,15 @@ Subsequent sections provide details for conducting each activity.
 [[ccg--proposing-a-change]]
 === Proposing a Change to the Template
 
-Currently, the best method for proposing a change to the template is to open an issue in the https://github.com/redhat-documentation/community-contribution-template[community-contribution-template] GitHub repository.
+Currently, the best method for proposing a change to the template is to open an issue in the https://github.com/redhat-documentation/community-collaboration-guide[community-collaboration-guide] GitHub repository.
 
 .Prerequisites
 
-You must be a member of the GitHub `community-contribution-template` repository.
+You must be a member of the GitHub `community-collaboration-guide` repository.
 
 .Procedure
 
-. Navigate to the https://github.com/redhat-documentation/community-contribution-template/issues[*Issues*] tab and click *New issue.* The window for creating a new issue is displayed.
+. Navigate to the https://github.com/redhat-documentation/community-collaboration-guide/issues[*Issues*] tab and click *New issue.* The window for creating a new issue is displayed.
 
 . In the `Title` field, type a concise summary of the template change you are proposing.
 
@@ -61,9 +61,9 @@ https://help.github.com/articles/set-up-git/[Set Up Git^]
 [[ccg-fork-the-upstream-repository]]
 === Fork the Upstream (GitHub) Repository
 
-Fork the `community-contribution-template` upstream repository to create a fork under your own GitHub ID. This allows you to work on multiple pieces of content and push changes to branches in your local GitHub instance. When you are ready, you can request the changes be merged from your local fork into the upstream repository.
+Fork the `community-collaboration-guide` upstream repository to create a fork under your own GitHub ID. This allows you to work on multiple pieces of content and push changes to branches in your local GitHub instance. When you are ready, you can request the changes be merged from your local fork into the upstream repository.
 
-. Open a browser and navigate to the upstream repository located at https://github.com/redhat-documentation/community-contribution-template[https://github.com/redhat-documentation/community-contribution-template].
+. Open a browser and navigate to the upstream repository located at https://github.com/redhat-documentation/community-collaboration-guide[https://github.com/redhat-documentation/community-collaboration-guide].
 
 . Click the *Fork* button located in the upper right, under your profile icon.
 
@@ -86,15 +86,15 @@ Clone the repository. Your fork is the `origin` location for your local files.
 . Type the following command:
 [options="nowrap",subs="+quotes"]
 ----
-$ git clone git@github.com:USERNAME/community-contribution-template.git
+$ git clone git@github.com:USERNAME/community-collaboration-guide.git
 ----
 In this and subsequent examples, _USERNAME_ represents your GitHub User ID.
 
 [start=3]
-. Navigate to the newly created `community-contribution-template` directory.
+. Navigate to the newly created `community-collaboration-guide` directory.
 [options="nowrap",subs="+quotes"]
 ----
-$ cd community-contribution-template/
+$ cd community-collaboration-guide/
 ----
 
 [discrete]
@@ -107,15 +107,15 @@ After you have forked and cloned the upstream repository, connect it to your loc
 [options="nowrap",subs="+quotes"]
 ----
 $ git remote -v
-origin	git@github.com:USERNAME/community-contribution-template.git (fetch)
-origin	git@github.com:USERNAME/community-contribution-template.git (push)
+origin	git@github.com:USERNAME/community-collaboration-guide.git (fetch)
+origin	git@github.com:USERNAME/community-collaboration-guide.git (push)
 ----
 
 [start=2]
 . Add the upstream as a remote repository and fetch its contents. This allows you to check out and work with the latest source.
 [options="nowrap",subs="+quotes"]
 ----
-$ git remote add -f upstream git@github.com:redhat-documentation/community-contribution-template.git
+$ git remote add -f upstream git@github.com:redhat-documentation/community-collaboration-guide.git
 ----
 
 [start=3]
@@ -125,10 +125,10 @@ $ git remote add -f upstream git@github.com:redhat-documentation/community-contr
 [options="nowrap",subs="+quotes"]
 ----
 $ git remote -v
-origin	git@github.com:USERNAME/community-contribution-template.git (fetch)
-origin	git@github.com:USERNAME/community-contribution-template.git  (push)
-upstream	git@github.com:redhat-documentation/community-contribution-template.git (fetch)
-upstream	git@github.com:redhat-documentation/community-contribution-template.git (push)
+origin	git@github.com:USERNAME/community-collaboration-guide.git (fetch)
+origin	git@github.com:USERNAME/community-collaboration-guide.git  (push)
+upstream	git@github.com:redhat-documentation/community-collaboration-guide.git (fetch)
+upstream	git@github.com:redhat-documentation/community-collaboration-guide.git (push)
 ----
 
 [discrete]
