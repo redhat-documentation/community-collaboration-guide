@@ -1,0 +1,30 @@
+sudo: required
+
+branches:
+  only:
+  - master # Name of the branch from which to publish
+
+services:
+  - docker
+
+before_install:
+  - mkdir -p output
+  - docker pull asciidoctor/docker-asciidoctor
+
+script:
+  - docker run -v $TRAVIS_BUILD_DIR:/documents/ --name asciidoc-to-html asciidoctor/docker-asciidoctor asciidoctor -o index.html -D /documents/output community/master.adoc
+
+after_error:
+  - docker logs asciidoc-to-html
+  - docker logs asciidoc-to-pdf
+
+after_failure:
+  - docker logs asciidoc-to-html
+  - docker logs asciidoc-to-pdf
+
+after_success:
+  - cd output ; git init
+  - git config user.name "${USER_NAME}" # USER_NAME must be defined in Travis
+  - git config user.email "${USER_EMAIL}" # USER_EMAIL must be defined in Travis
+  - git add *.html ; git commit -m "Deploy to GitHub Pages"
+  - git push --force "https://${TOKEN}@${REF}" HEAD:publish # TOKEN and REF must be defined in Travis; publish is the name of the deployment branch

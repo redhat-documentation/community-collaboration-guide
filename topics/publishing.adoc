@@ -66,8 +66,8 @@ before_install:
   - docker pull asciidoctor/docker-asciidoctor
 
 script:
-  - docker run -v $TRAVIS_BUILD_DIR:/documents/ --name asciidoc-to-html asciidoctor/docker-asciidoctor asciidoctor -D /documents/output community/index.adoc
-  - docker run -v $TRAVIS_BUILD_DIR:/documents/ --name asciidoc-to-pdf asciidoctor/docker-asciidoctor asciidoctor-pdf -D /documents/output community/index.adoc # Only needed when also building PDF
+  - docker run -v $TRAVIS_BUILD_DIR:/documents/ --name asciidoc-to-html asciidoctor/docker-asciidoctor asciidoctor -o index.html -D /documents/output community/master.adoc
+  - docker run -v $TRAVIS_BUILD_DIR:/documents/ --name asciidoc-to-pdf asciidoctor/docker-asciidoctor asciidoctor-pdf -D /documents/output community/master.adoc # Only needed when also building PDF
 
 after_error:
   - docker logs asciidoc-to-html
@@ -82,7 +82,7 @@ after_success:
   - git config user.name "${USER_NAME}" # USER_NAME must be defined in Travis
   - git config user.email "${USER_EMAIL}" # USER_EMAIL must be defined in Travis
   - git add *.html ; git commit -m "Deploy to GitHub Pages"
-  - git push --force "https://${TOKEN}@${REF}" master:publish # TOKEN and REF must be defined in Travis; publish is the name of the deployment branch
+  - git push --force "https://${TOKEN}@${REF}" HEAD:publish # TOKEN and REF must be defined in Travis; publish is the name of the deployment branch
 ----
 
 [[ccg-other]]
