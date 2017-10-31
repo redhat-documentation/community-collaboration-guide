@@ -11,6 +11,8 @@
 :numbered:
 include::topics/introduction.adoc[]
 
+include::topics/community_evaluation.adoc[]
+
 include::topics/structure.adoc[]
 
 include::topics/supported_tools.adoc[]
