@@ -85,7 +85,7 @@ after_success:
   - git push --force "https://${TOKEN}@${REF}" HEAD:gh-pages # TOKEN and REF must be defined in Travis; gh-pages is the name of the deployment branch
 ----
 
-[[ccg-other]]
-=== Other
+//[[ccg-other]]
+//=== Other
 
-Placeholder text.
+//Add if necessary.
