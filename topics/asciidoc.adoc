@@ -1,0 +1,123 @@
+[[asciidoc]]
+== AsciiDoc
+http://asciidoc.org/[AsciiDoc] is a text document format that you can use to write documentation, articles, books, web pages, and blogs. AsciiDoc files can be translated to many formats including HTML, PDF, EPUB, and man page.
+
+The Red Hat documentation team uses http://asciidoctor.org/[Asciidoctor] as part of the publishing toolchain.
+
+[[ccg-asciidoc-attributes]]
+=== AsciiDoc Attributes
+
+AsciiDoc attributes are variables you can use in common files to avoid hard-coding brand-specific information. Using attributes allows you to more easily share content between multiple brands. To use attributes, first define them in the relevant _brand_ AsciiDoc attribute file in the `common` directory. Then, include the _brand_ AsciiDoc attribute file in the `master.adoc` file for the relevant document. Finally, replace brand-specific terms with the variable names that you have defined, and use `ifdef` statements to indicate mark blocks of brand-specific content.
+
+Common AsciiDoc attributes include product name, abbreviated product name, and product version. For more information about attributes  and `ifdef` statements, see http://asciidoctor.org/docs/user-manual/#attributes[Attributes^] and http://asciidoctor.org/docs/user-manual/#conditional-preprocessor-directives[Conditional Preprocessor Directives^] in the __Asciidoctor User Guide__.
+
+The example below creates attributes for the *Community Documentation* brand.
+
+. Create a new `community.adoc` file in the `common/attributes/` directory.
+
+. Open the file, and add your attribute mappings, each entry on a new line:
++
+----
+:product-name: Community Documentation
+:product-name_short: Community
+:product-name_abbr: cd
+:product-version: 1.0
+----
++
+. Save the file.
+. In each _doc-Guide_Name_/`community` directory, edit the `master.adoc` file. Include the attribute file, and add the variable name you want to use to identify `ifdef` statements:
++
+----
+include::common/attributes/community.adoc
+
+:community:
+----
++
+. Anywhere in a common topic file that you would normally use the product name or version, use the following values instead:
++
+----
+{product-name}
+{product-name_short}
+{product-name_abbr}
+{product-version}
+----
++
+. Anywhere in a common topic file that you need a section of text to appear only in the *Community Documentation* version of the guide, use an ifdef statement:
++
+----
+// An ifdef for an entire sentence or paragraph
+ ifdef::community[]
+ This is a sentence that applies only to the Community Documentation version of the document.
+ endif::community[]
+
+// An ifdef for an inline reference, which includes an entry for another brand
+ See
+ ifdef::community[the Community Standards Guide.]
+ ifdef::productx[the Product X Conventions Guide.]
+----
++
+
+The `ifdef` statement must be at the start of a new line, even for inline references. When the *Community Documentation* version of the guide is rendered, the content inside the `ifdef` statements for `community` will appear, and the content inside the `ifdef` statements for `productx` will be excluded. Any content not included inside an `ifdef` statement will appear in rendered guides for all brands.
+
+. Render the guide to verify that your attributes are appearing correctly.
+
+
+[[ccg-rendering-content]]
+=== Rendering Content
+
+ifdef::community[]
+When your source content is ready to be reviewed or published, you can render it into a display format that can be hosted on a website, included directly in a product, or otherwise accessed by your users. The recommended tool for rendering AsciiDoc into a display format is AsciiDoctor. AsciiDoctor is a fully open-source, Ruby-based implementation of AsciiDoc, and is also the tool that GitHub itself uses to render the content of files written in AsciiDoc.
+
+See the project home page for instructions on how to install AsciiDoctor on a variety of platforms:
+
+* http://asciidoctor.org/[http://asciidoctor.org/^]
+
+The following is the basic syntax for rendering content into a display format:
+
+[options="nowrap" subs="verbatim,quotes"]
+----
+$ asciidoctor master.adoc
+----
+
+This command creates a single HTML file of the same name and in the same directory as the specified master file. The master file does not need to be in the current working directory, and you can specify either a relative path or absolute path to it.
+
+In addition to this basic syntax, AsciiDoctor also provides a number of options that allow you to customize the location and format of the content that it renders.
+
+The following example outlines how to specify a custom output directory:
+
+[options="nowrap" subs="verbatim,quotes"]
+----
+$ asciidoctor -D ./output master.adoc
+----
+
+The following example outlines how to render the content as an article instead of as a book:
+
+[options="nowrap" subs="verbatim,quotes"]
+----
+$ asciidoctor -d article master.adoc
+----
+
+For additional examples, including instructions on how to render content in formats other than HTML such as PDF, EPUB3, and LaTeX, see link:http://asciidoctor.org/docs/render-documents/[How do I render a document?^] on the AsciiDoctor project home page.
+endif::community[]
+
+ifdef::redhat[]
+You can use `ccutil` to build a local preview of your content in the same way as repositories that do not use this repository structure. The only difference is that the command must be run in the `redhat` brand directory where the master file is located instead of in the default content directory. Pantheon builds and build scripts must also be updated to specify the `redhat` brand directory.
+endif::redhat[]
+
+[[ccg-synchronizing-content]]
+=== Synchronizing Content
+
+Placeholder text.
+
+[[ccg-asciidoc-converter]]
+=== AsciiDoc Converters
+
+If your project is not already written in AsciiDoc and you want to migrate from Markdown or another markup language, there are a variety of conversion tools available.
+
+* The Atom editor has a https://atom.io/packages/markdown-to-asciidoc[package to convert Markdown to AsciiDoc^].
+
+* There is a plugin to https://chrome.google.com/webstore/detail/asciidoc-processor/eghlmnhjljbjodpeehjjcgfcjegcfbhk?hl=en[convert Google docs to AsciiDoc^].
+
+* https://pandoc.org/[Pandoc^] can convert between a large number of different markup and file formats including DocBook, Emacs Org-Mode, EPUB, HTML, LaTeX, LibreOffice ODT, Markdown, MediaWiki markup, Microsoft Word docx, OPML, reStructuredText, textile, TWiki markup, and Txt2Tags.
+
+* https://github.com/lruzicka/rst2adoc/[rst2adoc^] is an AsciiDoc builder and writer for Sphinx that allows you to convert reStructuredText (RST) files to AsciiDoc using the Sphinx build system.
