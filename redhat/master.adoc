@@ -1,4 +1,4 @@
-= Community Contribution Guide
+= Community Collaboration Guide
 :imagesdir: images
 :doctype: book
 :toc: left
@@ -16,6 +16,8 @@ include::topics/community_evaluation.adoc[]
 //Community collaboration chapter here
 
 include::topics/structure.adoc[]
+
+include::topics/asciidoc.adoc[]
 
 include::topics/migrating_an_existing_repository.adoc[]
 
