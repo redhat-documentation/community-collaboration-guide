@@ -23,9 +23,7 @@ include::topics/migrating_an_existing_repository.adoc[]
 
 include::topics/asciidoc.adoc[]
 
-include::topics/supported_tools.adoc[]
-
-//Rendering instructions here from issue 43
+include::topics/building.adoc[]
 
 include::topics/publishing.adoc[]
 
