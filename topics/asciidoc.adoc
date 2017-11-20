@@ -104,11 +104,6 @@ ifdef::redhat[]
 You can use `ccutil` to build a local preview of your content in the same way as repositories that do not use this repository structure. The only difference is that the command must be run in the `redhat` brand directory where the master file is located instead of in the default content directory. Pantheon builds and build scripts must also be updated to specify the `redhat` brand directory.
 endif::redhat[]
 
-[[ccg-synchronizing-content]]
-=== Synchronizing Content
-
-Placeholder text.
-
 [[ccg-asciidoc-converter]]
 === AsciiDoc Converters
 
