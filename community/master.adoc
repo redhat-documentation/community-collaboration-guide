@@ -1,4 +1,4 @@
-= Community Contribution Guide
+= Community Collaboration Guide
 Red Hat Customer Content Services
 :imagesdir: images
 :doctype: book
