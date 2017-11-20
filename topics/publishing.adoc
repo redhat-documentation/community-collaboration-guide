@@ -3,7 +3,6 @@
 
 Placeholder text.
 
-
 [[ccg-asciibinder]]
 === AsciiBinder
 
@@ -33,8 +32,6 @@ Reference:: http://asciibinder.org/latest/guides/user_guide.html#building-the-do
 === Microservices
 
 Placeholder text.
-
-Reference::https://placeholder.url[]
 
 [[ccg-travis-container]]
 === Using Travis CI and Asciidoctor Container to Publish to GitHub Pages
