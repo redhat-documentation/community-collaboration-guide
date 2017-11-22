@@ -1,7 +1,9 @@
 [[ccg-building-content]]
 == Building Content
 
-Placeholder text.
+Writing your documentation using Asciidoc or other formats means that you can build HTML, PDF, EPUB, and man pages. During the writing process, you build your documentation to test and review the content. Depending on the complexity of the documentation, you might decide to adopt a tool that helps you organize the building of documentation sets, for example, AsciiBinder.
+
+You might want to automate the build process, for example, xref:ccg-travis-container[].
 
 [[ccg-rendering-content-locally]]
 === Rendering Content Locally
