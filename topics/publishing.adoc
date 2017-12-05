@@ -1,7 +1,7 @@
 [[ccg-publishing-content]]
 == Publishing Content
 
-Placeholder text.
+To be useful, content must be published to a public location that end users can access. There are multiple ways to publish. Some commonly used tools are described in this section.
 
 [[ccg-asciibinder]]
 === AsciiBinder
