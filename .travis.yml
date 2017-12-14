@@ -12,19 +12,18 @@ before_install:
   - docker pull asciidoctor/docker-asciidoctor
 
 script:
-  - docker run -v $TRAVIS_BUILD_DIR:/documents/ --name asciidoc-to-html asciidoctor/docker-asciidoctor asciidoctor -o index.html -D /documents/output community/master.adoc
+  - docker run -v $TRAVIS_BUILD_DIR:/documents/ --name asciidoc-to-html asciidoctor/docker-asciidoctor asciidoctor --destination-dir=/documents/output --out-file=index.html community/master.adoc
 
 after_error:
   - docker logs asciidoc-to-html
-  - docker logs asciidoc-to-pdf
 
 after_failure:
   - docker logs asciidoc-to-html
-  - docker logs asciidoc-to-pdf
 
-after_success:
-  - cd output ; git init
-  - git config user.name "${USER_NAME}" # USER_NAME must be defined in Travis
-  - git config user.email "${USER_EMAIL}" # USER_EMAIL must be defined in Travis
-  - git add *.html ; git commit -m "Deploy to GitHub Pages"
-  - git push --force "https://${TOKEN}@${REF}" HEAD:gh-pages # TOKEN and REF must be defined in Travis; gh-pages is the name of the deployment branch
+deploy:
+  provider: pages
+  skip_cleanup: true
+  github_token: $TOKEN # Set in travis-ci.org dashboard
+  local_dir: output
+  on:
+    branch: master

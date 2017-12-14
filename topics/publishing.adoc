@@ -36,11 +36,11 @@ Placeholder text.
 [[ccg-travis-container]]
 === Using Travis CI and Asciidoctor Container to Publish to GitHub Pages
 
-This publishing mechanism uses a single configuration file ``.travis.yml`` and is based on a **GitHub** + **Travis CI** + **Asciidoctor container** + **GitHub Pages** toolchain, an idea taken from http://mgreau.com/asciidoc-to-ghpages/[http://mgreau.com/asciidoc-to-ghpages/^].
+This publishing mechanism uses a single configuration file ``.travis.yml`` and is based on a **GitHub** + **Travis CI** + **Asciidoctor container** + **GitHub Pages** toolchain, an idea taken from https://docs.travis-ci.com/user/deployment/pages/[GitHub Pages Deployment^].
 
-Each commit pushed to a pre-configured branch (such as ``master``, ``devel``, or ``stable``) with a ``.travis.yml`` automatically triggers a document build, so you do not need an extra tool installed locally in order to publish an update to the document. When the Asciidoctor container running in Travis CI successfully finishes the build, Travis CI pushes the resulting HTML (and, optionally, PDF) to a deployment branch (such as ``gh-pages`` or ``publish``), and GitHub Pages then publishes the HTML (and PDF) from the deployment branch to the desired URL (for instance, ``my-project.github.io/my-document``).
+Each commit pushed to a pre-configured branch (such as ``master``, ``devel``, or ``stable``) containing a ``.travis.yml`` automatically triggers a document build, so you do not need an extra tool installed locally in order to publish an update to the document. When the Asciidoctor container running in Travis CI successfully finishes the build, Travis CI pushes the resulting HTML (and, optionally, PDF) to a deployment branch (such as ``gh-pages`` or ``publish``), and GitHub Pages then publishes the HTML (and PDF) from the deployment branch to the desired URL (for instance, ``my-project.github.io/my-document``).
 
-A working example that uses this mechanism can be found at https://github.com/redhat-developer/rpm-packaging-guide/[https://github.com/redhat-developer/rpm-packaging-guide/^].
+This publishing mechanism is used to publish the Community Collaboration Guide from https://github.com/redhat-documentation/community-collaboration-guide[https://github.com/redhat-documentation/community-collaboration-guide^].
 
 [[ccg-travisyml]]
 ==== Sample .travis.yml
@@ -53,7 +53,7 @@ sudo: required
 
 branches:
   only:
-  - master # Name of the branch from which to publish
+  - master # Branch from which to publish
 
 services:
   - docker
@@ -63,8 +63,8 @@ before_install:
   - docker pull asciidoctor/docker-asciidoctor
 
 script:
-  - docker run -v $TRAVIS_BUILD_DIR:/documents/ --name asciidoc-to-html asciidoctor/docker-asciidoctor asciidoctor -o index.html -D /documents/output community/master.adoc
-  - docker run -v $TRAVIS_BUILD_DIR:/documents/ --name asciidoc-to-pdf asciidoctor/docker-asciidoctor asciidoctor-pdf -D /documents/output community/master.adoc # Only needed when also building PDF
+  - docker run -v $TRAVIS_BUILD_DIR:/documents/ --name asciidoc-to-html asciidoctor/docker-asciidoctor asciidoctor --destination-dir=/documents/output --out-file=index.html community/master.adoc
+  - docker run -v $TRAVIS_BUILD_DIR:/documents/ --name asciidoc-to-pdf asciidoctor/docker-asciidoctor asciidoctor-pdf --destination-dir=/documents/output --out-file=community-collaboration-guide.pdf community/master.adoc
 
 after_error:
   - docker logs asciidoc-to-html
@@ -74,12 +74,13 @@ after_failure:
   - docker logs asciidoc-to-html
   - docker logs asciidoc-to-pdf
 
-after_success:
-  - cd output ; git init
-  - git config user.name "${USER_NAME}" # USER_NAME must be defined in Travis
-  - git config user.email "${USER_EMAIL}" # USER_EMAIL must be defined in Travis
-  - git add *.html ; git commit -m "Deploy to GitHub Pages"
-  - git push --force "https://${TOKEN}@${REF}" HEAD:gh-pages # TOKEN and REF must be defined in Travis; gh-pages is the name of the deployment branch
+deploy:
+  provider: pages
+  skip_cleanup: true
+  github_token: $TOKEN # Set in travis-ci.org dashboard
+  local_dir: output
+  on:
+    branch: master
 ----
 
 //[[ccg-other]]
