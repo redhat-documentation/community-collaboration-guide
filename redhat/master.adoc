@@ -19,8 +19,6 @@ include::topics/structure.adoc[]
 
 include::topics/creating_a_new_repository.adoc[]
 
-include::topics/migrating_an_existing_repository.adoc[]
-
 include::topics/asciidoc.adoc[]
 
 include::topics/building.adoc[]
@@ -28,7 +26,5 @@ include::topics/building.adoc[]
 include::topics/publishing.adoc[]
 
 include::topics/tips_and_tricks.adoc[]
-
-include::topics/contacts.adoc[]
 
 include::topics/contributing_to_the_framework.adoc[]
