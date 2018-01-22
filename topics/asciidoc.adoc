@@ -69,6 +69,12 @@ When the *Community Documentation* version of the guide is rendered, the content
 Any content not included inside an `ifdef` statement will appear in rendered guides for all brands.
 
 . Render the guide to verify that your attributes are appearing correctly.
+Navigate to the directory containing the `master.adoc`, and use:
++
+[source,bash]
+--
+asciidoctor compile
+--
 
 [ccg-asciidoc-converter]
 === AsciiDoc Converters
