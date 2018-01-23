@@ -16,9 +16,9 @@ include::topics/community_evaluation.adoc[]
 
 //Community collaboration chapter here
 
-include::topics/structure.adoc[]
-
 include::topics/creating_a_new_repository.adoc[]
+
+include::topics/structure.adoc[]
 
 include::topics/asciidoc.adoc[]
 
