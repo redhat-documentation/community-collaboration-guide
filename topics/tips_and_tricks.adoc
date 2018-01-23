@@ -1,4 +1,0 @@
-[[ccg-tips-tricks]]
-== Tips and Tricks
-
-Placeholder text.
