@@ -15,4 +15,4 @@ In principle, single-streamed documentation will be worked on completely in the 
 [[ccg-contacts]]
 == Contacts
 
-Placeholder text.
+To report issues or request enhancements to the Community Collaboration Guide use the link:https://github.com/redhat-documentation/community-collaboration-guide/issues[GitHub issues tool].
