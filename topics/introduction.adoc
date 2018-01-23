@@ -13,6 +13,6 @@ Customer Content Services (CCS) is a Red Hat team responsible for producing docu
 In principle, single-streamed documentation will be worked on completely in the upstream and brought down to the Customer Portal wholesale. In some projects, this process eliminates the overhead of maintaining two separate repositories for documentation content. This framework guides you through the process necessary for deciding if a community is a viable single-stream partner, setting up your repositories, choosing the right tools, and more.
 
 [[ccg-contacts]]
-== Contacts
+=== Contacts
 
 To report issues or request enhancements to the Community Collaboration Guide use the link:https://github.com/redhat-documentation/community-collaboration-guide/issues[GitHub issues tool].
