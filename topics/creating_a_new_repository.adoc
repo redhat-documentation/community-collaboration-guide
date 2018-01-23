@@ -7,12 +7,12 @@ If you are working on a completely new open source project you might need to cre
 === Setting up the Repository
 
 [[ccg-create-repo-setup-prereq]]
-===== Prerequisites
+==== Prerequisites
 
 To create a repository on GitHub you will first need to have an account.
 
 [[ccg-create-repo-setup-procedure]]
-===== Procedure
+==== Procedure
 
 There are several ways to create a new repository in GitHub. One procedure is to:
 
