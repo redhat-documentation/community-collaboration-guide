@@ -28,10 +28,12 @@ The output of this command is saved in the `<docs_repo_dir>/_package/<distro>/<b
 
 Reference:: http://asciibinder.org/latest/guides/user_guide.html#building-the-docs[http://asciibinder.org/latest/guides/user_guide.html#building-the-docs^]
 
+////
 [[ccg-microservices]]
 === Microservices
 
 Placeholder text.
+////
 
 [[ccg-travis-container]]
 === Using Travis CI and Asciidoctor Container to Publish to GitHub Pages
