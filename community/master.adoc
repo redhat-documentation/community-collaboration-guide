@@ -26,6 +26,4 @@ include::topics/building.adoc[]
 
 include::topics/publishing.adoc[]
 
-include::topics/tips_and_tricks.adoc[]
-
 include::topics/contributing_to_the_framework.adoc[]

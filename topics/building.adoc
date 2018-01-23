@@ -1,10 +1,12 @@
 [[ccg-building-content]]
 == Building Content
 
-Writing your documentation using AsciiDoc means that you can build HTML, PDF, EPUB, and man pages. During the writing process, you build your documentation to test and review the content as described in xref:ccg-rendering-content-locally[]. Depending on the complexity of the documentation, you might also decide to adopt a tool that helps you organize the building of documentation sets. Some commonly used tools are described later in this section.
+Writing your documentation using AsciiDoc means that you can build HTML, PDF, EPUB, and man pages. During the writing process, you build your documentation to test and review the content as described in xref:ccg-rendering-content-locally[].
+
+Depending on the complexity of the documentation, you might also decide to adopt a tool other than AsciiDoctor to help you organize the building of documentation sets. Some commonly used tools are described later in this section.
 
 [[ccg-rendering-content-locally]]
-=== Rendering Content Locally
+=== Rendering Content Locally With AsciiDoctor
 
 ifdef::community[]
 When your source content is ready to be reviewed or published, you can render it into a display format that can be hosted on a website, included directly in a product, or otherwise accessed by your users. The recommended tool for rendering AsciiDoc into a display format is AsciiDoctor. AsciiDoctor is a fully open-source, Ruby-based implementation of AsciiDoc, and is also the tool that GitHub itself uses to render the content of files written in AsciiDoc.

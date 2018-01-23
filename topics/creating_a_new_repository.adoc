@@ -1,17 +1,27 @@
 [[ccg-create-repo]]
 == Creating a New Repository
 
-Placeholder text.
+If you are working on a completely new open source project you might need to create a git repository from scratch.  A common option for creating a public repository is to use link:http://github.com[GitHub].
 
 [[ccg-create-repo-setup]]
 === Setting up the Repository
 
-Placeholder text.
+[[ccg-create-repo-setup-prereq]]
+===== Prerequisites
 
-[[ccg-create-repo-synch]]
-=== Configuring Content Synchronization
+To create a repository on GitHub you will first need to have an account.
 
-Placeholder text.
+[[ccg-create-repo-setup-procedure]]
+===== Procedure
+
+There are several ways to create a new repository in GitHub. One procedure is to:
+
+. Log in to GitHub
+. Click the *plus (+) sign* in the top right
+. Choose *New Repository*
+. Provide a *Repository Name*, *Description*, and choose if the repository is *Public* or *Private*
+. Click *Create Repository* to finalize the process
+
 
 [[ccg-create-repo-synch-methods]]
 ==== Synchronization Methods
