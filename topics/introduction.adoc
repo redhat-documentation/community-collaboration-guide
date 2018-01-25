@@ -15,4 +15,6 @@ In principle, single-streamed documentation will be worked on completely in the 
 [[ccg-contacts]]
 === Contacts
 
+Communicate with members of this community by signing up for our mailing list.  To sign up send an empty email to ccs-upstream-subscribe@redhat.com.
+
 To report issues or request enhancements to the Community Collaboration Guide use the link:https://github.com/redhat-documentation/community-collaboration-guide/issues[GitHub issues tool].
