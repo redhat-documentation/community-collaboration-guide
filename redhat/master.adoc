@@ -17,6 +17,8 @@ include::topics/community_evaluation.adoc[]
 
 include::topics/creating_a_new_repository.adoc[]
 
+include::topics/migrating_an_existing_repository.adoc[]
+
 include::topics/structure.adoc[]
 
 include::topics/asciidoc.adoc[]
