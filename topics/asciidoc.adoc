@@ -111,7 +111,12 @@ link:{link-community-docs}#introduction[Community Documentation Introduction^]
 TIP: Use the caret `^` character to enforce the `target=_blank` attribute for the link anchor.
 When clicked the link will always open in a new tab.
 
-[ccg-previewing-your]
+[ccg-previewing-your-content]
+=== Previewing your content
+
+* The AsciiDoctor documentation has a chapter on link:http://asciidoctor.org/docs/editing-asciidoc-with-live-preview/[Editing AsciiDoc with live preview^].
+
+* The Atom editor has a link:https://atom.io/packages/asciidoc-preview[package to render a live preview^] of your AsciiDoc source, which allows you to see your markup rendered as you type it.
 
 [ccg-asciidoc-converter]
 === AsciiDoc Converters
