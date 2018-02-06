@@ -76,6 +76,43 @@ Navigate to the directory containing the `master.adoc`, and use:
 asciidoctor compile
 --
 
+[ccg-attributes-to-links]
+=== Single-sourcing URLs using attributes
+
+In addition to storing product names and versions, attributes can be used to store book-local and cross-book links for your guides.
+Doing this allows you to:
+
+* construct consistently structured and predictable link URLs (especially when combined with explicit ID anchors),
+* single-source your link URLs, making updates easier,
+* eliminate the risk of introducing errors when updating your links.
+
+To store a relative link as an attribute, you must define it in the:
+
+[source,asciidoc,option="nowrap"]
+--
+:link-getting-started: /docs/getting-strated.html
+--
+//Next step: Specify the variable in a link macro.
+
+Attributes can also store external link URLs, allowing you to update them without breaking any links in your guide.
++
+[source,asciidoc,options="nowrap"]
+--
+:link-community-docs: https://docs.example.com/guides/community.html
+--
+
+Use the variable in a link macro.
+The variable will automatically resolve to the URL defined in the attribute when you build your documents.
+
+[source,asciidoc,options="nowrap",subs="attributes+"]
+--
+link:{link-community-docs}#introduction[Community Documentation Introduction^]
+--
+TIP: Use the caret `^` character to enforce the `target=_blank` attribute for the link anchor.
+When clicked the link will always open in a new tab.
+
+[ccg-previewing-your]
+
 [ccg-asciidoc-converter]
 === AsciiDoc Converters
 
