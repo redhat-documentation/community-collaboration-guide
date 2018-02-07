@@ -1,42 +1,11 @@
 [[ccg-migrate-repo]]
 == Migrating an Existing Repository
 
-If you are working on an existing open source project where there is an established upstream community and an established downstream documentation team, you might need to migrate existing content from the downstream repository to the upstream repository so that it can be shared across both repositories. This chapter outlines how to migrate content from a downstream repository to an upstream repository.
+If you are working on an existing open source project where there is an established downstream documentation team and an established upstream community, you might need to migrate existing content from the downstream repository to the upstream repository so that it can be shared across both repositories. This chapter outlines how to migrate content from a downstream repository to an upstream repository.
 
 [[ccg-migrate-repo-planning]]
-=== Planning the Migration
-
-If you need to migrate the content in an existing downstream repository to an upstream repository, it is important that you plan these efforts. While you might already be familiar with the community manager if they are a member of Red Hat, there are some cases where the community manager will be independent, and a new relationship with the community must be built.
-
-Use the planning process to discover and decide upon important details about the migration. For example, who will the main contact be in the upstream community, what will the new workflow look like, and how will changes to existing titles and development of new titles be handled when the content has been fully migrated and the new workflow put in place?
-
-Most importantly, you must reach a common understanding with the upstream community about the key goals of the migration and how the upstream community and downstream documentation team will interact when migration is complete. This might require participation in community meetings and holding workshops with the downstream documentation team to take them through the new workflow and communication guidelines.
+include::planning_the_migration.adoc[]
 
 [[ccg-migrate-repo-considerations]]
-=== Migration Checklist
+include::migration_checklist.adoc[]
 
-The following is a basic checklist of considerations to make before migrating content from an existing downstream repository to an upstream repository. In principle, the content should be laid out in accordance with one of the structures outlined in <<ccg-project-structure,Project Structure>>.
-
-Where will you submit the content?::
-Is there a dedicated upstream repository for documentation, or will the content be managed alongside the code? Alternatively, does a new upstream repository need to be created for documentation, and if so, who will perform this work?
-
-How will you submit the content?::
-When the content is ready, how will you submit it to the upstream community? Can you submit a standard pull request that adds all the content at the same time, or do you need to follow another process?
-
-When will you submit the content?::
-Can you migrate the content at any time, or should you migrate it in line with an existing milestone such as an upstream community release? Who should be notified when the content has been migrated, and when will any new workflows commence? How will changes to the documentation be handled in the time after a pull request to submit the content has been created and before it has been accepted?
-
-Do you have the required permissions?::
-Ensure the members of the downstream documentation team have been granted the permissions and roles to work on content in the upstream repository before any new workflows commence. Before requesting that any permissions or roles be granted, ensure all members of the downstream documentation team have created an account on the appropriate website, if required, and that you have collected a list of user names that can be submitted.
-
-Have all brand-specific references been conditionalized?::
-If there are any references to resources that are inappropriate for or cannot be accessed by the upstream community, such as support statements or links to content on the Customer Portal, this content must be conditionalized so that it only appears in the downstream version of that content. Likewise, if there are any references to resources that are inappropriate for the end users of the downstream documentation, such as links to community documentation, this content must be conditionalized so that it only appears in the usptream version of that content.
-
-Have all product names and versions been converted to attributes?::
-If there are any references to product names or product versions that are specific to the downstream community or upstream community, and have an equivalent in the other, ensure they are replaced with attributes so that the correct product names and product versions will be input when the content is built. See <<ccg-asciidoc-attributes,AsciiDoc Attributes>> for more information.
-
-How will you manage existing titles?::
-Is there any content in the upstream repository that must be retired or included in the new content being added? If so, discuss the potential impact with the community, and decide whether this content must be kept separate or whether it must be converted into a similar format as the other content.
-
-How will you synchronize content?::
-After you have migrated the content to the upstream repository, how will you synchronize that content with the downstream repository? Do any titles exist only in the upstream or in the downstream? If so, you might consider using the <<ccg-create-repo-synch-batchcommit,Batch Commit>> method method to synchronize only selected content. If all content in the upstream repository can be synchronized as is with the downstream repository, you might consider pushing all branches from the upstream repository to the downstream repository as a second remote. If the method you use to synchronize content affects the way the content is to be managed in the upstream community (for example, references to downstream-only resources must be included, even if conditionalized), discuss the potential impact with the community.
