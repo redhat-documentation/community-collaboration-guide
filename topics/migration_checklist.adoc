@@ -2,6 +2,7 @@
 
 The following is a basic checklist of considerations to make before migrating content from an existing downstream repository to an upstream repository. In principle, the content should be laid out in accordance with one of the structures outlined in <<ccg-project-structure,Project Structure>>.
 
+
 Where will you submit the content?::
 Is there a dedicated upstream repository for documentation, or will the content be managed alongside the code? Alternatively, does a new upstream repository need to be created for documentation, and if so, who will perform this work?
 
@@ -22,6 +23,12 @@ If there are any references to product names or product versions that are specif
 
 How will you manage existing titles?::
 Is there any content in the upstream repository that must be retired or included in the new content being added? If so, a decision must be made as to whether this content will be kept separate or whether it will be converted into a similar format as the other content.
+
+What license is applied to the content?::
+If there is any existing content in the upstream repository, what license is applied to that content? If the same license is applied to all content in an upstream repository or to all rendered documentation on a community website, it is important to discuss how and where this license is applied, and to discuss whether any conditions would prevent that content from being used by both the upstream community and downstream documentation team.
+
+What markup language is required?::
+If there is any existing content in the upstream repository, what markup language was used to write that content, and what rendering and publication mechanism is used to convert it into readable documentation? Is it possible to use AsciiDoc as the markup language, and if not, how can content to be synchronized with the downstream repository be converted from the current markup language into AsciiDoc?
 
 How will you synchronize content?::
 After the content has been migrated to the upstream repository, how will that content be synchronized with the downstream repository? Do any titles exist only in the upstream or in the downstream? If so, consider using the <<ccg-create-repo-synch-batchcommit,Batch Commit>> method method to synchronize only selected content. If all content in the upstream repository can be synchronized as is with the downstream repository, consider pushing all branches from the upstream repository to the downstream repository as a second remote. If the method used to synchronize content affects the way the content is to be managed in the upstream community (for example, references to downstream-only resources must be included, even if conditionalized), the potential impact must be discussed with the community.
