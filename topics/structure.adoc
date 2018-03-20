@@ -1,5 +1,5 @@
 [[ccg-project-structure]]
-== Project Structure
+== Project structure
 
 There is no single structure that will work for all projects, rather as a project grows and becomes more complex, it is likely to move through a variety of different structures.  The repository structure may change as files and directories are added, a large repository may split into separate, related repositories, etc.    As a project grows, the documentation needs for the project also grow. And just like you want to have a plan for project architecture that changes and adapts as the project grows, you likewise want to have a plan for the documentation structure that grows and adapts as the doc set grows.
 
@@ -7,7 +7,7 @@ This section discusses repository and directory structure and how to structure y
 
 
 [[ccg-directory-structure]]
-=== Directory Structure
+=== Directory structure
 
 The first steps towards documenting a project are often found in the README file of the repository.   Eventually the project will grow to where there is a need for more documentation than you can fit in a single README, and that may appear in the form of a project wiki, a separate installation guide, possibly a developer guide, and one or more user guides.   You may start out with all of the documentation in the same repository as the code, but as things grow more complex, you may want to consider having a separate repository for your documentation.  This makes it easier for community members who may only want to contribute to the documentation, as they don’t have to worry about merge conflicts in the code.
 
@@ -20,7 +20,7 @@ Add a new repo for each new title or document.:: The single title per repository
 Add a new repo with multiple titles or documents.:: The multiple title per repository model enables simple-and-easy topic sharing between titles, but does require building all titles when updates are made.
 
 [[ccg-flat-file-structure]]
-=== Flat File Structure
+=== Flat file structure
 
 In a flat-file structure there are no sub-directories, just one directory with all the documentation files in a single directory.  A flat file structure might be as simple as a single README file, or contain a complete guide. A flat file structure for an AsciiDoc guide might look something like this:
 
@@ -44,7 +44,7 @@ In a flat file system every file must have a different name because there is onl
 
 
 [[ccg-single-book-structure]]
-=== Single Book Structure
+=== Single book structure
 
 If you do not share any content between books you may choose a single book per directory structure.  A structure with a single AsciiDoc guide per repository might look something like this:
 
@@ -72,7 +72,7 @@ If you do not share any content between books you may choose a single book per d
 
 
 [[ccg-multiple-book-structure]]
-=== Multiple Book Structure
+=== Multiple book structure
 If you have common files that you want to reuse between books, you may choose a more complex directory structure, where all the books live in the same repository and have access to common files.
 
 Note that in the following multiple book structure each “book” directory has a symlink to a common directory for topic files.  This allows you to use any individual topic in any book, saving time writing and updating topics that appear in more than one place.  This structure also uses a common directory for images inside the topics directory, again allowing for reuse of images such as button icons and product logos.  And the attributes file is also common, allowing for the same replacement variables in all files and books.
@@ -166,7 +166,7 @@ https://github.com/silasrh/multi-topic-level-repo-template
 
 
 [[ccg-content-structure]]
-=== Content Structure
+=== Content structure
 Rather than writing your documentation in a single lengthy file, a best practice is to break the content up into small chunks.  There are several reasons why this is a good idea.   Having some sort of structure for your content provides many benefits for both readers and writers of your documentation:
 
 * *Onboarding new contributors* – It’s easier for new contributors to add to the documentation if they have some sort of template or pattern to follow. For example, all 	UNIX/LINUX man pages follow a similar structure, so when a developer is documenting a new command, they can follow that familiar pattern.
@@ -185,7 +185,7 @@ A commonly used pattern for documentation is to chunk content into one of three 
 In general when writing content you want to use simple language and avoid jargon that people unfamiliar with your project might not understand  Writing short sentences and short paragraphs also makes your content easier to read and understand.
 
 [[ccg-file-naming]]
-=== File Naming
+=== File naming
 
 No matter what repo and directory structure you choose, directory and file names should be clear and consistent.
 

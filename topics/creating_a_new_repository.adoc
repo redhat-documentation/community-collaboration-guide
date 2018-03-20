@@ -1,10 +1,10 @@
 [[ccg-create-repo]]
-== Creating a New Repository
+== Creating a new repository
 
 If you are working on a completely new open source project you might need to create a git repository from scratch.  A common option for creating a public repository is to use link:http://github.com[GitHub].
 
 [[ccg-create-repo-setup]]
-=== Setting up the Repository
+=== Setting up the repository
 
 [[ccg-create-repo-setup-prereq]]
 ==== Prerequisites
@@ -24,7 +24,7 @@ There are several ways to create a new repository in GitHub. One procedure is to
 
 
 [[ccg-create-repo-synch-methods]]
-==== Synchronization Methods
+==== Synchronization methods
 
 The following synchronization methods are currently recommended:
 
@@ -32,10 +32,10 @@ The following synchronization methods are currently recommended:
 
 
 [[ccg-create-repo-synch-batchcommit]]
-==== Batch Commit Synchronization Method
+==== Batch commit synchronization method
 
 [[ccg-create-repo-synch-batchcommit-when]]
-===== When to Use this Approach
+===== When to use this approach
 
 The batch commit process is a good approach to use when you need to incorporate upstream content into product documentation and the product contains a good deal of additional product-specific content.
 In other words, when the upstream content is included as a _subset_ of the product documentation.
@@ -49,7 +49,7 @@ The batch commit method assumes that your upstream repository is hosted on GitHu
 * `zip`
 
 [[ccg-create-repo-synch-batchcommit-dir]]
-===== Directory Structure
+===== Directory structure
 
 The batch commit example described here assumes that you have a book directory, `my-sample-book`, structured as follows:
 
@@ -86,7 +86,7 @@ $ git commit -m "Synched content from upstream"
 ----
 
 [[ccg-create-repo-synch-batchcommit-script]]
-===== Sample Batch Commit Script
+===== Sample batch commit script
 
 The batch commit script, `fetch-upstream.sh`, is a simple `bash` script that pulls down the latest upstream content, copying the relevant upstream files into the `upstream` subdirectory.
 The script exploits a particular feature of GitHub, whereby GitHub provides a downloadable archive file containing the working tree for any branch in the repository.
@@ -126,16 +126,16 @@ Git automatically detects when a file has changed based on the file's content, n
 So Git ignores any files with the same content as before.
 
 [[ccg-create-repo-synch-batchcommit-procon]]
-===== Pros and Cons
+===== Pros and cons
 
 Given the simplicity of the batch commit script, you might get the impression that it is not as powerful as other approaches.
 But if you compare it with a mechanism that provides similar functionality -- for example, Git _submodules_ -- it measures up well.
 For example, <<table-batch-commit-git-submodule>> makes a point by point comparison of the batch commit process against the Git submodule process.
 
 [[table-batch-commit-git-submodule]]
-.Comparison of Batch Commit and Git Submodule
+.Comparison of batch commit and git submodule
 |===
-|(Negative) Feature |Batch Commit |Git Submodule
+|(Negative) Feature |Batch commit |Git submodule
 
 |Contributor needs to know special processes or commands?
 a|_No_

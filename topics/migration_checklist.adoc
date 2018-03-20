@@ -1,4 +1,5 @@
-=== Migration Checklist
+[[migration-checklist]]
+=== Migration checklist
 
 The following is a basic checklist of considerations to make before migrating content from an existing downstream repository to an upstream repository. In principle, the content should be laid out in accordance with one of the structures outlined in <<ccg-project-structure,Project Structure>>.
 
@@ -32,4 +33,3 @@ If there is any existing content in the upstream repository, what markup languag
 
 How will you synchronize content?::
 After the content has been migrated to the upstream repository, how will that content be synchronized with the downstream repository? Do any titles exist only in the upstream or in the downstream? If so, consider using the <<ccg-create-repo-synch-batchcommit,Batch Commit>> method method to synchronize only selected content. If all content in the upstream repository can be synchronized as is with the downstream repository, consider pushing all branches from the upstream repository to the downstream repository as a second remote. If the method used to synchronize content affects the way the content is to be managed in the upstream community (for example, references to downstream-only resources must be included, even if conditionalized), the potential impact must be discussed with the community.
-
