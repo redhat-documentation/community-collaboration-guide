@@ -6,7 +6,7 @@ AsciiDoc files can be translated to many formats including HTML, PDF, EPUB, and 
 The Red Hat documentation team uses http://asciidoctor.org/[Asciidoctor^] as part of the publishing toolchain.
 
 [#ccg-asciidoc-attributes]
-=== AsciiDoc Attributes
+=== AsciiDoc attributes
 
 AsciiDoc attributes are variables you can use in common files to:
 
@@ -155,7 +155,7 @@ When clicked, the link will always open in a new tab.
 * The Atom editor has a link:https://atom.io/packages/asciidoc-preview[package to render a live preview^] of your AsciiDoc source, which allows you to see your markup rendered as you type it.
 
 [#ccg-asciidoc-converter]
-=== AsciiDoc Converters
+=== AsciiDoc converters
 
 If your project is not already written in AsciiDoc and you want to migrate from Markdown or another markup language, there are a variety of conversion tools available.
 
