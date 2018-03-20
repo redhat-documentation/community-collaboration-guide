@@ -1,8 +1,8 @@
-=== Planning the Migration
+[[planning-migration]]
+=== Planning the migration
 
 If you need to migrate content from an existing downstream repository to an upstream repository, it is important that you plan these efforts. Planning should be a collaborative process between a representative of the downstream documentation team and the upstream community, and might require the building of a new relationship.
 
 Use the planning process to discover and decide upon important details about the migration. For example, who are the main contacts in the downstream documentation team and the upstream community, what will the new workflow be, and how will changes to existing titles and development of new titles be handled when the content has been fully migrated and the new workflow put in place?
 
 Most importantly, the downstream documentation team and upstream community must reach a common understanding about the key goals of the migration and how both parties will interact when the migration is complete. This might require participation in community meetings and holding workshops with the downstream documentation team to take them through the new workflow and communication guidelines.
-
