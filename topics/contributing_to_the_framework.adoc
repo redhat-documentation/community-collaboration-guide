@@ -9,7 +9,7 @@ You can contribute to this project in two ways:
 
 Subsequent sections provide details for conducting each activity.
 
-[[ccg--proposing-a-change]]
+[[ccg-proposing-a-change]]
 === Proposing a change to the guide
 
 Currently, the best method for proposing a change to the _Community Collaboration Guide_ is to open an issue in the https://github.com/redhat-documentation/community-collaboration-guide[community-collaboration-guide] GitHub repository.
