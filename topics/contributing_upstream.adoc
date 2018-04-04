@@ -1,0 +1,50 @@
+[[ccg-contributing-upstream]]
+== Contributing upstream
+
+This is a set of guidelines for  getting involved in an upstream open source documentation project.
+It is geared primarily towards people working for a downstream distributor,
+although many of the guidelines are useful for everyone.
+
+The first step to get involved is to join the conversation.
+Open source teams communicate in many different ways, including mailing lists, IRC, Slack, and Telegram.
+Find out where documentation conversations are happening and join.
+For most projects, there is a documentation-specific mailing list.
+Sometimes, there is just a single development mailing list that includes documentation work.
+When you join a mailing list, it's a good idea to send an email introducing yourself.
+Tell the team who you are and what ways you're interesting in helping.
+
+When trying to introduce changes, it is important not to come across as judgmental or condescending.
+An email that paints a team's work as wrong or broken will often be ignored,
+or it will cause people to become very defensive.
+Instead, point out the positive and try to show how it can be incrementally improved.
+
+Be curious and show that you're listening.
+If there's something you don't think is optimal, try to understand why it is the way it is.
+"This isn't the right way to do things" rarely effects positive change.
+"I'm trying to understand why we do things this way" is a better way of sparking constructive conversation.
+
+You may have specific ideas of how you want to improve something, but when working with the community,
+you have to be prepared to adapt your ideas to what others are saying.
+Every project has unique objectives, constraints, history, and culture. One size rarely fits all.
+
+When proposing changes, focus on how they will benefit the project and the community,
+rather than how they will benefit you or your employer.
+Commercian distributions have business needs, and these affect what they would like to see in upstream projects.
+But their business needs aren't necessarily interesting or relevant to the project.
+
+Proposals to change things carry more weight when somebody is offering to do the work.
+You may have heard responses like "show me the code" or "patches welcome".
+If you want something improved, show that you're willing to put in some of the work.
+If you're not sure how you can best help, ask the community.
+"How can I help?" is a great question.
+If it involves technical work you're not comfortable with, find somebody who can help.
+
+Sometimes it can be difficult for a newcomer to propose new ideas in an established community.
+If you're uncomfortable, or if you're not making progress,
+try to find somebody more established in the community to talk to.
+Remember that the same advice applies when talking to an individual.
+Be positive and curious. Listen and understand. Offer to help.
+
+Finally, be prepared to accept that things will not always go the way you want.
+One of the defining characteristics of a community is that it makes its own decisions.
+That's the reality of being good open source citizens.
