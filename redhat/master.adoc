@@ -27,4 +27,6 @@ include::topics/building.adoc[]
 
 include::topics/publishing.adoc[]
 
+include::topics/contributing_upstream.adoc[]
+
 include::topics/contributing_to_the_framework.adoc[]
