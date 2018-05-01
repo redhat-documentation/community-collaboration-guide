@@ -12,9 +12,9 @@ Red Hat Customer Content Services
 :numbered:
 include::topics/introduction.adoc[]
 
-include::topics/community_evaluation.adoc[]
+include::topics/contributing_upstream.adoc[]
 
-//Community collaboration chapter here
+include::topics/community_evaluation.adoc[]
 
 include::topics/creating_a_new_repository.adoc[]
 
@@ -27,7 +27,5 @@ include::topics/asciidoc.adoc[]
 include::topics/building.adoc[]
 
 include::topics/publishing.adoc[]
-
-include::topics/contributing_upstream.adoc[]
 
 include::topics/contributing_to_the_framework.adoc[]
