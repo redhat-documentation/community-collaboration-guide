@@ -182,7 +182,7 @@ A commonly used pattern for documentation is to chunk content into one of three 
 * *Findability* – Content that is properly structured makes it easier for readers to find answers to their 	questions. For example, when procedures are properly formatted as	numbered steps, readers don’t have to search paragraphs of text for instructions for how to complete a task. Projects that follow naming conventions and have an organizational structure make it easier for contributing writers to find and update topics.
 * *Organization* – Writing content in small chunks makes it easier to rearrange content than writing content in longer files.
 
-In general when writing content you want to use simple language and avoid jargon that people unfamiliar with your project might not understand  Writing short sentences and short paragraphs also makes your content easier to read and understand.
+In general when writing content you want to use simple language and avoid jargon that people unfamiliar with your project might not understand. Writing short sentences and short paragraphs also makes your content easier to read and understand.
 
 [[ccg-file-naming]]
 === File naming

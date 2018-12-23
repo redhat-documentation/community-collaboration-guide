@@ -29,7 +29,7 @@ Every project has unique objectives, constraints, history, and culture. One size
 
 When proposing changes, focus on how they will benefit the project and the community,
 rather than how they will benefit you or your employer.
-Commercian distributions have business needs, and these affect what they would like to see in upstream projects.
+Commercial distributions have business needs, and these affect what they would like to see in upstream projects.
 But their business needs aren't necessarily interesting or relevant to the project.
 
 Proposals to change things carry more weight when somebody is offering to do the work.
