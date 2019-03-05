@@ -1,7 +1,7 @@
 [[ccg-project-structure]]
 == Project structure
 
-There is no single structure that will work for all projects, rather as a project grows and becomes more complex, it is likely to move through a variety of different structures.  The repository structure may change as files and directories are added, a large repository may split into separate, related repositories, etc.    As a project grows, the documentation needs for the project also grow. And just like you want to have a plan for project architecture that changes and adapts as the project grows, you likewise want to have a plan for the documentation structure that grows and adapts as the doc set grows.
+There is no single structure that will work for all projects; rather as a project grows and becomes more complex, it is likely to move through a variety of different structures.  The repository structure may change as files and directories are added, a large repository may split into separate, related repositories, etc.    As a project grows, the documentation needs for the project also grow. And just like you want to have a plan for project architecture that changes and adapts as the project grows, you likewise want to have a plan for the documentation structure that grows and adapts as the doc set grows.
 
 This section discusses repository and directory structure and how to structure your content for ease of reuse (both in multiple documents and in upstream/downstream documents).
 
@@ -164,6 +164,7 @@ https://github.com/silasrh/multi-topic-level-repo-template
         └── buildGuides.sh
 ....
 
+include::considerations-sharing-repo.adoc[leveloffset=+2]
 
 [[ccg-content-structure]]
 === Content structure
