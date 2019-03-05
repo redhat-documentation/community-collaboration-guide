@@ -1,5 +1,5 @@
 [[ccg-contributing-to-the-framework]]
-== Contributing to the framework
+== Contributing to the guide
 
 You can contribute to this project in two ways:
 
@@ -51,11 +51,24 @@ We encourage contributions to the _Community Collaboration Guide_. In particular
 
 * You must have downloaded, installed, and configured Git on your desktop.
 
-* Ensure that your configuration gives you the ability to manage files locally by using the command line.
+* Ensure that you have a xref:ccg-fork-the-upstream-repository[copy of the repository on your local system].
 
-.Related information
+* You need the appropriate permissions to create pull requests. Request permission by emailing your GitHub username to ccs-upstream@redhat.com.
 
-https://help.github.com/articles/set-up-git/[Set Up Git^]
+.Procedure
+
+. Navigate to the https://github.com/redhat-documentation/community-collaboration-guide/issues[*Issues*] tab and click on the `Title` of the issue you'd like to address.
+
+. Assign the issue to yourself so that others know you are working on it.
+
+. Keep the issue up to date with your progress
+
+. Submit a PR with your edits
+
+. Ask for a review from someone on the team
+
+. Once your item is merged, close the issue.
+
 
 [discrete]
 [[ccg-fork-the-upstream-repository]]
@@ -68,6 +81,10 @@ Fork the `community-collaboration-guide` upstream repository to create a fork un
 . Click the *Fork* button located in the upper right, under your profile icon.
 
 . Choose the location of the forked repository.
+
+.Related information
+
+* https://help.github.com/articles/set-up-git/[Set Up Git^]
 
 [discrete]
 [[ccg-add-ssh-keys]]
@@ -153,3 +170,4 @@ In this example, _BRANCH_NAME_ is the unique name of the branch you are using to
 [NOTE]
 ====
 You can check out multiple topic branches and work on multiple features at one time, with no impact on each other as long as each topic branch is branched from `master`.
+====
