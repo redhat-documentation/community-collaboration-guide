@@ -1,0 +1,34 @@
+[[ccg-considerations-sharing-repo]]
+= Considerations for sharing a repository with engineering
+
+If you are considering sharing a repository with engineering, that is, for the software code and documentation to reside in the same upstream repository, here are a few things you will want to keep in mind.
+
+.Space considerations
+The size of the combined repository will be large, so if limited space is an issue, keep this factor in mind.
+
+.Rebase often
+When working in the same repository as engineering, rebasing frequently is often a necessity because engineering is making changes too. Before making any changes to the documentation you’ll want to rebase your fork.
+
+.Upstream shared repository branches and downstream docs repository branches
+Although you’ll be sharing the upstream repository with engineering, you’ll also need a downstream docs repository. Since more than likely the upstream repository branching structure will not match exactly the downstream docs repository branching, you will need to sync up the content.
+
+Also, investing the time to plan a branching strategy in advance will save plenty of headaches in the long run.
+
+.Use the git export script 
+To easily sync up content, use the link:https://github.com/redhat-documentation/tools/tree/master/git-export[git export script^].
+
+.Use attributes
+In general, using attributes will facilitate ease of use between upstream docs and downstream docs. One of the most useful is for the product name itself: `{ProductName}`. Other useful attributes include those for any version numbers used in the docs or any other product names. For more general information about how to use attributes, see xref:ccg-asciidoc-attributes[].
+
+In particular, using a variable for the upstream directory in the downstream docs repository is helpful. For example, define the following variable in the downstream docs repository attributes file:
+----
+:UpstreamDir: upstream/documentation
+----
+
+Then, in the downstream master.adoc files, use the variable in the include statements:
+
+[source,asciidoc]
+----
+include::{UpstreamDir}/assemblies/assembly-installing.adoc[leveloffset=+1]
+----
+

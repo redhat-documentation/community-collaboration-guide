@@ -1,15 +1,15 @@
 [[ccg-project-structure]]
 == Project structure
 
-There is no single structure that will work for all projects, rather as a project grows and becomes more complex, it is likely to move through a variety of different structures.  The repository structure may change as files and directories are added, a large repository may split into separate, related repositories, etc.    As a project grows, the documentation needs for the project also grow. And just like you want to have a plan for project architecture that changes and adapts as the project grows, you likewise want to have a plan for the documentation structure that grows and adapts as the doc set grows.
+There is no single structure that will work for all projects; rather as a project grows and becomes more complex, it is likely to move through a variety of different structures.  The repository structure may change as files and directories are added, a large repository may split into separate, related repositories, etc.    As a project grows, the documentation needs for the project also grow. And just like you want to have a plan for project architecture that changes and adapts as the project grows, you likewise want to have a plan for the documentation structure that grows and adapts as the doc set grows.
 
 This section discusses repository and directory structure and how to structure your content for ease of reuse (both in multiple documents and in upstream/downstream documents).
 
 
 [[ccg-directory-structure]]
-=== Directory structure
+=== Repository and directory structure
 
-The first steps towards documenting a project are often found in the README file of the repository.   Eventually the project will grow to where there is a need for more documentation than you can fit in a single README, and that may appear in the form of a project wiki, a separate installation guide, possibly a developer guide, and one or more user guides.   You may start out with all of the documentation in the same repository as the code, but as things grow more complex, you may want to consider having a separate repository for your documentation.  This makes it easier for community members who may only want to contribute to the documentation, as they don’t have to worry about merge conflicts in the code.
+The first steps towards documenting a project are often found in the README file of the repository.   Eventually the project will grow to where there is a need for more documentation than you can fit in a single README, and that may appear in the form of a project wiki, a separate installation guide, possibly a developer guide, and one or more user guides.   You may start out with all of the documentation in the same repository as the code, but as things grow more complex, you may want to consider having a separate repository for your documentation.  This makes it easier for community members who may only want to contribute to the documentation, as they don’t have to worry about merge conflicts in the code. For more information about considerations when sharing a repository with engineering, see xref:ccg-considerations-sharing-repo[].
 
 As your project grows, you should consider the structure you want to use for your documentation directory.  Directories should be structured in a logical and related fashion. Many projects have a documentation repo or directory for their project web page, and possibly a separate repo or directory for the project documentation.  You may choose to have separate repositories for each “manual” or you may choose to have all the documents in your doc set share a repository.  Contribution style and build requirements are two primary considerations when you decide how to proceed.
 
@@ -164,6 +164,7 @@ https://github.com/silasrh/multi-topic-level-repo-template
         └── buildGuides.sh
 ....
 
+include::considerations-sharing-repo.adoc[leveloffset=+2]
 
 [[ccg-content-structure]]
 === Content structure
