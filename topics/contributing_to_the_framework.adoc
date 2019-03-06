@@ -16,7 +16,7 @@ Currently, the best method for proposing a change to the _Community Collaboratio
 
 .Prerequisites
 
-You must be a member of the GitHub `community-collaboration-guide` repository.
+You must be a member of the GitHub `community-collaboration-guide` repository. Request to join by emailing your GitHub username to ccs-upstream@redhat.com.
 
 .Procedure
 
@@ -52,8 +52,6 @@ We encourage contributions to the _Community Collaboration Guide_. In particular
 * You must have downloaded, installed, and configured Git on your desktop.
 
 * Ensure that you have a xref:ccg-fork-the-upstream-repository[copy of the repository on your local system].
-
-* You need the appropriate permissions to create pull requests. Request permission by emailing your GitHub username to ccs-upstream@redhat.com.
 
 .Procedure
 
