@@ -63,7 +63,7 @@ We encourage contributions to the _Community Collaboration Guide_. In particular
 
 . Keep the issue up to date with your progress
 
-. Submit a PR with your edits
+. Submit a Pull Request (PR) with your edits
 
 . Ask for a review from someone on the team
 
