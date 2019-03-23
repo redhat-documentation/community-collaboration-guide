@@ -6,14 +6,14 @@ Writing your documentation using AsciiDoc means that you can build HTML, PDF, EP
 Depending on the complexity of the documentation, you might also decide to adopt a tool other than AsciiDoctor to help you organize the building of documentation sets. Some commonly used tools are described later in this section.
 
 [[ccg-rendering-content-locally]]
-=== Rendering content locally with AsciiDoctor
+=== Rendering content locally with Asciidoctor
 
 ifdef::community[]
-When your source content is ready to be reviewed or published, you can render it into a display format that can be hosted on a website, included directly in a product, or otherwise accessed by your users. The recommended tool for rendering AsciiDoc into a display format is AsciiDoctor. AsciiDoctor is a fully open-source, Ruby-based implementation of AsciiDoc, and is also the tool that GitHub itself uses to render the content of files written in AsciiDoc.
+When your source content is ready to be reviewed or published, you can render it into a display format that can be hosted on a website, included directly in a product, or otherwise accessed by your users. The recommended tool for rendering AsciiDoc into a display format is Asciidoctor. Asciidoctor is a fully open-source, Ruby-based implementation of AsciiDoc, and is also the tool that GitHub itself uses to render the content of files written in AsciiDoc.
 
-See the project home page for instructions on how to install AsciiDoctor on a variety of platforms:
+See the project home page for instructions on how to install Asciidoctor on a variety of platforms:
 
-* http://asciidoctor.org/[http://asciidoctor.org/^]
+* https://asciidoctor.org/[https://asciidoctor.org/^]
 
 The following is the basic syntax for rendering content into a display format:
 
@@ -24,7 +24,7 @@ $ asciidoctor master.adoc
 
 This command creates a single HTML file of the same name and in the same directory as the specified master file. The master file does not need to be in the current working directory, and you can specify either a relative path or absolute path to it.
 
-In addition to this basic syntax, AsciiDoctor also provides a number of options that allow you to customize the location and format of the content that it renders.
+In addition to this basic syntax, Asciidoctor also provides a number of options that allow you to customize the location and format of the content that it renders.
 
 The following example outlines how to specify a custom output directory:
 
@@ -98,10 +98,6 @@ Challenges::
 * Edits are immediately committed
 * Editor is not advanced enough to keep in conditional tags in place
 
-
-
-
-
 [[ccg-hugo]]
 === Hugo
 
@@ -111,7 +107,7 @@ Website: link:https://gohugo.io/[https://gohugo.io/]
 
 Advantages::
 * Hugo is built using Go — a compiled language — and installing or updating Hugo is as simple as downloading a binary and setting up your system to use it.
-* You can install Hugo on Linux, MacOS, and Windows.
+* You can install Hugo on Linux, macOS, and Windows.
 * Hugo has https://gohugo.io/getting-started/installing/[extensive documentation].
 * Hugo is a very popular static site generator and has an active developer community.
 

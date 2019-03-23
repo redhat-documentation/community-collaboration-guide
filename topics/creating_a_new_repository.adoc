@@ -92,7 +92,7 @@ The batch commit script, `fetch-upstream.sh`, is a simple `bash` script that pul
 The script exploits a particular feature of GitHub, whereby GitHub provides a downloadable archive file containing the working tree for any branch in the repository.
 The archive file has a snapshot of the _latest_ content in a particular branch and thus provides an ideal basis for synchronizing content downstream.
 
-To see how his works, consider the following sample `fetch-upstream.sh` script developed for synchronizing the contents of the _Apache Camel Component Reference_:
+To see how this works, consider the following sample `fetch-upstream.sh` script developed for synchronizing the contents of the _Apache Camel Component Reference_:
 
 ----
 #!/bin/sh
@@ -119,7 +119,7 @@ rm $branch.zip <4>
 Note that the `unzip` command is a remarkably flexible tool for extracting content from the archive.
 In this particular case, the AsciiDoc files are embedded in the Java code base and scattered across hundreds of subdirectories.
 But thanks to the globbing capabilities of `unzip`, it takes only a few commands to find and extract all the relevant files.
-<4> Clean up, by removing the downloaded archive, `$branch.zip`.
+<4> Clean up by removing the downloaded archive, `$branch.zip`.
 
 NOTE: It is not necessary for the script to figure out whether specific files have changed or not.
 Git automatically detects when a file has changed based on the file's content, not its creation time.
@@ -130,7 +130,7 @@ So Git ignores any files with the same content as before.
 
 Given the simplicity of the batch commit script, you might get the impression that it is not as powerful as other approaches.
 But if you compare it with a mechanism that provides similar functionality -- for example, Git _submodules_ -- it measures up well.
-For example, <<table-batch-commit-git-submodule>> makes a point by point comparison of the batch commit process against the Git submodule process.
+<<table-batch-commit-git-submodule>> makes a point by point comparison of the batch commit process against the Git submodule process.
 
 [[table-batch-commit-git-submodule]]
 .Comparison of batch commit and git submodule

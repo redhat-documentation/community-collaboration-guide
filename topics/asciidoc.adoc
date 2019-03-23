@@ -19,9 +19,9 @@ To use attributes:
 . Include the _brand_ AsciiDoc attribute file in the `master.adoc` file for the relevant document:
 +
 [source,asciidoc]
---
+----
 \include::attributes.adoc[]
---
+----
 +
 . Replace brand-specific terms with the variable names that you have defined, and use `ifdef` statements to mark blocks of brand-specific content.
 
@@ -34,6 +34,7 @@ The example below creates attributes for the *Community Documentation* brand.
 
 . Open the file, and add your attribute mappings, each entry on a new line:
 +
+[source,asciidoc]
 ----
 :product-name: Community Documentation
 :product-name_short: Community
@@ -45,14 +46,16 @@ The example below creates attributes for the *Community Documentation* brand.
 . In each `_doc-Guide_Name_/community` directory, edit the `master.adoc` file.
 Include the attribute file, and add the variable name you want to use to identify `ifdef` statements:
 +
+[source,asciidoc]
 ----
-include::common/attributes/community.adoc
+\include::common/attributes/community.adoc[]
 
 :community:
 ----
 +
 . Anywhere in a common topic file that you would normally use the product name or version, use the following values instead:
 +
+[source,asciidoc]
 ----
 {product-name}
 {product-name_short}
@@ -60,21 +63,21 @@ include::common/attributes/community.adoc
 {product-version}
 ----
 +
-. Anywhere in a common topic file that you need a section of text to appear only in the *Community Documentation* version of the guide, use an ifdef statement:
+. Anywhere in a common topic file that you need a section of text to appear only in the *Community Documentation* version of the guide, use an `ifdef` statement:
 +
+[source,asciidoc]
 ----
 // An ifdef for an entire sentence or paragraph
- ifdef::community[]
- This is a sentence that applies only to the Community Documentation version of the document.
- endif::community[]
+\ifdef::community[]
+This is a sentence that applies only to the Community Documentation version of the document.
+\endif::community[]
 
 // An ifdef for an inline reference, which includes an entry for another brand
- See
- ifdef::community[the Community Standards Guide.]
- ifdef::productx[the Product X Conventions Guide.]
+See
+\ifdef::community[the Community Standards Guide.]
+\ifdef::productx[the Product X Conventions Guide.]
 ----
 +
-
 The `ifdef` statement must be at the start of a new line, even for inline references.
 When the *Community Documentation* version of the guide is rendered, the content inside the `ifdef` statements for `community` will appear, and the content inside the `ifdef` statements for `productx` will be excluded.
 Any content not included inside an `ifdef` statement will appear in rendered guides for all brands.
@@ -82,10 +85,9 @@ Any content not included inside an `ifdef` statement will appear in rendered gui
 . Render the guide to verify that your attributes are appearing correctly.
 Navigate to the directory containing the `master.adoc`, and use:
 +
-[source,bash]
---
+----
 asciidoctor compile
---
+----
 
 [#ccg-attributes-to-links]
 === Single-sourcing URLs using attributes
@@ -100,48 +102,48 @@ Doing this allows you to:
 To store a relative link as an attribute, you must define it in the:
 
 [source,asciidoc,option="nowrap"]
---
+----
 :link-getting-started: /docs/getting-strated.html
---
+----
 //Next step: Specify the variable in a link macro.
 
 Attributes can also store external link URLs, allowing you to update them without breaking any links in your guide.
 
 [source,asciidoc,options="nowrap"]
---
+----
 :link-community-docs: https://docs.example.com/guides/community.html
---
+----
 
 Use the variable in a link macro.
 The variable will automatically resolve to the URL stored in the attribute when you build your documents.
 
 [source,asciidoc,options="nowrap",subs="attributes+"]
---
+----
 link:{link-community-docs}#introduction[Community Documentation Introduction]
---
+----
 
 To force your links to open in a new window:
 
 . Set the `linkattrs` attribute in your `attributes.adoc` file:
 +
 [source,asciidoc]
---
+----
 :linkattrs:
---
+----
 +
 . Use the caret `^` character to enforce the `target=_blank` HTML attribute for the link anchor.
 +
 [source,asciidoc,options="nowrap",subs="attributes+"]
---
+----
 link:{link-community-docs}[Community Documentation^]
---
+----
 +
 . Alternatively, you can set the the AsciiDoc attribute explicitly:
 +
 [source,asciidoc,options="nowrap",subs="attributes+"]
---
+----
 link:{link-community-docs}[Community Documentation, window="_blank"]
---
+----
 +
 When clicked, the link will always open in a new tab.
 
@@ -150,7 +152,7 @@ When clicked, the link will always open in a new tab.
 [#ccg-previewing-your-content]
 === Previewing your content
 
-* The AsciiDoctor documentation has a chapter on link:http://asciidoctor.org/docs/editing-asciidoc-with-live-preview/[Editing AsciiDoc with live preview^].
+* The Asciidoctor documentation has a chapter on link:http://asciidoctor.org/docs/editing-asciidoc-with-live-preview/[Editing AsciiDoc with live preview^].
 
 * The Atom editor has a link:https://atom.io/packages/asciidoc-preview[package to render a live preview^] of your AsciiDoc source, which allows you to see your markup rendered as you type it.
 

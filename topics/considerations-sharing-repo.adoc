@@ -25,10 +25,10 @@ In particular, using a variable for the upstream directory in the downstream doc
 :UpstreamDir: upstream/documentation
 ----
 
-Then, in the downstream master.adoc files, use the variable in the include statements:
+Then, in the downstream `master.adoc` files, use the variable in the include statements:
 
 [source,asciidoc]
 ----
-include::{UpstreamDir}/assemblies/assembly-installing.adoc[leveloffset=+1]
+\include::{UpstreamDir}/assemblies/assembly-installing.adoc[leveloffset=+1]
 ----
 
