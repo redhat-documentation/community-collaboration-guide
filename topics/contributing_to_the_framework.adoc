@@ -91,23 +91,25 @@ Fork the `community-collaboration-guide` upstream repository to create a fork un
 When using the SSH address for creating a clone, you need to add an SSH Key to GitHub. See the article https://help.github.com/articles/connecting-to-github-with-ssh/[_Generating an SSH Key_] for more information.
 
 [discrete]
-[[ccg-clone-upstream-repository]]
-=== Clone the upstream repository to your fork
+[[ccg-clone-fork-repository]]
+=== Clone your fork to your local workstation
 
 Clone the repository. Your fork is the `origin` location for your local files.
 
 . Open a terminal and navigate to the location where you want to create a directory to contain your local copy of the repository.
 
 . Type the following command:
++
 [options="nowrap",subs="+quotes"]
 ----
-$ git clone git@github.com:USERNAME/community-collaboration-guide.git
+$ git clone git@github.com:__USERNAME__/community-collaboration-guide.git
 ----
-In this and subsequent examples, _USERNAME_ represents your GitHub User ID.
++
+In this and subsequent examples, `_USERNAME_` represents your GitHub user ID.
 
-[start=3]
 . Navigate to the newly created `community-collaboration-guide` directory.
-[options="nowrap",subs="+quotes"]
++
+[options="nowrap"]
 ----
 $ cd community-collaboration-guide/
 ----
@@ -119,31 +121,32 @@ $ cd community-collaboration-guide/
 After you have forked and cloned the upstream repository, connect it to your local fork by adding the upstream repository as a remote.
 
 . List the current remote repositories:
++
 [options="nowrap",subs="+quotes"]
 ----
 $ git remote -v
-origin	git@github.com:USERNAME/community-collaboration-guide.git (fetch)
-origin	git@github.com:USERNAME/community-collaboration-guide.git (push)
+origin	git@github.com:__USERNAME__/community-collaboration-guide.git (fetch)
+origin	git@github.com:__USERNAME__/community-collaboration-guide.git (push)
 ----
 
-[start=2]
 . Add the upstream as a remote repository and fetch its contents. This allows you to check out and work with the latest source.
++
 [options="nowrap",subs="+quotes"]
 ----
 $ git remote add -f upstream git@github.com:redhat-documentation/community-collaboration-guide.git
 ----
 
-[start=3]
 . Enter your GitHub credentials if prompted to do so.
 
 . Verify that the new remote was added:
++
 [options="nowrap",subs="+quotes"]
 ----
 $ git remote -v
-origin	git@github.com:USERNAME/community-collaboration-guide.git (fetch)
-origin	git@github.com:USERNAME/community-collaboration-guide.git  (push)
-upstream	git@github.com:redhat-documentation/community-collaboration-guide.git (fetch)
-upstream	git@github.com:redhat-documentation/community-collaboration-guide.git (push)
+origin  git@github.com:__USERNAME__/community-collaboration-guide.git (fetch)
+origin  git@github.com:__USERNAME__/community-collaboration-guide.git  (push)
+upstream  git@github.com:redhat-documentation/community-collaboration-guide.git (fetch)
+upstream  git@github.com:redhat-documentation/community-collaboration-guide.git (push)
 ----
 
 [discrete]
@@ -152,20 +155,23 @@ upstream	git@github.com:redhat-documentation/community-collaboration-guide.git (
 
 Fetch the latest source from the upstream repository. Note that using the `git fetch` command to obtain the latest copy of the source does not actually "put" the content on your local fork until you perform some other action, such as creating a branch.
 
-. Use the `git fetch` command to fetch the latest source from the repository.
-[options="nowrap",subs="+quotes"]
+. Use the `git fetch` command to fetch the latest source from the repository:
++
+[options="nowrap"]
 ----
 $ git fetch upstream
 ----
-[start=2]
+
 . Create a local working branch that is based on an upstream branch. The branch name should be descriptive, containing an issue number or short summary of the change.
++
 [options="nowrap",subs="+quotes"]
 ----
-$ git checkout -b BRANCH_NAME upstream/master
+$ git checkout -b _BRANCH_NAME_ upstream/master
 ----
-In this example, _BRANCH_NAME_ is the unique name of the branch you are using to make changes locally.
++
+In this example, `_BRANCH_NAME_` is the unique name of the branch you are using to make changes locally.
 
 [NOTE]
 ====
-You can check out multiple topic branches and work on multiple features at one time, with no impact on each other as long as each topic branch is branched from `master`.
+You can check out multiple topic branches and work on multiple features at one time with no impact on each other as long as each topic branch is branched from `master`.
 ====

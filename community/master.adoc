@@ -1,5 +1,6 @@
 = Community Collaboration Guide
 Red Hat Customer Content Services
+:source-highlighter: coderay
 :imagesdir: images
 :doctype: book
 :toc: left
