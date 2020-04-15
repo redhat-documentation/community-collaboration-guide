@@ -1,0 +1,12 @@
+[id="ccg-directory-structure_{context}"]
+=== Repository and directory structure
+
+The first steps towards documenting a project are often found in the README file of the repository.   Eventually the project will grow to where there is a need for more documentation than you can fit in a single README, and that may appear in the form of a project wiki, a separate installation guide, possibly a developer guide, and one or more user guides.   You may start out with all of the documentation in the same repository as the code, but as things grow more complex, you may want to consider having a separate repository for your documentation.  This makes it easier for community members who may only want to contribute to the documentation, as they don’t have to worry about merge conflicts in the code. For more information about considerations when sharing a repository with engineering, see xref:ccg-considerations-sharing-repo[].
+
+As your project grows, you should consider the structure you want to use for your documentation directory.  Directories should be structured in a logical and related fashion. Many projects have a documentation repo or directory for their project web page, and possibly a separate repo or directory for the project documentation.  You may choose to have separate repositories for each “manual” or you may choose to have all the documents in your doc set share a repository.  Contribution style and build requirements are two primary considerations when you decide how to proceed.
+
+Add a docs directory to the code repository.:: This makes it easier for developers to update the documentation, but may present a challenge for non-developers who want to contribute to the documentation but may have difficulties following the repository workflow used by developers.
+
+Add a new repo for each new title or document.:: The single title per repository model allows independent updates between titles, but prevents topic sharing among titles.
+
+Add a new repo with multiple titles or documents.:: The multiple title per repository model enables simple-and-easy topic sharing between titles, but does require building all titles when updates are made.

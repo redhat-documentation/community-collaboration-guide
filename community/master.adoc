@@ -11,21 +11,27 @@ Red Hat Customer Content Services
 :community:
 
 :numbered:
-include::topics/introduction.adoc[]
+include::modules/con-introduction.adoc[leveloffset=+1]
 
-include::topics/contributing_upstream.adoc[]
+include::modules/con-overview.adoc[leveloffset=+1]
 
-include::topics/community_evaluation.adoc[]
+include::modules/con-contacts.adoc[leveloffset=+1]
 
-include::topics/creating_a_new_repository.adoc[]
+include::modules/con-contributing_upstream.adoc[leveloffset=+1]
 
-include::topics/migrating_an_existing_repository.adoc[]
+include::assemblies/assembly-community_evaluation.adoc[leveloffset=+1]
 
-include::topics/structure.adoc[]
+include::assemblies/assembly-creating_a_new_repository.adoc[]
 
-include::topics/asciidoc.adoc[]
+include::assemblies/assembly-synchronizing_content.adoc[leveloffset=+1]
 
-include::topics/building.adoc[]
+include::assemblies/assembly-migrating_an_existing_repository.adoc[leveloffset=+1]
+
+include::assemblies/assembly-structure.adoc[leveloffset=+1]
+
+include::assemblies/assembly-asciidoc.adoc[leveloffset=+1]
+
+include::assemblies/assembly-building_content.adoc[leveloffset=+1]
 
 include::topics/publishing.adoc[]
 

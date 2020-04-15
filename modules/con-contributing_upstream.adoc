@@ -1,5 +1,5 @@
-[[ccg-contributing-upstream]]
-== Contributing upstream
+[id="ccg-contributing-upstream_{context}"]
+= Contributing upstream
 
 This is a set of guidelines for  getting involved in an upstream open source documentation project.
 It is geared primarily towards people working for a downstream distributor,

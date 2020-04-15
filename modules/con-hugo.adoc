@@ -1,0 +1,18 @@
+[id="ccg-hugo_{context}"]
+= Hugo
+
+Hugo is a static site generator written in Go.
+
+Website: link:https://gohugo.io/[https://gohugo.io/]
+
+Advantages::
+* Hugo is built using Go — a compiled language — and installing or updating Hugo is as simple as downloading a binary and setting up your system to use it.
+* You can install Hugo on Linux, macOS, and Windows.
+* Hugo has https://gohugo.io/getting-started/installing/[extensive documentation].
+* Hugo is a very popular static site generator and has an active developer community.
+
+Challenges::
+* Uses a fixed directory structure defined by Hugo. In Hugo, there's only a single content directory.  Hugo also assumes that the same structure that organizes your source content is used to organize the rendered site.
+* Hugo does not come with a default theme, you must set one up before you can view your content.  However, there are many themes available on the https://themes.gohugo.io/[Hugo web site].
+* The Hugo documentation tends to be technical and developer/features focused, rather that writer/task focused.
+

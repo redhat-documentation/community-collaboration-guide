@@ -1,0 +1,33 @@
+[id="ccg-create-repo-synch-batchcommit_{context}"]
+= Batch commit synchronization method
+
+[id="ccg-create-repo-synch-batchcommit-when_{context}"]
+== When to use this approach
+
+The batch commit process is a good approach to use when you need to incorporate upstream content into product documentation and the product contains a good deal of additional product-specific content.
+In other words, when the upstream content is included as a _subset_ of the product documentation.
+
+[id="ccg-create-repo-synch-batchcommit-prereq_{context}"]
+== Prerequisites
+
+The batch commit method assumes that your upstream repository is hosted on GitHub and the machine where you run the batch commit script has the following utilities installed:
+
+* `curl`
+* `zip`
+
+[id="ccg-create-repo-synch-batchcommit-dir_{context"}]
+== Directory structure
+
+The batch commit example described here assumes that you have a book directory, `my-sample-book`, structured as follows:
+
+----
+my-sample-book/
+|__ fetch-upstream.sh
+|__ docinfo.xml
+|__ master.adoc
+|__ topics/
+|__ upstream/
+----
+
+Where `fetch-upstream.sh` is the batch commit script (for details, see <<ccg-create-repo-synch-batchcommit-script>>), and `upstream` is a subdirectory reserved for the upstream content.
+

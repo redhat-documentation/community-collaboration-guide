@@ -1,0 +1,27 @@
+[id="ccg-single-book-structure_{context}"]
+=== Single-book structure
+
+If you do not share any content between books, you may choose a single book per directory structure.  A structure with a single AsciiDoc guide per repository might look something like this:
+
+....
+├── README.adoc
+├── docs
+│   ├── DocumentTitle
+│   ├──-|──  topics -> ../topics/ (symlink to docs/topics/)
+│   ├──-|── master-docinfo.xml
+│   ├──-|── master.adoc   (book file/table of contents for the documentation)
+│   │   ├── /topics  (all topic files for the documentation)
+│   │   │   ├──  /images (all images for the documentation)
+│   │   │   │    ├── logo.png
+│   │   │   │    ├──screenshot1.png
+│   │   │   │    ├── screenshot2.png
+│   │   │   │    ├──screenshot3.png
+│   │   │   ├── attributes.adoc (variables file)
+│   │   │   ├── topic-1.adoc
+│   │   │   ├── topic-2.adoc
+│   │   │   ├── topic-4.adoc
+│   │   │   └── topic-5.adoc
+└── scripts (Scripts to automatically create and build documentation)
+    └── buildGuides.sh
+....
+

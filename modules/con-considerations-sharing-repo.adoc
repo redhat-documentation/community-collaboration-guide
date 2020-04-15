@@ -1,4 +1,4 @@
-[[ccg-considerations-sharing-repo]]
+[id="ccg-considerations-sharing-repo_{context}"]
 = Considerations for sharing a repository with engineering
 
 If you are considering sharing a repository with engineering, that is, for the software code and documentation to reside in the same upstream repository, here are a few things you will want to keep in mind.

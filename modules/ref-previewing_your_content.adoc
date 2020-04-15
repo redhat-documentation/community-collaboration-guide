@@ -1,0 +1,7 @@
+[id="ccg-previewing-your-content_{context}"]
+= Previewing your content
+
+* The Asciidoctor documentation has a chapter on link:http://asciidoctor.org/docs/editing-asciidoc-with-live-preview/[Editing AsciiDoc with live preview^].
+
+* The Atom editor has a link:https://atom.io/packages/asciidoc-preview[package to render a live preview^] of your AsciiDoc source, which allows you to see your markup rendered as you type it.
+ 

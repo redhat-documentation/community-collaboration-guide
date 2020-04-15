@@ -1,0 +1,20 @@
+[id="ccg-content-structure_{context}"]
+=== Content structure
+Rather than writing your documentation in a single lengthy file, a best practice is to break the content up into small chunks.  There are several reasons why this is a good idea.   Having some sort of structure for your content provides many benefits for both readers and writers of your documentation:
+
+* *Onboarding new contributors* – It’s easier for new contributors to add to the documentation if they have some sort of template or pattern to follow. For example, all 	UNIX/LINUX man pages follow a similar structure, so when a developer is documenting a new command, they can follow that familiar pattern.
++
+A commonly used pattern for documentation is to chunk content into one of three types of topics:
++
+** *Procedure or Task* – The ordered steps to complete a task or perform an action using the software.
+
+** *Concept or Overview* – Product-specific terminology or concepts that the user needs to understand in order to successfully use the software.
+** *Reference* – Reference material about the software, for example configuration settings , lists of commands, or API documentation.
+
+* *Reusability* – If you write content in small chunks, it can be reused in different documents that cover the same topics. For example, topics such as “System Requirements” or “Supported Platforms” might appear in Release Notes, planning documentation, and installation documentation.
+* *Findability* – Content that is properly structured makes it easier for readers to find answers to their 	questions. For example, when procedures are properly formatted as numbered steps, readers don’t have to search paragraphs of text for instructions for how to complete a task. Projects that follow naming conventions and have an organizational structure make it easier for contributing writers to find and update topics.
+* *Organization* – Writing content in small chunks makes it easier to rearrange content than when writing content in longer files.
+
+See the link:https://redhat-documentation.github.io/modular-docs/[Modular Documentation Reference Guide] prepared by Red{nbsp}Hat for guidance on authoring documentation using a modular structure.
+
+In general, when writing content you want to use simple language and avoid jargon that people unfamiliar with your project might not understand. Writing short sentences and short paragraphs also makes your content easier to read and understand.

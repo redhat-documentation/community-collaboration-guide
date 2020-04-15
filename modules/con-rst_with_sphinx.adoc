@@ -1,0 +1,18 @@
+[id="ccg-rst-sphinx-tool_{context}"]
+= RST with Sphinx
+
+http://docutils.sourceforge.net/rst.html[reStructuredText (RST)^] is a popular lightweight documentation format used by many, particularly Python-based, projects and open source communities. RST is often used alongside the http://www.sphinx-doc.org/[Sphinx documentation generator^], which can be seen as an counterpart of the AsciiDoctor toolchain for AsciiDoc.
+
+Advantages::
+* The toolchain of choice for a large number of open source projects.
+** Easy to find community support, resources and examples.
+* Supports translations with gettext, has been integrated with http://zanata.org/[Zanata^].
+* Supports multiple output formats, including HTML, HTML single, PDF, ePub, Texinfo, man pages, etc.
+* Fully customized document hierarchy, design themes, etc.
+* More features can be added with custom extensions.
+* Supported by popular community hosting services, such as https://readthedocs.org/[Read the Docs^].
+
+Challenges::
+* Does not provide native integration with AsciiDoc-based toolchains.
+** Extensions or converters must be used to build or convert RST to AsciiDoc. For details, see xref:ccg-asciidoc-converter[].
+

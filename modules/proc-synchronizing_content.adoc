@@ -1,0 +1,24 @@
+[id="ccg-create-repo-synch-batchcommit-workflow_{context}"]
+= Synchronizing content
+
+.Prerequisites
+
+* Given that you already have a batch commit script, `fetch-upstream.sh`, the workflow for synchronizing content from the upstream repository is as follows:
+
+.Procedure
+. Pull down the latest content from the upstream repository and put the downloaded files in the `upstream/` subdirectory:
++
+----
+$ ./fetch-upstream.sh
+----
+
+. Inspect the downloaded content (for example, using `git diff`) to check for new files, restructured content, and so on.
+If necessary, edit the book file, `master.adoc`, to incorporate new content.
+
+. Add and commit the downloaded content:
++
+----
+$ git add upstream
+$ git commit -m "Synched content from upstream"
+----
+

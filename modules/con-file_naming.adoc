@@ -1,0 +1,12 @@
+[id="ccg-file-naming_{context}"]
+=== File naming
+
+No matter what repo and directory structure you choose, directory and file names should be clear and consistent.
+
+* Numbered file names like `52187.adoc` or `IMG_390.png` are more likely to cause confusion for other contributors.
+* Short file names are good, as long as they're still meaningful.  But give enough detail to make the content clear (`overview.adoc` could be anything).
+* Long file names are often unwieldy, hard to work with, and easy to mistype.  Try to find the right balance for file-name length.
+* File names should reflect the topic they cover to help contributors find content in your files.
+* Do not include the project or product name, book name, release version, or anything similar in file names.
+* Do not hard-code file names when linking documents. Use relative paths to the topic or directory.
+

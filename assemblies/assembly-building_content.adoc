@@ -1,0 +1,16 @@
+[id="ccg-building-content_{context}"]
+= Building content
+
+Writing your documentation using AsciiDoc means that you can build HTML, PDF, EPUB, and man pages. During the writing process, you build your documentation to test and review the content as described in xref:ccg-rendering-content-locally[].
+
+Depending on the complexity of the documentation, you might also decide to adopt a tool other than AsciiDoctor to help you organize the building of documentation sets. Some commonly used tools are described later in this section.
+
+include::modules/proc-rendering_content_locally_with_asciidoctor.adoc[leveloffset=+2]
+
+include::modules/con-asciibinder.adoc[leveloffset=+2]
+
+include::modules/con-gitbook.adoc[leveloffset=+2]
+
+include::modules/con-hugo.adoc[leveloffset=+2]
+
+include::modules/con-rst_with_sphinx.adoc[leveloffset=+2]

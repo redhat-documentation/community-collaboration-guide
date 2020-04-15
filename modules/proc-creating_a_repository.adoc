@@ -1,0 +1,14 @@
+[id="ccg-creating-a-repository_{context}"]
+== Creating a repository
+
+.Prerequisites
+
+* A GitHub account.
+
+.Procedure
+. Log in to GitHub.
+. Click the *plus (+) sign* in the top right.
+. Choose *New Repository*.
+. Provide a *Repository Name*, *Description*, and choose if the repository is *Public* or *Private*.
+. Click *Create Repository* to finalize the process.
+

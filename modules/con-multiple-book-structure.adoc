@@ -1,0 +1,93 @@
+[id="ccg-multiple-book-structure_{context}"]
+=== Multiple-book structure
+If you have common files that you want to reuse between books, you may choose a more complex directory structure, where all the books live in the same repository and have access to common files.
+
+Note that in the following multiple-book structure, each “book” directory has a symlink to a common directory for topic files.  This allows you to use any individual topic in any book, saving time writing and updating topics that appear in more than one place.  This structure also uses a common directory for images inside the topics directory, again allowing for the reuse of images such as button icons and product logos.  And the attributes file is also common, allowing for the same replacement variables in all files and books.
+
+A structure with multiple AsciiDoc guides per repository and a single topic directory might look something like this:
+
+////
+internal Up/Down repo template on Red Hat GitLab https://gitlab.cee.redhat.com/ccs-tools-documentation/up-down-repo-template#use-this-repository-template
+////
+
+....
+├── README.md
+├── docs
+│   ├── Title_A
+│   │   ├── master.adoc
+│   │   ├── master-docinfo.xml
+│   │   ├── topics -> ../topics/ (symlink to docs/topics/)
+│   ├── Title_B
+│   │   ├── master.adoc
+│   │   ├── master-docinfo.xml
+│   │   ├── topics -> ../topics/ (symlink to docs/topics/)
+│   ├── Title_C
+│   │   ├── master.adoc
+│   │   ├── master-docinfo.xml
+│   │   ├── topics -> ../topics/ (symlink to docs/topics/)
+│   ├── topics (all topics for titles)
+│   │   │   ├── images (all the images for titles)
+│   │   │   |   ├──  logo.png
+│   │   │   |   ├──  screenshot1.png
+│   │   │   |   ├── screenshot2.png
+│   │   │   |   ├── screenshot3.png
+│   │   │   ├──attributes.adoc (variables file)
+│   │   │   ├── topic-1.adoc
+│   │   │   ├── topic-2.adoc
+│   │   │   ├── topic-4.adoc
+│   │   │   └── topic-5.adoc
+│   │   │   ├── topic-shared-1.adoc
+│   │   │   ├──  topic-shared-2.adoc
+....
+
+And a structure with multiple AsciiDoc guides per repository and multiple topic directories might look something like this:
+////
+Silas’s Multi-topic repo template on GitHub
+https://github.com/silasrh/multi-topic-level-repo-template
+////
+....
+├── README.adoc
+├── docs
+│   ├── title-a
+│   │   ├── enterprise
+│   │   │   ├── master-docinfo.xml
+│   │   │   ├── master.adoc
+│   │   │   └── topics -> ../topics
+│   │   ├── topics
+│   │   │   ├── shared -> ../../shared
+│   │   │   ├── topic-1.adoc
+│   │   │   ├── topic-2.adoc
+│   │   │   ├── topic-4.adoc
+│   │   │   └── topic-5.adoc
+│   │   └── upstream-1
+│   │       ├── master-docinfo.xml
+│   │       ├── master.adoc
+│   │       └── topics -> ../topics
+│   ├── title-b
+│   │   ├── enterprise
+│   │   │   ├── master-docinfo.xml
+│   │   │   ├── master.adoc
+│   │   │   └── topics -> ../topics
+│   │   ├── topics
+│   │   │   ├── shared -> ../../shared
+│   │   │   ├── topic-1.adoc
+│   │   │   ├── topic-2.adoc
+│   │   │   ├── topic-4.adoc
+│   │   │   └── topic-5.adoc
+│   │   └── upstream-1
+│   │       ├── master-docinfo.xml
+│   │       ├── master.adoc
+│   │       └── topics -> ../topics
+│   └── shared
+│       ├── attributes.adoc (variables file)
+│       ├── images (all images for titles)
+│       ├── templates
+│       │   └── revision-info.adoc
+│       ├── topic-shared-1.adoc
+│       └── topic-shared-2.adoc
+└── resources
+    ├── asciidoc-writing-guide.adoc
+    └── scripts
+        └── buildGuides.sh
+....
+
