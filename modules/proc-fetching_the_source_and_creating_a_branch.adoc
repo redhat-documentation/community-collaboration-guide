@@ -1,0 +1,27 @@
+[discrete]
+[id="ccg-fetch-source-create-branch_{context}"]
+= Fetch the source and create a branch
+
+Fetch the latest source from the upstream repository. Note that using the `git fetch` command to obtain the latest copy of the source does not actually "put" the content on your local fork until you perform some other action, such as creating a branch.
+
+. Use the `git fetch` command to fetch the latest source from the repository:
++
+[options="nowrap"]
+----
+$ git fetch upstream
+----
+
+. Create a local working branch that is based on an upstream branch. The branch name should be descriptive, containing an issue number or short summary of the change.
++
+[options="nowrap",subs="+quotes"]
+----
+$ git checkout -b _BRANCH_NAME_ upstream/master
+----
++
+In this example, `_BRANCH_NAME_` is the unique name of the branch you are using to make changes locally.
+
+[NOTE]
+====
+You can check out multiple topic branches and work on multiple features at one time with no impact on each other as long as each topic branch is branched from `master`.
+====
+

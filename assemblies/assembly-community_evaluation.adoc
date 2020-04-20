@@ -3,4 +3,4 @@
 
 Before joining an upstream documentation community with the goal of collaborating, you should gather data about the community to evaluate how your documentation team will fit in with the community's.
 
-include::ref-community_readiness.adoc[leveloffset=+1]
+include::modules/ref-community_readiness.adoc[leveloffset=+1]

@@ -21,7 +21,7 @@ include::modules/con-contributing_upstream.adoc[leveloffset=+1]
 
 include::assemblies/assembly-community_evaluation.adoc[leveloffset=+1]
 
-include::assemblies/assembly-creating_a_new_repository.adoc[]
+include::assemblies/assembly-creating_a_new_repository.adoc[leveloffset=+1]
 
 include::assemblies/assembly-synchronizing_content.adoc[leveloffset=+1]
 
@@ -33,6 +33,6 @@ include::assemblies/assembly-asciidoc.adoc[leveloffset=+1]
 
 include::assemblies/assembly-building_content.adoc[leveloffset=+1]
 
-include::topics/publishing.adoc[]
+include::assemblies/assembly-publishing.adoc[leveloffset=+1]
 
-include::topics/contributing_to_the_framework.adoc[]
+include::assemblies/assembly-contributing_to_the_framework.adoc[leveloffset=+1]

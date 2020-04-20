@@ -1,0 +1,9 @@
+[id="ccg-travis-container_{context}"]
+= Using Travis CI and Asciidoctor container to publish to GitHub Pages
+
+This publishing mechanism uses a single configuration file, `.travis.yml`, and is based on a *GitHub* + *Travis CI* + *Asciidoctor container* + *GitHub Pages* toolchain, an idea taken from https://docs.travis-ci.com/user/deployment/pages/[GitHub Pages Deployment^].
+
+Each commit pushed to a pre-configured branch (such as `master`, `devel`, or `stable`) containing a `.travis.yml` automatically triggers a document build, so you do not need an extra tool installed locally in order to publish an update to the document. When the Asciidoctor container running in Travis CI successfully finishes the build, Travis CI pushes the resulting HTML (and, optionally, PDF) to a deployment branch (such as `gh-pages` or `publish`), and GitHub Pages then publishes the HTML (and PDF) from the deployment branch to the desired URL (for instance, `my-project.github.io/my-document`).
+
+This publishing mechanism is used to publish the _Community Collaboration Guide_ from https://github.com/redhat-documentation/community-collaboration-guide[https://github.com/redhat-documentation/community-collaboration-guide^].
+

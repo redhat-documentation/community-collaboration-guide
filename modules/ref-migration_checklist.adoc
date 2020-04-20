@@ -1,5 +1,5 @@
 [id="migration-checklist_{context}"]
-=== Migration checklist
+= Migration checklist
 
 The following is a basic checklist of considerations to make before migrating content from an existing downstream repository to an upstream repository. In principle, the content should be laid out in accordance with one of the structures outlined in <<ccg-project-structure,Project Structure>>.
 

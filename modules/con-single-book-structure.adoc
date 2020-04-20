@@ -1,5 +1,5 @@
 [id="ccg-single-book-structure_{context}"]
-=== Single-book structure
+= Single-book structure
 
 If you do not share any content between books, you may choose a single book per directory structure.  A structure with a single AsciiDoc guide per repository might look something like this:
 

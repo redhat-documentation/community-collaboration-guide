@@ -1,5 +1,5 @@
 [id="ccg-multiple-book-structure_{context}"]
-=== Multiple-book structure
+= Multiple-book structure
 If you have common files that you want to reuse between books, you may choose a more complex directory structure, where all the books live in the same repository and have access to common files.
 
 Note that in the following multiple-book structure, each “book” directory has a symlink to a common directory for topic files.  This allows you to use any individual topic in any book, saving time writing and updating topics that appear in more than one place.  This structure also uses a common directory for images inside the topics directory, again allowing for the reuse of images such as button icons and product logos.  And the attributes file is also common, allowing for the same replacement variables in all files and books.

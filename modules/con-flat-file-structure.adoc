@@ -1,5 +1,5 @@
 [id="ccg-flat-file-structure_{context}"]
-=== Flat file structure
+= Flat file structure
 
 In a flat file structure, there are no sub-directories, just one directory with all the documentation files in a single directory.  A flat file structure might be as simple as a single README file, or contain a complete guide. A flat file structure for an AsciiDoc guide might look something like this:
 

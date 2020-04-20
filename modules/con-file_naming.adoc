@@ -1,5 +1,5 @@
 [id="ccg-file-naming_{context}"]
-=== File naming
+= File naming
 
 No matter what repo and directory structure you choose, directory and file names should be clear and consistent.
 

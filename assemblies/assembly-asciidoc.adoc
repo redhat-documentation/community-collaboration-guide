@@ -5,10 +5,10 @@ AsciiDoc files can be translated to many formats including HTML, PDF, EPUB, and 
 
 The Red Hat documentation team uses http://asciidoctor.org/[Asciidoctor^] as part of the publishing toolchain.
 
-include::modules/con-asciidoc_attributes.adoc[leveloffset=+3]
+include::modules/con-asciidoc_attributes.adoc[leveloffset=+2]
 
-include::modules/proc-single_sourcing_using_attributes.adoc[leveloffset=+3]
+include::modules/proc-single_sourcing_using_attributes.adoc[leveloffset=+2]
 
-include::modules/ref-previewing_your_content.adoc[leveloffset=+3]
+include::modules/ref-previewing_your_content.adoc[leveloffset=+2]
 
-include::modules/ref-asciidoc_converters.adoc[leveloffset=+3]
+include::modules/ref-asciidoc_converters.adoc[leveloffset=+2]

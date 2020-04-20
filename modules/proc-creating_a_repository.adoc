@@ -1,5 +1,5 @@
 [id="ccg-creating-a-repository_{context}"]
-== Creating a repository
+= Creating a repository
 
 .Prerequisites
 

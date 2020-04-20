@@ -1,0 +1,22 @@
+[id="ccg-publishing-content_{context}"]
+= Publishing content
+
+To be useful, content must be published to a public location that end users can access. There are multiple ways to publish. Some commonly used tools are described in this section.
+
+include::modules/proc-using_asciibinder.adoc[leveloffset=+2]
+
+////
+[[ccg-microservices]]
+=== Microservices
+
+Placeholder text.
+////
+
+include::modules/proc-using_travis_and_asciidoctor.adoc[leveloffset=+2]
+
+include::modules/ref-sample_travis_yml.adoc[leveloffset=+3]
+
+//[[ccg-other]]
+//=== Other
+
+//Add if necessary.
