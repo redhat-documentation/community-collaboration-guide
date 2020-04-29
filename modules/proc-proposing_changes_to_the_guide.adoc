@@ -1,4 +1,4 @@
-[id="ccg-proposing-a-change_{context}"]
+[id="proposing-a-change-to-the-guide_{context}"]
 = Proposing a change to the guide
 
 Currently, the best method for proposing a change to the _Community Collaboration Guide_ is to open an issue in the https://github.com/redhat-documentation/community-collaboration-guide[community-collaboration-guide] GitHub repository.

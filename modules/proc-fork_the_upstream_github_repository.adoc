@@ -1,6 +1,6 @@
 [discrete]
-[id="ccg-fork-the-upstream-repository_{context}"]
-= Fork the upstream (GitHub) repository
+[id="fork-the-upstream-github-repository_{context}"]
+= Forking the upstream (GitHub) repository
 
 Fork the `community-collaboration-guide` upstream repository to create a fork under your own GitHub ID. This allows you to work on multiple pieces of content and push changes to branches in your local GitHub instance. When you are ready, you can request the changes be merged from your local fork into the upstream repository.
 

@@ -1,4 +1,4 @@
-[id="ccg-create-repo-synch-batchcommit-script_{context}"]
+[id="sample-batch-commit-script_{context}"]
 = Sample batch commit script
 
 The batch commit script, `fetch-upstream.sh`, is a simple `bash` script that pulls down the latest upstream content, copying the relevant upstream files into the `upstream` subdirectory.

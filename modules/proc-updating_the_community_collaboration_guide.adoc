@@ -1,4 +1,4 @@
-[id="ccg-updating-collaboration-guide_{context}"]
+[id="updating-the-community-collaboration-guide_{context}"]
 = Updating the community collaboration guide
 
 We encourage contributions to the _Community Collaboration Guide_. In particular, you can share your experiences in the following areas:

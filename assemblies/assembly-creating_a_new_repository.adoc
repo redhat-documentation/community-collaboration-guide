@@ -3,5 +3,5 @@
 
 If you are working on a completely new open source project you might need to create a git repository from scratch.  A common option for creating a public repository is to use link:http://github.com[GitHub].
 
-include::modules/proc-creating_a_repository.adoc[leveloffset=+2]
+include::modules/proc-creating_a_repository.adoc[leveloffset=+1]
 

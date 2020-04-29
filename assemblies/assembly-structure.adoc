@@ -5,16 +5,16 @@ There is no single structure that will work for all projects; rather as a projec
 
 This section discusses repository and directory structure and how to structure your content for ease of reuse (both in multiple documents and in upstream/downstream documents).
 
-include::modules/con-repository_and_directory_structure.adoc[leveloffset=+2]
+include::modules/con-repository_and_directory_structure.adoc[leveloffset=+1]
 
-include::modules/con-flat-file-structure.adoc[leveloffset=+2]
+include::modules/con-flat-file-structure.adoc[leveloffset=+1]
 
-include::modules/con-single-book-structure.adoc[leveloffset=+2]
+include::modules/con-single-book-structure.adoc[leveloffset=+1]
 
-include::modules/con-multiple-book-structure.adoc[leveloffset=+2]
+include::modules/con-multiple-book-structure.adoc[leveloffset=+1]
 
-include::modules/con-considerations-sharing-repo.adoc[leveloffset=+2]
+include::modules/con-considerations-sharing-repo.adoc[leveloffset=+1]
 
-include::modules/con-content_structure.adoc[leveloffset=+2]
+include::modules/con-content_structure.adoc[leveloffset=+1]
 
-include::modules/con-file_naming.adoc[leveloffset=+2]
+include::modules/con-file_naming.adoc[leveloffset=+1]

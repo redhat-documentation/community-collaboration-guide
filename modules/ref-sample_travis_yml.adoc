@@ -1,4 +1,4 @@
-[id="ccg-travisyml_{context}"]
+[id="sample-travis-yml_{context}"]
 = Sample .travis.yml
 
 Below is a sample `.travis.yml` file that must be placed in the root directory of your branch, from which you want to publish to GitHub Pages.

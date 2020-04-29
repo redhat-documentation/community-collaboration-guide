@@ -1,5 +1,5 @@
 [discrete]
-[id="ccg-clone-fork-repository_{context}"]
+[id="clone-your-fork-to-your-local-workstation_{context}"]
 = Clone your fork to your local workstation
 
 Clone the repository. Your fork is the `origin` location for your local files.

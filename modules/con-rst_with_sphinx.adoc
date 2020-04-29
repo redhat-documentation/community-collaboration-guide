@@ -1,4 +1,4 @@
-[id="ccg-rst-sphinx-tool_{context}"]
+[id="rst-with-sphinx_{context}"]
 = RST with Sphinx
 
 http://docutils.sourceforge.net/rst.html[reStructuredText (RST)^] is a popular lightweight documentation format used by many, particularly Python-based, projects and open source communities. RST is often used alongside the http://www.sphinx-doc.org/[Sphinx documentation generator^], which can be seen as an counterpart of the AsciiDoctor toolchain for AsciiDoc.

@@ -1,4 +1,4 @@
-[id="ccg-travis-container_{context}"]
+[id="using-travis-ci-and-asciidoctor-container-to-publish-to-github-pages_{context}"]
 = Using Travis CI and Asciidoctor container to publish to GitHub Pages
 
 This publishing mechanism uses a single configuration file, `.travis.yml`, and is based on a *GitHub* + *Travis CI* + *Asciidoctor container* + *GitHub Pages* toolchain, an idea taken from https://docs.travis-ci.com/user/deployment/pages/[GitHub Pages Deployment^].

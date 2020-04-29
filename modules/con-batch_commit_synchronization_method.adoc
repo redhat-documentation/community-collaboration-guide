@@ -1,21 +1,23 @@
-[id="ccg-create-repo-synch-batchcommit_{context}"]
+[id="batch_commit_synchronization_method_{context}"]
 = Batch commit synchronization method
 
-[id="ccg-create-repo-synch-batchcommit-when_{context}"]
+The batch commit synchronization method is a method of copying content from one repository to another by downloading the content in a source repository, copying the files to the target repository, and committing the changes in a single commit (a batch).
+
+[id="when_to_use_this_approach_{context}"]
 == When to use this approach
 
 The batch commit process is a good approach to use when you need to incorporate upstream content into product documentation and the product contains a good deal of additional product-specific content.
 In other words, when the upstream content is included as a _subset_ of the product documentation.
 
-[id="ccg-create-repo-synch-batchcommit-prereq_{context}"]
+[id="prerequisites_{context}"]
 == Prerequisites
 
-The batch commit method assumes that your upstream repository is hosted on GitHub and the machine where you run the batch commit script has the following utilities installed:
+The batch commit method assumes your upstream repository is hosted on GitHub and the machine where you run the batch commit script has the following utilities installed:
 
 * `curl`
 * `zip`
 
-[id="ccg-create-repo-synch-batchcommit-dir_{context"}]
+[id="directory_structure_{context}"]
 == Directory structure
 
 The batch commit example described here assumes that you have a book directory, `my-sample-book`, structured as follows:

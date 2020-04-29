@@ -1,4 +1,4 @@
-[id="ccg-previewing-your-content_{context}"]
+[id="previewing-your-content_{context}"]
 = Previewing your content
 
 * The Asciidoctor documentation has a chapter on link:http://asciidoctor.org/docs/editing-asciidoc-with-live-preview/[Editing AsciiDoc with live preview^].

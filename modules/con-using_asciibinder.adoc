@@ -1,5 +1,5 @@
-[id="ccg-asciibinder_{context}"]
-= AsciiBinder
+[id="using-asciibinder_{context}"]
+= Using AsciiBinder
 
 In addition to providing a system to structure and maintain documentation for multiple brands using a single repository, AsciiBinder also provides the ability to preview and package documentation as a set of HTML files that you can publish on a website.
 

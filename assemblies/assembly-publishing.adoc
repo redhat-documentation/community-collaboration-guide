@@ -3,7 +3,7 @@
 
 To be useful, content must be published to a public location that end users can access. There are multiple ways to publish. Some commonly used tools are described in this section.
 
-include::modules/proc-using_asciibinder.adoc[leveloffset=+2]
+include::modules/con-using_asciibinder.adoc[leveloffset=+1]
 
 ////
 [[ccg-microservices]]
@@ -12,9 +12,9 @@ include::modules/proc-using_asciibinder.adoc[leveloffset=+2]
 Placeholder text.
 ////
 
-include::modules/proc-using_travis_and_asciidoctor.adoc[leveloffset=+2]
+include::modules/proc-using_travis_and_asciidoctor.adoc[leveloffset=+1]
 
-include::modules/ref-sample_travis_yml.adoc[leveloffset=+3]
+include::modules/ref-sample_travis_yml.adoc[leveloffset=+2]
 
 //[[ccg-other]]
 //=== Other

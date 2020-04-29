@@ -1,4 +1,4 @@
-[id="ccg-asciidoc-attributes_{context}"]
+[id="asciidoc-attributes_{context}"]
 = AsciiDoc attributes
 
 AsciiDoc attributes are variables you can use in common files to:

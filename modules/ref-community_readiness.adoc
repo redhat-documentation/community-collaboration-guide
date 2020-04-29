@@ -1,4 +1,4 @@
-[id="ccg-community-readiness_{context}"]
+[id="community-readiness-survey_{context}"]
 = Community readiness survey
 
 This sample communication survey can be used to determine if single-streaming documentation is feasible on a specific project. Content Strategists and Documentation Program Managers will work together to gather data to evaluate community documentation for their products. Using the results of this survey your team will be able to make a proposal for or against single-streaming documentation.

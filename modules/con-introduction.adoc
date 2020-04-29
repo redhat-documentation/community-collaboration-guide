@@ -1,4 +1,4 @@
-[id="ccg-introduction_{context}"]
+[id="introduction_{context}"]
 = Introduction
 
 This guide has been provided by https://www.redhat.com/[Red Hat^] to assist enterprise projects in collaborating with upstream communities on documentation. For Red Hat, this guide provides tips for evaluating a community to see if they are prepared for collaboration with an enterprise software team, communication guidelines, information about supported and unsupported tools, and guidelines for structuring git repositories.

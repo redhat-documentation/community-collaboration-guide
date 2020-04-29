@@ -1,4 +1,4 @@
-[id="ccg-create-repo-synch-batchcommit-procon_{context}"]
+[id="pros-and-cons_{context}"]
 = Pros and cons
 
 Given the simplicity of the batch commit script, you might get the impression that it is not as powerful as other approaches.

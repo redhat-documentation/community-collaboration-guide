@@ -1,6 +1,6 @@
 [discrete]
-[id="ccg-fetch-source-create-branch_{context}"]
-= Fetch the source and create a branch
+[id="fetching-the-source-and-creating-a-branch_{context}"]
+= Fetching the source and creating a branch
 
 Fetch the latest source from the upstream repository. Note that using the `git fetch` command to obtain the latest copy of the source does not actually "put" the content on your local fork until you perform some other action, such as creating a branch.
 

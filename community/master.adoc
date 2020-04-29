@@ -11,6 +11,9 @@ Red Hat Customer Content Services
 :community:
 
 :numbered:
+
+:context: ccg
+
 include::modules/con-introduction.adoc[leveloffset=+1]
 
 include::modules/con-overview.adoc[leveloffset=+1]

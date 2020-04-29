@@ -9,16 +9,16 @@ You can contribute to this project in two ways:
 
 Subsequent sections provide details for conducting each activity.
 
-include::modules/proc-proposing_changes_to_the_guide.adoc[leveloffset=+2]
+include::modules/proc-proposing_changes_to_the_guide.adoc[leveloffset=+1]
 
-include::modules/proc-updating_the_community_collaboration_guide.adoc[leveloffset=+2]
+include::modules/proc-updating_the_community_collaboration_guide.adoc[leveloffset=+1]
 
-incude::modules/proc-fork_the_upstream_github_repository.adoc[leveloffset=+2]
+incude::modules/proc-fork_the_upstream_github_repository.adoc[leveloffset=+1]
 
-include::modules/ref-adding_your_ssh_keys_to_github.adoc[leveloffset=+2]
+include::modules/ref-adding_your_ssh_keys_to_github.adoc[leveloffset=+1]
 
-include::modules/proc-cloning_the_fork_to_your_local_workstation.adoc[leveloffset=+2]
+include::modules/proc-cloning_the_fork_to_your_local_workstation.adoc[leveloffset=+1]
 
-include::modules/proc-adding_the_upstream_as_a_remote_repository.adoc[leveloffset=+2]
+include::modules/proc-adding_the_upstream_as_a_remote_repository.adoc[leveloffset=+1]
 
-include::modules/proc-fetching_the_source_and_creating_a_branch.adoc[leveloffset=+2]
+include::modules/proc-fetching_the_source_and_creating_a_branch.adoc[leveloffset=+1]

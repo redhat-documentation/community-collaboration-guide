@@ -1,5 +1,6 @@
-[id="ccg-content-structure_{context}"]
+[id="content-structure_{context}"]
 = Content structure
+
 Rather than writing your documentation in a single lengthy file, a best practice is to break the content up into small chunks.  There are several reasons why this is a good idea.   Having some sort of structure for your content provides many benefits for both readers and writers of your documentation:
 
 * *Onboarding new contributors* – It’s easier for new contributors to add to the documentation if they have some sort of template or pattern to follow. For example, all 	UNIX/LINUX man pages follow a similar structure, so when a developer is documenting a new command, they can follow that familiar pattern.

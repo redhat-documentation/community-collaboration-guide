@@ -1,4 +1,4 @@
-[id="ccg-creating-a-repository_{context}"]
+[id="creating-a-repository_{context}"]
 = Creating a repository
 
 .Prerequisites

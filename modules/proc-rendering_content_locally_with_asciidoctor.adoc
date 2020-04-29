@@ -1,4 +1,4 @@
-[id="ccg-rendering-content-locally_{context}"]
+[id="rendering-content-locally-with-asciidoctor_{context}"]
 = Rendering content locally with Asciidoctor
 
 ifdef::community[]

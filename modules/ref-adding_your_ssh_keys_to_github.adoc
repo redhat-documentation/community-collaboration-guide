@@ -1,5 +1,5 @@
 [discrete]
-[id="ccg-add-ssh-keys_{context}"]
-= Add your SSH keys to GitHub
+[id="adding-your-ssh-keys-to-github_{context}"]
+= Adding your SSH keys to GitHub
 
 When using the SSH address for creating a clone, you need to add an SSH Key to GitHub. See the article https://help.github.com/articles/connecting-to-github-with-ssh/[_Generating an SSH Key_] for more information.

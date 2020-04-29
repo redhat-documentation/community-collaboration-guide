@@ -1,4 +1,4 @@
-[id="ccg-attributes-to-links_{context}"]
+[id="single-sourcing-urls-using-attributes_{context}"]
 = Single-sourcing URLs using attributes
 
 In addition to storing product names and versions, attributes can be used to store book-local and cross-book links for your guides.

@@ -1,5 +1,7 @@
-[id="ccg-create-repo-synch-batchcommit-workflow_{context}"]
+[id="synchronizing-content_{context}"]
 = Synchronizing content
+
+Copy the changes in one repository to another using the batch commit method.
 
 .Prerequisites
 

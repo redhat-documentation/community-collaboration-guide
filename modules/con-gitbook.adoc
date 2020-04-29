@@ -1,4 +1,4 @@
-[id="ccg-gitbook-tool_{context}"]
+[id="gitbook_{context}"]
 = GitBook
 
 GitBook is a documentation hosting system based on GitHub.

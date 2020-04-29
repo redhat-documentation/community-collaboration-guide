@@ -1,5 +1,5 @@
 [discrete]
-[id="ccg-add-upstream-remote_{context}"]
+[id="add-the-upstream-as-a-remote-repository_{context}"]
 = Add the upstream as a remote repository
 
 After you have forked and cloned the upstream repository, connect it to your local fork by adding the upstream repository as a remote.
