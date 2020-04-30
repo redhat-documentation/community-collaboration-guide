@@ -1,4 +1,4 @@
-[id="ccg-contributing-to-the-framework_{context}"]
+[id="contributing-to-the-framework_{context}"]
 = Contributing to the guide
 
 You can contribute to this project in two ways:
@@ -13,7 +13,7 @@ include::modules/proc-proposing_changes_to_the_guide.adoc[leveloffset=+1]
 
 include::modules/proc-updating_the_community_collaboration_guide.adoc[leveloffset=+1]
 
-incude::modules/proc-fork_the_upstream_github_repository.adoc[leveloffset=+1]
+include::modules/proc-fork_the_upstream_github_repository.adoc[leveloffset=+1]
 
 include::modules/ref-adding_your_ssh_keys_to_github.adoc[leveloffset=+1]
 

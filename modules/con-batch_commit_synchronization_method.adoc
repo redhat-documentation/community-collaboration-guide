@@ -31,5 +31,5 @@ my-sample-book/
 |__ upstream/
 ----
 
-Where `fetch-upstream.sh` is the batch commit script (for details, see <<ccg-create-repo-synch-batchcommit-script>>), and `upstream` is a subdirectory reserved for the upstream content.
+Where `fetch-upstream.sh` is the batch commit script (for details, see <<batch_commit_synchronization_method_{context}>>), and `upstream` is a subdirectory reserved for the upstream content.
 

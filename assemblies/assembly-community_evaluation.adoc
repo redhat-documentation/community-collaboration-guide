@@ -1,4 +1,4 @@
-[id="ccg-community-evaluation_{context}"]
+[id="community-evaluation_{context}"]
 = Evaluating upstream communities
 
 Before joining an upstream documentation community with the goal of collaborating, you should gather data about the community to evaluate how your documentation team will fit in with the community's.

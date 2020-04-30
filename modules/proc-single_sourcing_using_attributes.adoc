@@ -33,6 +33,7 @@ link:{link-community-docs}#introduction[Community Documentation Introduction]
 
 To force your links to open in a new window:
 
+.Procedure
 . Set the `linkattrs` attribute in your `attributes.adoc` file:
 +
 [source,asciidoc]

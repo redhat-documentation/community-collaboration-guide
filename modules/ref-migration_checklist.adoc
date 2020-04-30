@@ -1,7 +1,7 @@
 [id="migration-checklist_{context}"]
 = Migration checklist
 
-The following is a basic checklist of considerations to make before migrating content from an existing downstream repository to an upstream repository. In principle, the content should be laid out in accordance with one of the structures outlined in <<ccg-project-structure,Project Structure>>.
+The following is a basic checklist of considerations to make before migrating content from an existing downstream repository to an upstream repository. In principle, the content should be laid out in accordance with one of the structures outlined in <<project-structure_{context},Project Structure>>.
 
 
 Where will you submit the content?::
@@ -20,7 +20,7 @@ Have all brand-specific references been conditionalized?::
 If there are any references to resources that are inappropriate for or cannot be accessed by the upstream community, such as support statements or links to content on the Customer Portal, this content must be conditionalized so that it only appears in the downstream version of that content. Likewise, if there are any references to resources that are inappropriate for the end users of the downstream documentation, such as links to community documentation, this content must be conditionalized, so that it only appears in the upstream version of that content.
 
 Have all product names and versions been converted to attributes?::
-If there are any references to product names or product versions that are specific to the downstream community or upstream community, and have an equivalent in the other, ensure they are replaced with attributes, so that the correct product names and product versions will be input when the content is built. See <<ccg-asciidoc-attributes,AsciiDoc Attributes>> for more information.
+If there are any references to product names or product versions that are specific to the downstream community or upstream community, and have an equivalent in the other, ensure they are replaced with attributes, so that the correct product names and product versions will be input when the content is built. See <<asciidoc-attributes_{context},AsciiDoc Attributes>> for more information.
 
 How will you manage existing titles?::
 Is there any content in the upstream repository that must be retired or included in the new content being added? If so, a decision must be made as to whether this content will be kept separate or whether it will be converted into a similar format as the other content.
@@ -32,5 +32,5 @@ What markup language is required?::
 If there is any existing content in the upstream repository, what markup language was used to write that content, and what rendering and publication mechanism is used to convert it into readable documentation? Is it possible to use AsciiDoc as the markup language, and if not, how can content to be synchronized with the downstream repository be converted from the current markup language into AsciiDoc?
 
 How will you synchronize content?::
-After the content has been migrated to the upstream repository, how will that content be synchronized with the downstream repository? Do any titles exist only in the upstream or in the downstream? If so, consider using the <<ccg-create-repo-synch-batchcommit,Batch Commit>> method to synchronize only selected content. If all content in the upstream repository can be synchronized as is with the downstream repository, consider pushing all branches from the upstream repository to the downstream repository as a second remote. If the method used to synchronize content affects the way the content is to be managed in the upstream community (for example, references to downstream-only resources must be included, even if conditionalized), the potential impact must be discussed with the community.
+After the content has been migrated to the upstream repository, how will that content be synchronized with the downstream repository? Do any titles exist only in the upstream or in the downstream? If so, consider using the <<batch_commit_synchronization_method_{context},Batch Commit>> method to synchronize only selected content. If all content in the upstream repository can be synchronized as is with the downstream repository, consider pushing all branches from the upstream repository to the downstream repository as a second remote. If the method used to synchronize content affects the way the content is to be managed in the upstream community (for example, references to downstream-only resources must be included, even if conditionalized), the potential impact must be discussed with the community.
 

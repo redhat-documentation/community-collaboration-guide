@@ -12,7 +12,7 @@ We encourage contributions to the _Community Collaboration Guide_. In particular
 .Prerequisites
 
 * You must have downloaded, installed, and configured Git on your desktop.
-* Ensure that you have a xref:ccg-fork-the-upstream-repository[copy of the repository on your local system].
+* Ensure that you have a xref:forking-the-upstream-github-repository_{context}[copy of the repository on your local system].
 
 .Procedure
 

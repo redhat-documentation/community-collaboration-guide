@@ -16,9 +16,9 @@ Red Hat Customer Content Services
 
 include::modules/con-introduction.adoc[leveloffset=+1]
 
-include::modules/con-overview.adoc[leveloffset=+1]
+include::modules/con-overview.adoc[leveloffset=+2]
 
-include::modules/con-contacts.adoc[leveloffset=+1]
+include::modules/con-contacts.adoc[leveloffset=+2]
 
 include::modules/con-contributing_upstream.adoc[leveloffset=+1]
 

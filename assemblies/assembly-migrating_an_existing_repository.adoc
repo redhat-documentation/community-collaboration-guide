@@ -1,4 +1,4 @@
-[id="ccg-migrating-an-existing-repository_{context}"]
+[id="migrating-an-existing-repository_{context}"]
 = Migrating an existing repository
 
 If you are working on an existing open source project where there is an established downstream documentation team and an established upstream community, you might need to migrate existing content from the downstream repository to the upstream repository so that it can be shared across both repositories. This chapter outlines how to migrate content from a downstream repository to an upstream repository.

@@ -13,10 +13,8 @@ Copy the changes in one repository to another using the batch commit method.
 ----
 $ ./fetch-upstream.sh
 ----
-
 . Inspect the downloaded content (for example, using `git diff`) to check for new files, restructured content, and so on.
 If necessary, edit the book file, `master.adoc`, to incorporate new content.
-
 . Add and commit the downloaded content:
 +
 ----

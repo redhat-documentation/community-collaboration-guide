@@ -18,7 +18,7 @@ Also, investing the time to plan a branching strategy in advance will save plent
 To easily sync up content, use the link:https://github.com/redhat-documentation/tools/tree/master/git-export[git export script^].
 
 .Use attributes
-In general, using attributes will facilitate ease of use between upstream docs and downstream docs. One of the most useful is for the product name itself: `{ProductName}`. Other useful attributes include those for any version numbers used in the docs or any other product names. For more general information about how to use attributes, see xref:ccg-asciidoc-attributes[].
+In general, using attributes will facilitate ease of use between upstream docs and downstream docs. One of the most useful is for the product name itself: `{ProductName}`. Other useful attributes include those for any version numbers used in the docs or any other product names. For more general information about how to use attributes, see xref:asciidoc-attributes_{context}[].
 
 In particular, using a variable for the upstream directory in the downstream docs repository is helpful. For example, define the following variable in the downstream docs repository attributes file:
 ----

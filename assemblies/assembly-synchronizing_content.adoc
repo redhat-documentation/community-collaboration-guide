@@ -1,9 +1,9 @@
-[id="ccg-create-repo-synch-methods_{context}"]
+[id="create-repo-synch-methods_{context}"]
 = Synchronizing content
 
 The following synchronization methods are currently recommended:
 
-* <<ccg-create-repo-synch-batchcommit,Batch Commit>>
+* <<batch_commit_synchronization_method_{context},Batch Commit>>
 
 include::modules/con-batch_commit_synchronization_method.adoc[leveloffset=+1]
 

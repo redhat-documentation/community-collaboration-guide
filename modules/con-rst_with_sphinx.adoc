@@ -14,5 +14,5 @@ Advantages::
 
 Challenges::
 * Does not provide native integration with AsciiDoc-based toolchains.
-** Extensions or converters must be used to build or convert RST to AsciiDoc. For details, see xref:ccg-asciidoc-converter[].
+** Extensions or converters must be used to build or convert RST to AsciiDoc. For details, see xref:asciidoc-converters_{context}[].
 

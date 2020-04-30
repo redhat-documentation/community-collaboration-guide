@@ -1,8 +1,9 @@
 [id="creating-a-repository_{context}"]
 = Creating a repository
 
-.Prerequisites
+Create a new repository in GitHub.
 
+.Prerequisites
 * A GitHub account.
 
 .Procedure

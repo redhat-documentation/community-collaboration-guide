@@ -4,13 +4,13 @@
 
 Fetch the latest source from the upstream repository. Note that using the `git fetch` command to obtain the latest copy of the source does not actually "put" the content on your local fork until you perform some other action, such as creating a branch.
 
+.Procedure
 . Use the `git fetch` command to fetch the latest source from the repository:
 +
 [options="nowrap"]
 ----
 $ git fetch upstream
 ----
-
 . Create a local working branch that is based on an upstream branch. The branch name should be descriptive, containing an issue number or short summary of the change.
 +
 [options="nowrap",subs="+quotes"]

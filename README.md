@@ -18,4 +18,4 @@ https://redhat-documentation.github.io/community-collaboration-guide/.
 ## Contributing to the Community Collaboration Guide
 
 Contributing to the guide is described in
-https://redhat-documentation.github.io/community-collaboration-guide/#ccg-contributing-to-the-framework.
+https://redhat-documentation.github.io/community-collaboration-guide/#contributing-to-the-framework_ccg.
