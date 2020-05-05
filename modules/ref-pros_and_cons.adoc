@@ -1,0 +1,37 @@
+[id="pros-and-cons_{context}"]
+= Pros and cons
+
+Given the simplicity of the batch commit script, you might get the impression that it is not as powerful as other approaches.
+But if you compare it with a mechanism that provides similar functionality -- for example, Git _submodules_ -- it measures up well.
+<<table-batch-commit-git-submodule>> makes a point by point comparison of the batch commit process against the Git submodule process.
+
+[[table-batch-commit-git-submodule]]
+.Comparison of batch commit and git submodule
+|===
+|(Negative) Feature |Batch commit |Git submodule
+
+|Contributor needs to know special processes or commands?
+a|_No_
+a|_Yes_
+
+For example, `git submodule update`
+
+|Requires customization of publication toolchain?
+a|_No_
+a|_Yes_
+
+|Causes repository bloat?
+a|_No_
+
+Only the required files are committed to the downstream repository.
+
+a|_Yes_
+
+Complete working tree and complete history are downloaded.
+
+|Requires maintenance to keep in sync?
+a|_Yes_
+a|_Yes_
+
+|===
+

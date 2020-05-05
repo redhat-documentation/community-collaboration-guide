@@ -1,0 +1,36 @@
+[discrete]
+[id="add-the-upstream-as-a-remote-repository_{context}"]
+= Add the upstream as a remote repository
+
+After you have forked and cloned the upstream repository, connect it to your local fork by adding the upstream repository as a remote.
+
+.Procedure
+. List the current remote repositories:
++
+[options="nowrap",subs="+quotes"]
+----
+$ git remote -v
+origin	git@github.com:__USERNAME__/community-collaboration-guide.git (fetch)
+origin	git@github.com:__USERNAME__/community-collaboration-guide.git (push)
+----
+
+. Add the upstream as a remote repository and fetch its contents. This allows you to check out and work with the latest source.
++
+[options="nowrap",subs="+quotes"]
+----
+$ git remote add -f upstream git@github.com:redhat-documentation/community-collaboration-guide.git
+----
+
+. Enter your GitHub credentials if prompted to do so.
+
+. Verify that the new remote was added:
++
+[options="nowrap",subs="+quotes"]
+----
+$ git remote -v
+origin  git@github.com:__USERNAME__/community-collaboration-guide.git (fetch)
+origin  git@github.com:__USERNAME__/community-collaboration-guide.git  (push)
+upstream  git@github.com:redhat-documentation/community-collaboration-guide.git (fetch)
+upstream  git@github.com:redhat-documentation/community-collaboration-guide.git (push)
+----
+

@@ -1,0 +1,22 @@
+[id="publishing-content_{context}"]
+= Publishing content
+
+To be useful, content must be published to a public location that end users can access. There are multiple ways to publish. Some commonly used tools are described in this section.
+
+include::modules/con-using_asciibinder.adoc[leveloffset=+1]
+
+////
+[id="microservices_{context}"]
+=== Microservices
+
+Placeholder text.
+////
+
+include::modules/proc-using_travis_and_asciidoctor.adoc[leveloffset=+1]
+
+include::modules/ref-sample_travis_yml.adoc[leveloffset=+2]
+
+//[id="other_{context}"]
+//=== Other
+
+//Add if necessary.

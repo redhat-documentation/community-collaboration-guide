@@ -1,0 +1,42 @@
+[id="rendering-content-locally-with-asciidoctor_{context}"]
+= Rendering content locally with Asciidoctor
+
+ifdef::community[]
+When your source content is ready to be reviewed or published, you can render it into a display format that can be hosted on a website, included directly in a product, or otherwise accessed by your users. The recommended tool for rendering AsciiDoc into a display format is Asciidoctor. Asciidoctor is a fully open-source, Ruby-based implementation of AsciiDoc, and is also the tool that GitHub itself uses to render the content of files written in AsciiDoc.
+
+See the project home page for instructions on how to install Asciidoctor on a variety of platforms:
+
+* https://asciidoctor.org/[https://asciidoctor.org/^]
+
+The following is the basic syntax for rendering content into a display format:
+
+[options="nowrap" subs="verbatim,quotes"]
+----
+$ asciidoctor master.adoc
+----
+
+This command creates a single HTML file of the same name and in the same directory as the specified master file. The master file does not need to be in the current working directory, and you can specify either a relative path or absolute path to it.
+
+In addition to this basic syntax, Asciidoctor also provides a number of options that allow you to customize the location and format of the content that it renders.
+
+The following example outlines how to specify a custom output directory:
+
+[options="nowrap" subs="verbatim,quotes"]
+----
+$ asciidoctor -D ./output master.adoc
+----
+
+The following example outlines how to render the content as an article instead of as a book:
+
+[options="nowrap" subs="verbatim,quotes"]
+----
+$ asciidoctor -d article master.adoc
+----
+
+For additional examples, including instructions on how to render content in formats other than HTML such as PDF, EPUB3, and LaTeX, see link:http://asciidoctor.org/docs/render-documents/[How do I render a document?^] on the AsciiDoctor project home page.
+endif::community[]
+
+ifdef::redhat[]
+You can use `ccutil` to build a local preview of your content in the same way as repositories that do not use this repository structure. The only difference is that the command must be run in the `redhat` brand directory where the master file is located instead of in the default content directory. Pantheon builds and build scripts must also be updated to specify the `redhat` brand directory.
+endif::redhat[]
+

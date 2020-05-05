@@ -1,0 +1,20 @@
+[id="project-structure_{context}"]
+= Project structure
+
+There is no single structure that will work for all projects; rather as a project grows and becomes more complex, it is likely to move through a variety of different structures.  The repository structure may change as files and directories are added, a large repository may split into separate, related repositories, etc.    As a project grows, documentation needs for the project also grow. And just like you want to have a plan for project architecture that changes and adapts as the project grows, you likewise want to have a plan for the documentation structure that grows and adapts as the doc set grows.
+
+This section discusses repository and directory structure and how to structure your content for ease of reuse (both in multiple documents and in upstream/downstream documents).
+
+include::modules/con-repository_and_directory_structure.adoc[leveloffset=+1]
+
+include::modules/con-flat-file-structure.adoc[leveloffset=+1]
+
+include::modules/con-single-book-structure.adoc[leveloffset=+1]
+
+include::modules/con-multiple-book-structure.adoc[leveloffset=+1]
+
+include::modules/con-considerations-sharing-repo.adoc[leveloffset=+1]
+
+include::modules/con-content_structure.adoc[leveloffset=+1]
+
+include::modules/con-file_naming.adoc[leveloffset=+1]

@@ -1,5 +1,5 @@
-[[planning-migration]]
-=== Planning the migration
+[id="planning-the-migration_{context}"]
+= Planning the migration
 
 If you need to migrate content from an existing downstream repository to an upstream repository, it is important that you plan these efforts. Planning should be a collaborative process between a representative of the downstream documentation team and the upstream community, and might require the building of a new relationship.
 

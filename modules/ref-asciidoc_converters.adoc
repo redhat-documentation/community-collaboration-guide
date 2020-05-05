@@ -1,0 +1,13 @@
+[id="asciidoc-converters_{context}"]
+= AsciiDoc converters
+
+If your project is not already written in AsciiDoc and you want to migrate from Markdown or another markup language, there are a variety of conversion tools available.
+
+* The Atom editor has a https://atom.io/packages/markdown-to-asciidoc[package to convert Markdown to AsciiDoc^].
+
+* There is a plug-in to https://chrome.google.com/webstore/detail/asciidoc-processor/eghlmnhjljbjodpeehjjcgfcjegcfbhk?hl=en[convert Google docs to AsciiDoc^].
+
+* https://pandoc.org/[Pandoc^] can convert between a large number of different markup and file formats including DocBook, Emacs Org-Mode, EPUB, HTML, LaTeX, LibreOffice ODT, Markdown, MediaWiki markup, Microsoft Word docx, OPML, reStructuredText, textile, TWiki markup, and Txt2Tags.
+
+* https://github.com/lruzicka/rst2adoc/[rst2adoc^] is an AsciiDoc builder and writer for Sphinx that allows you to convert reStructuredText (RST) files to AsciiDoc using the Sphinx build system.
+

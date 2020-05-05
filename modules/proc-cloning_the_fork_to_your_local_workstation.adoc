@@ -1,0 +1,23 @@
+[discrete]
+[id="clone-your-fork-to-your-local-workstation_{context}"]
+= Clone your fork to your local workstation
+
+Clone the repository. Your fork is the `origin` location for your local files.
+
+.Procedure
+. Open a terminal and navigate to the location where you want to create a directory to contain your local copy of the repository.
+. Type the following command:
++
+[options="nowrap",subs="+quotes"]
+----
+$ git clone git@github.com:__USERNAME__/community-collaboration-guide.git
+----
++
+In this and subsequent examples, `_USERNAME_` represents your GitHub user ID.
+. Navigate to the newly created `community-collaboration-guide` directory.
++
+[options="nowrap"]
+----
+$ cd community-collaboration-guide/
+----
+

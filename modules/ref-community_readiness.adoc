@@ -1,10 +1,5 @@
-[[ccg-community-evaluation]]
-== Evaluating upstream communities
-
-Before joining an upstream documentation community with the goal of collaborating, you should gather data about the community to evaluate how your documentation team will fit in with the community's.
-
-[[ccg-community-readiness]]
-=== Community readiness survey
+[id="community-readiness-survey_{context}"]
+= Community readiness survey
 
 This sample communication survey can be used to determine if single-streaming documentation is feasible on a specific project. Content Strategists and Documentation Program Managers will work together to gather data to evaluate community documentation for their products. Using the results of this survey your team will be able to make a proposal for or against single-streaming documentation.
 
@@ -38,3 +33,4 @@ What tools are used in creating documents?,Asciidoctor (5) | Gitbook (1) | RST +
 Average number of commits a month to code,_number_
 Average number of commits a month to docs,_number_
 |===
+

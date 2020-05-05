@@ -1,5 +1,5 @@
-[[ccg-contributing-upstream]]
-== Contributing upstream
+[id="contributing-upstream_{context}"]
+= Contributing upstream
 
 This is a set of guidelines for  getting involved in an upstream open source documentation project.
 It is geared primarily towards people working for a downstream distributor,
@@ -48,3 +48,4 @@ Be positive and curious. Listen and understand. Offer to help.
 Finally, be prepared to accept that things will not always go the way you want.
 One of the defining characteristics of a community is that it makes its own decisions.
 That's the reality of being good open source citizens.
+

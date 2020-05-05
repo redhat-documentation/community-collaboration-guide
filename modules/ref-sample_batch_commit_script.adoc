@@ -1,0 +1,40 @@
+[id="sample-batch-commit-script_{context}"]
+= Sample batch commit script
+
+The batch commit script, `fetch-upstream.sh`, is a simple `bash` script that pulls down the latest upstream content, copying the relevant upstream files into the `upstream` subdirectory.
+The script exploits a particular feature of GitHub, whereby GitHub provides a downloadable archive file containing the working tree for any branch in the repository.
+The archive file has a snapshot of the _latest_ content in a particular branch and thus provides an ideal basis for synchronizing content downstream.
+
+To see how this works, consider the following sample `fetch-upstream.sh` script developed for synchronizing the contents of the _Apache Camel Component Reference_:
+
+----
+#!/bin/sh
+
+branch=camel-2.18.x <1>
+
+echo "info: fetching upstream content from branch: $branch"
+echo
+
+# -L = follow redirects
+curl -L -o $branch.zip https://github.com/apache/camel/archive/$branch.zip <2>
+
+# -o = overwrite, -j = flatten directory structure, -q = quiet
+unzip -qjo -d upstream $branch.zip camel-$branch/components/camel-*/src/main/docs/*.adoc <3>
+unzip -qjo -d upstream/images $branch.zip camel-$branch/components/camel-*/src/main/docs/*.png
+unzip -qjo -d upstream $branch.zip camel-$branch/camel-core/src/main/docs/*-component.adoc
+
+rm $branch.zip <4>
+----
+
+<1> Set the `branch` variable to the name of the upstream branch.
+<2> Download the archive (`.zip`) file from GitHub, which includes a snapshot of the latest content from the `$branch` branch and store it locally as the file, `$branch.zip`.
+<3> Extract the relevant documentation files from the archive and put them into the `upstream` subdirectory.
+Note that the `unzip` command is a remarkably flexible tool for extracting content from the archive.
+In this particular case, the AsciiDoc files are embedded in the Java code base and scattered across hundreds of subdirectories.
+But thanks to the globbing capabilities of `unzip`, it takes only a few commands to find and extract all the relevant files.
+<4> Clean up by removing the downloaded archive, `$branch.zip`.
+
+NOTE: It is not necessary for the script to figure out whether specific files have changed or not.
+Git automatically detects when a file has changed based on the file's content, not its creation time.
+So Git ignores any files with the same content as before.
+

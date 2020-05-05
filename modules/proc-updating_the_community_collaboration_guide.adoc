@@ -1,0 +1,25 @@
+[id="updating-the-community-collaboration-guide_{context}"]
+= Updating the community collaboration guide
+
+We encourage contributions to the _Community Collaboration Guide_. In particular, you can share your experiences in the following areas:
+
+* Evaluating communities
+* Working through the communications process
+* Using supported (and unsupported) tools
+* Structuring repositories in new and different ways
+* Exploring best practices and discovering lessons learned
+
+.Prerequisites
+
+* You must have downloaded, installed, and configured Git on your desktop.
+* Ensure that you have a xref:forking-the-upstream-github-repository_{context}[copy of the repository on your local system].
+
+.Procedure
+
+. Navigate to the https://github.com/redhat-documentation/community-collaboration-guide/issues[*Issues*] tab and click on the `Title` of the issue you'd like to address.
+. Assign the issue to yourself so that others know you are working on it.
+. Keep the issue up to date with your progress
+. Submit a Pull Request (PR) with your edits
+. Ask for a review from someone on the team
+. Once your item is merged, close the issue.
+

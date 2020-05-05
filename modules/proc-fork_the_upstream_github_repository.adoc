@@ -1,0 +1,15 @@
+[discrete]
+[id="forking-the-upstream-github-repository_{context}"]
+= Forking the upstream (GitHub) repository
+
+Fork the `community-collaboration-guide` upstream repository to create a fork under your own GitHub ID. This allows you to work on multiple pieces of content and push changes to branches in your local GitHub instance. When you are ready, you can request the changes be merged from your local fork into the upstream repository.
+
+.Procedure
+. Open a browser and navigate to the upstream repository located at https://github.com/redhat-documentation/community-collaboration-guide[https://github.com/redhat-documentation/community-collaboration-guide].
+. Click the *Fork* button located in the upper right, under your profile icon.
+. Choose the location of the forked repository.
+
+.Related information
+
+* https://help.github.com/articles/set-up-git/[Set Up Git^]
+

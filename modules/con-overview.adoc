@@ -1,0 +1,7 @@
+[id="overview_{context}"]
+= Overview
+
+Customer Content Services (CCS) is a Red Hat team responsible for producing documentation for Red Hat customers. Because all Red Hat products have an upstream, or open source community version, it makes sense for CCS to use these upstream resources in developing guides for customers. Many programs use pieces of upstream content in the downstream documentation. This framework defines best practices for single-streaming your documentation.
+
+In principle, single-streamed documentation will be worked on completely in the upstream and brought down to the Customer Portal wholesale. In some projects, this process eliminates the overhead of maintaining two separate repositories for documentation content. This framework guides you through the process necessary for deciding if a community is a viable single-stream partner, setting up your repositories, choosing the right tools, and more.
+

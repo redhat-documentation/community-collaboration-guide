@@ -1,0 +1,41 @@
+[id="sample-travis-yml_{context}"]
+= Sample .travis.yml
+
+Below is a sample `.travis.yml` file that must be placed in the root directory of your branch, from which you want to publish to GitHub Pages.
+
+[source,yaml,options="nowrap"]
+----
+sudo: required
+
+branches:
+  only:
+  - master # Branch from which to publish
+
+services:
+  - docker
+
+before_install:
+  - mkdir -p output
+  - docker pull asciidoctor/docker-asciidoctor
+
+script:
+  - docker run -v $TRAVIS_BUILD_DIR:/documents/ --name asciidoc-to-html asciidoctor/docker-asciidoctor asciidoctor --destination-dir=/documents/output --out-file=index.html community/master.adoc
+  - docker run -v $TRAVIS_BUILD_DIR:/documents/ --name asciidoc-to-pdf asciidoctor/docker-asciidoctor asciidoctor-pdf --destination-dir=/documents/output --out-file=community-collaboration-guide.pdf community/master.adoc
+
+after_error:
+  - docker logs asciidoc-to-html
+  - docker logs asciidoc-to-pdf
+
+after_failure:
+  - docker logs asciidoc-to-html
+  - docker logs asciidoc-to-pdf
+
+deploy:
+  provider: pages
+  skip_cleanup: true
+  github_token: $TOKEN # Set in travis-ci.org dashboard
+  local_dir: output
+  on:
+    branch: master
+----
+
