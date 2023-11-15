@@ -1,0 +1,30 @@
+name: Build and deploy Community Collaboration Guide website
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: Build Asciidoc
+        uses: docker://asciidoctor/docker-asciidoctor
+        with:
+          args: "asciidoctor getting_started_guide/main.adoc -o index.html"
+
+      - name: Copy output to docs/
+        run: |
+          mkdir docs
+          mv index.html docs/
+
+      - name: Publish to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./docs
