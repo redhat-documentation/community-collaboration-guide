@@ -16,7 +16,7 @@ jobs:
       - name: Build Asciidoc
         uses: docker://asciidoctor/docker-asciidoctor
         with:
-          args: "asciidoctor getting_started_guide/main.adoc -o index.html"
+          args: "asciidoctor community/main.adoc -o index.html"
 
       - name: Copy output to docs/
         run: |
